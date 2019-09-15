@@ -322,24 +322,25 @@ function back2normal(d, i) {
       .classed('mycompare', false)
       .classed('ordinary', true)
     d3.select("#data-table").selectAll(".table-cell").style("background", "white")
-    for (k of d.compare_id){
-      d3.select('.element_' + String(k)).style('fill', cur.color[cur.data_array[k]['c0']])
-    if(cur.cType!="load_scatter_plot"){
-      d3.select('.element_' + String(k)).style('fill', cur.color[cur.data_array[k]['c0']])
-    }
-    else{
-    d3.select('.element_' + String(k)).style('fill', 'black')
-  }
-}
+    // for (let k of d.compare_id){
+    //   d3.select('.element_' + String(k)).style('fill', cur.color[cur.data_array[k]['c0']])
+  //   if(cur.cType!="load_scatter_plot"){
+  //     d3.select('.element_' + String(k)).style('fill', cur.color[cur.data_array[k]['c0']])
+  //   }
+  //   else{
+  //   d3.select('.element_' + String(k)).style('fill', 'black')
+  // }}
 
-    for (k of d.focus_id){
-      if(cur.cType!="load_scatter_plot"){
-        d3.select('.element_' + String(k)).style('fill', cur.color[cur.data_array[k]['c0']])
-      }
-      else{
-      d3.select('.element_' + String(k)).style('fill', 'black')
-    }
-    }
+
+
+    // for (k of d.focus_id){
+    //   if(cur.cType!="load_scatter_plot"){
+    //     d3.select('.element_' + String(k)).style('fill', cur.color[cur.data_array[k]['c0']])
+    //   }
+    //   else{
+    //   d3.select('.element_' + String(k)).style('fill', 'black')
+    // }
+    // }
 }
 
 function captionHighlight(d, i) {
@@ -352,7 +353,7 @@ function captionHighlight(d, i) {
          .classed('ordinary', false)
          .classed('mycompare', true)
          fadeid[compid] = false
-      d3.select('.element_' + String(compid)).style('fill', 'blue')
+      //d3.select('.element_' + String(compid)).style('fill', 'blue')
       d3.select("#data-table").select("#table-" + String(compid)).style("background", "#9ecae1")
     }
     for(let focusid of d.focus_id) {
@@ -362,7 +363,7 @@ function captionHighlight(d, i) {
          .classed('myfocus', true)
        fadeid[focusid] = false
        // Tell me why!!!!!!!
-       d3.select('.element_' + String(focusid)).style('fill', 'red')
+      // d3.select('.element_' + String(focusid)).style('fill', 'red')
        d3.select("#data-table").select("#table-" + String(focusid)).style("background", "#fc9272")
      }
     for(let i in fadeid){
@@ -751,7 +752,7 @@ let loadJsonData = function(fileName='.data/0018.json') {
 
 let loadJsonDataByData = function(data, fileName){
   console.log(data)
-  cur.init(data.data, fileName)
+  cur.init(data, fileName)
   cur.initChart()
   //cur.drawTitle()
   SVG_string = d3.select('#visualization').node().innerHTML

@@ -3,7 +3,7 @@
 */
 window.userStudyTotal = 2500;
 let cur = new Data()
-loadJsonData('../data/dataset/190324_pie_1111111.json')
+loadJsonData('../data/dataset/tmp/1.json')
 // generate_pie_data()
 get_line_chart_svg_data()
 window.num = 0
@@ -172,5 +172,6 @@ function frush_no_update_svg(data_pack){
   // d3.select('#visualization').node().innerHTML = svg_string
   // highLightShadow()
    showSentences(sentences)
+   highLightText()
   // addDragging()
 }

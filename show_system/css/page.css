@@ -74,15 +74,17 @@ body,html {
     background-color: white;
     height:100%;
 }
-.mycompare rect {
-  mask: url(#mask-blue);
-  filter: url(#blue-shadow)
+.mycompare {
+  /* mask: url("#mask-blue"); */
+  /* filter: url("#blue-shadow"); */
+  /* fill: blue; */
 }
-.myfocus rect{
-  mask: url(#mask-red);
-  filter: url(#red-shadow);
+.myfocus {
+  /* mask: url("#mask-red"); */
+  /* filter: url("#red-shadow"); */
+  /* fill: red; */
 }
-.myfocus .circle{
+.myfocus circle{
   fill:red;
 }
 .nobody {

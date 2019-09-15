@@ -5,6 +5,26 @@ var TIME_LAST = 0
 var TIME_NOW = 0
 let highLightTableColor = '#fec44f'
 let highLightRectColor = '#d95f0e'
+let highLightText = function (textData=[]) {
+  let g = d3.select('#visualization').select('svg').append('g').attr('id', 'annotation')
+  let textCollection = {
+    'yAxis': [{'x': 10, 'y': 10, 'w': 20, 'h': 10 }, {'x': 10, 'y': 30, 'w': 20, 'h': 10 }, {'x': 10, 'y': 50, 'w': 20, 'h': 10 }],
+    'xAxis': [{'x': 30, 'y': 500, 'w': 20, 'h': 10 }, {'x': 50, 'y': 500, 'w': 20, 'h': 10 }, {'x': 70, 'y': 500, 'w': 20, 'h': 10 }],
+    'legend': [{'x': 300, 'y': 10, 'w': 20, 'h': 10 }, {'x': 300, 'y': 30, 'w': 20, 'h': 10 }, {'x': 300, 'y': 5, 'w': 20, 'h': 10 }]
+  }
+  let colorList = ['blanchedalmond', 'palegreen', 'mediumpurple', 'lightskyblue', 'lightpink']
+  let attributeList = ['xAxis', 'yAxis', 'legend', 'unit', 'title']
+  for (let attribute in attributeList) {
+    let canvas = g.append('g').attr('id', `g_${attributeList[attribute]}`)
+    for (let item of textCollection[attributeList[attribute]].text) {
+      canvas.append('rect')
+        .style('stroke-width', 2)
+        .style('stroke-color', colorList[attribute])
+        .style('fill-opacity', 0)
+    }
+  }
+
+}
 let dragStart = function(d) {
     DRAG_HANDLER = d3.event.y
     INIT_HEIGHT = d3.select(this).attr('height')
@@ -59,7 +79,7 @@ let mouseOver = function() {
       .style('stroke-width', '0.5vh')
 }
 let mouseOut = function() {
-   id =d3.select(this)
+   id = d3.select(this)
          .attr('id')
    d3.select('#table-'+String(id))
      .style('background', null)
