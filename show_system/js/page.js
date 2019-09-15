@@ -17,6 +17,7 @@ $(document).ready(function(){
     });
     let origin = d3.select('#visualization').select('svg')
     let overlay = d3.select('#annotationDiv').select('svg')
+    console.log(origin.attr('width'), origin.attr('height'), origin.attr('viewBox'))
     overlay.attr('width', origin.attr('width'))
       .attr('height', origin.attr('height'))
       .attr('viewBox', origin.attr('viewBox'))

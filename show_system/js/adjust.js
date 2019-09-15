@@ -21,14 +21,12 @@ let highLightText = function (textData=[]) {
   for (let attrName of attributeList) {
     let canvas = g.append('g').attr('id', `g_${attrName}`)
     for (let item of textCollection[attrName].text) {
-      canvas.append('rect')
-        .attr('x', item.x)
-        .attr('y', item.y)
-        .attr('width', item.w)
-        .attr('height', item.h)
+      let x1 = item.x, x2 = item.x + item.w, y1 = item.y, y2 = item.y + item.h
+      canvas.append('polygon')
+        .attr('points', `${x1},${ y1} ${x2},${y1} ${x2},${y2} ${x1},${y2}`)
         .style('stroke-width', 3)
-        .style('stroke-color', colorList[i])
-        .style('fill-opacity', 0.5)
+        .style('stroke', colorList[i])
+        .style('fill-opacity', 0.2)
         .style('fill', colorList[i])
         .style('stroke-opacity', 1)
     }
