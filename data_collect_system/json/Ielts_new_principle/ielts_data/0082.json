@@ -1,0 +1,91 @@
+{
+  "title": "different levels of qualification across the workforce of  an engineering company  in  1980  and  2008", 
+  "data_array": [
+    {
+      "q0": 13.0, 
+      "c0": 0, 
+      "id": 0, 
+      "o0": 0
+    }, 
+    {
+      "q0": 29.0, 
+      "c0": 1, 
+      "id": 1, 
+      "o0": 0
+    }, 
+    {
+      "q0": 11.0, 
+      "c0": 2, 
+      "id": 2, 
+      "o0": 0
+    }, 
+    {
+      "q0": 20.0, 
+      "c0": 3, 
+      "id": 3, 
+      "o0": 0
+    }, 
+    {
+      "q0": 25.0, 
+      "c0": 4, 
+      "id": 4, 
+      "o0": 0
+    }, 
+    {
+      "q0": 2.0, 
+      "c0": 5, 
+      "id": 5, 
+      "o0": 0
+    }, 
+    {
+      "q0": 30.0, 
+      "c0": 0, 
+      "id": 6, 
+      "o0": 1
+    }, 
+    {
+      "q0": 7.0, 
+      "c0": 1, 
+      "id": 7, 
+      "o0": 1
+    }, 
+    {
+      "q0": 29.0, 
+      "c0": 2, 
+      "id": 8, 
+      "o0": 1
+    }, 
+    {
+      "q0": 13.0, 
+      "c0": 3, 
+      "id": 9, 
+      "o0": 1
+    }, 
+    {
+      "q0": 10.0, 
+      "c0": 4, 
+      "id": 10, 
+      "o0": 1
+    }, 
+    {
+      "q0": 11.0, 
+      "c0": 5, 
+      "id": 11, 
+      "o0": 1
+    }
+  ], 
+  "c0": [
+    "ph D science", 
+    "ph D art", 
+    "masters degree science", 
+    "masters degree art", 
+    "first degree science", 
+    "first degree art"
+  ], 
+  "ID": 88, 
+  "unit": "percent", 
+  "o0": [
+    "1980", 
+    "2008"
+  ]
+}

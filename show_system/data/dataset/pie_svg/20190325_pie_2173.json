@@ -1,0 +1,53 @@
+{
+  "user_name": "20190325_pie_2173.json",
+  "total_number": "2325",
+  "data": {
+    "title": "Consumption",
+    "unit": "billion",
+    "c0": [
+      "A",
+      "B",
+      "C"
+    ],
+    "data_array": [
+      {
+        "id": 0,
+        "c0": 0,
+        "q0": 77
+      },
+      {
+        "id": 1,
+        "c0": 1,
+        "q0": 72
+      },
+      {
+        "id": 2,
+        "c0": 2,
+        "q0": 41
+      }
+    ],
+    "type": "cq",
+    "major_name": "c0",
+    "second_name": "c0",
+    "color": [
+      "#8dd3c7",
+      "#fdb462",
+      "#ffed6f"
+    ],
+    "vis_type": "load_pie_chart",
+    "pre_gen_focus": [],
+    "sentences": [],
+    "x": "o0",
+    "y": "q0",
+    "unit1": "year",
+    "unit2": "billion",
+    "quan": "q0"
+  },
+  "svg_string": "<h5 id=\"chart-title\" class=\"text-center mb-0\"></h5>\n          <svg id=\"mySvg\" viewBox=\"0 0 800 660\" preserveAspectRatio=\"xMidYMid meet\" height=\"660\" width=\"800\">\n            <defs>\n            <filter id=\"blue-shadow\">\n            <feDropShadow dx=\"3\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#0080e0\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n\n            <defs>\n            <filter id=\"red-shadow\">\n            <feDropShadow dx=\"3\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#fa1919\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n\n            <defs>\n            <filter id=\"ordinary-shadow\">\n            <feDropShadow dx=\"2.5\" dy=\"3\" stdDeviation=\"1\" flood-color=\"grey\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n          <g transform=\"translate(400,330)\"><g class=\"brush\"></g><g class=\"arc\"><path d=\"M1.2858791391047208e-14,-210L0,0Z\" fill=\"#8dd3c7\"></path><text transform=\"translate(1.1021821192326179e-14,-180)\" dy=\"0.35em\">A</text></g><g class=\"arc\"><path d=\"M1.2858791391047208e-14,-210A210,210,0,0,1,181.86533479473212,104.99999999999997L0,0Z\" fill=\"#fdb462\"></path><text transform=\"translate(155.88457268119896,-90)\" dy=\"0.35em\">B</text></g><g class=\"arc\"><path d=\"M181.86533479473212,104.99999999999997A210,210,0,1,1,-3.857637417314162e-14,-210L0,0Z\" fill=\"#ffed6f\"></path><text transform=\"translate(-155.88457268119893,90.00000000000006)\" dy=\"0.35em\">C</text></g><g transform=\"translate(320,-176)\" class=\"legend-wrap\"><g transform=\"translate(0,0)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#8dd3c7\" id=\"color-0\" color-data=\"#8dd3c7\" custom-id=\"0\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">A</text></g><g transform=\"translate(0,21.12)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#fdb462\" id=\"color-1\" color-data=\"#fdb462\" custom-id=\"1\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">B</text></g><g transform=\"translate(0,42.24)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#ffed6f\" id=\"color-2\" color-data=\"#ffed6f\" custom-id=\"2\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">C</text></g></g><text class=\"title\" text-anchor=\"middle\" font-size=\"23.759999999999998\" x=\"0\" y=\"-264\">Consumption</text></g></svg>",
+  "sentences": [],
+  "major_dim": "c0",
+  "second_dim": "o0",
+  "vis_type": "load_pie_chart",
+  "type": "cq",
+  "pre_gen_focus": ""
+}

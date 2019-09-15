@@ -1,0 +1,40 @@
+{
+  "title": "How sales have changed global sales", 
+  "first_dimension": [
+    "Games", 
+    "DVD video", 
+    "CDs"
+  ], 
+  "dimension": [
+    3, 
+    4
+  ], 
+  "second_dimension": [
+    "2000", 
+    "2001", 
+    "2002", 
+    "2003"
+  ], 
+  "data": {
+    "DVD video": [
+      17.0, 
+      21.0, 
+      26.0, 
+      30.0
+    ], 
+    "Games": [
+      13.0, 
+      15.0, 
+      17.0, 
+      18.0
+    ], 
+    "CDs": [
+      35.0, 
+      33.0, 
+      32.0, 
+      32.0
+    ]
+  }, 
+  "ID": 178, 
+  "unit": "billion"
+}

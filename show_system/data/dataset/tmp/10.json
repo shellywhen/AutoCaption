@@ -1,0 +1,144 @@
+{
+    "title": "The Value of Fruit Consumption",
+    "unit": "billion",
+    "c0": [
+        "America",
+        "China"
+    ],
+    "o0": [
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+    ],
+    "data_array": [
+        {
+            "c0": 0,
+            "id": 0,
+            "o0": 0,
+            "q0": 0.3136499353482395
+        },
+        {
+            "c0": 0,
+            "id": 1,
+            "o0": 1,
+            "q0": 0.27019388054345
+        },
+        {
+            "c0": 0,
+            "id": 2,
+            "o0": 2,
+            "q0": 0.1838941828452153
+        },
+        {
+            "c0": 0,
+            "id": 3,
+            "o0": 3,
+            "q0": 0.14884000263843689
+        },
+        {
+            "c0": 1,
+            "id": 4,
+            "o0": 0,
+            "q0": 1
+        },
+        {
+            "c0": 1,
+            "id": 5,
+            "o0": 1,
+            "q0": 1.914153378576131
+        },
+        {
+            "c0": 1,
+            "id": 6,
+            "o0": 2,
+            "q0": 0.8319353276731898
+        },
+        {
+            "c0": 1,
+            "id": 7,
+            "o0": 3,
+            "q0": 0.6879421724477138
+        }
+    ],
+    "type": "ocq",
+    "color": [
+        "#d9d9d9",
+        "#ffffb3",
+        "#ffed6f",
+        "#b3de69",
+        "#ccebc5",
+        "#fb8072",
+        "#bc80bd",
+        "#80b1d3",
+        "#bebada",
+        "#8dd3c7",
+        "#fdb462",
+        "#fccde5"
+    ],
+    "vis_type": "load_group_bar_chart",
+    "major_name": "c0",
+    "second_name": "o0",
+    "pre_gen_focus": [
+        {
+            "focus_id": [
+                4,
+                5,
+                7
+            ],
+            "compare_id": [
+                0,
+                3
+            ],
+            "type": "compare_trend"
+        },
+        {
+            "focus_id": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "compare_id": [
+                4,
+                5,
+                6,
+                7
+            ],
+            "type": "compare_ave"
+        }
+    ],
+    "sentences": [
+        {
+            "type": "compare_trend",
+            "sentence": "The value of China increase greatly between 2010 and 2011, then it decrease greatly by 2013; while America keeps stable between 2010 and 2013.",
+            "compare_id": [
+                0,
+                3
+            ],
+            "focus_id": [
+                4,
+                5,
+                7
+            ],
+            "sure": true
+        },
+        {
+            "type": "compare_ave",
+            "sentence": "The value of 2010, 2011, 2012 and 2013 in America is greatly lower China.",
+            "compare_id": [
+                4,
+                5,
+                6,
+                7
+            ],
+            "focus_id": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "sure": true
+        }
+    ]
+}

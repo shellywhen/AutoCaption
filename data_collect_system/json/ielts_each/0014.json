@@ -1,0 +1,57 @@
+{
+  "title": "employment rates by country 1995-2005", 
+  "first_dimension": [
+    "1995 male", 
+    "2005 male", 
+    "1995 female", 
+    "2005 female"
+  ], 
+  "dimension": [
+    4, 
+    6
+  ], 
+  "second_dimension": [
+    "australia", 
+    "switzerland", 
+    "iceland", 
+    "UK", 
+    "new zealand", 
+    "USA"
+  ], 
+  "data": {
+    "1995 female": [
+      28.0, 
+      58.0, 
+      40.0, 
+      50.0, 
+      25.0, 
+      45.0
+    ], 
+    "2005 female": [
+      39.0, 
+      78.0, 
+      53.0, 
+      62.0, 
+      41.0, 
+      60.0
+    ], 
+    "2005 male": [
+      69.0, 
+      78.0, 
+      82.0, 
+      72.0, 
+      71.0, 
+      70.0
+    ], 
+    "1995 male": [
+      57.0, 
+      65.0, 
+      70.0, 
+      54.0, 
+      60.0, 
+      59.0
+    ]
+  }, 
+  "ID": 192, 
+  "unit": ""
+}

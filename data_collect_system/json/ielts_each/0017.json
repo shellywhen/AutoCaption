@@ -1,0 +1,39 @@
+{
+  "title": "Estimated world illiteracy rates by region and by gender 2000", 
+  "first_dimension": [
+    "Male", 
+    "Fmale"
+  ], 
+  "dimension": [
+    2, 
+    6
+  ], 
+  "second_dimension": [
+    "Developed Countries", 
+    "Latin America/Caribbean", 
+    "East Asian/Oceania", 
+    "Sub-Saharan Africa", 
+    "Arab States", 
+    "South Asia"
+  ], 
+  "data": {
+    "Fmale": [
+      2.0, 
+      12.0, 
+      20.0, 
+      48.0, 
+      53.0, 
+      55.0
+    ], 
+    "Male": [
+      1.0, 
+      10.0, 
+      8.0, 
+      30.0, 
+      28.0, 
+      34.0
+    ]
+  }, 
+  "ID": 195, 
+  "unit": "%"
+}

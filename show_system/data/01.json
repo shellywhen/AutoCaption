@@ -1,0 +1,155 @@
+{
+    "title": "The Value of GDP",
+    "unit": "billion",
+    "c0": [
+        "America",
+        "India"
+    ],
+    "o0": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014"
+    ],
+    "data_array": [
+        {
+            "c0": 0,
+            "id": 0,
+            "o0": 0,
+            "q0": 0.8069842471219644
+        },
+        {
+            "c0": 0,
+            "id": 1,
+            "o0": 1,
+            "q0": 1.422962556876596
+        },
+        {
+            "c0": 0,
+            "id": 2,
+            "o0": 2,
+            "q0": 2.1169564590343555
+        },
+        {
+            "c0": 0,
+            "id": 3,
+            "o0": 3,
+            "q0": 1.327638377769202
+        },
+        {
+            "c0": 0,
+            "id": 4,
+            "o0": 4,
+            "q0": 1.1239873739752486
+        },
+        {
+            "c0": 1,
+            "id": 5,
+            "o0": 0,
+            "q0": 1
+        },
+        {
+            "c0": 1,
+            "id": 6,
+            "o0": 1,
+            "q0": 1.071840416218703
+        },
+        {
+            "c0": 1,
+            "id": 7,
+            "o0": 2,
+            "q0": 1.1516541557695712
+        },
+        {
+            "c0": 1,
+            "id": 8,
+            "o0": 3,
+            "q0": 1.156643169933145
+        },
+        {
+            "c0": 1,
+            "id": 9,
+            "o0": 4,
+            "q0": 1.193469995704221
+        }
+    ],
+    "type": "ocq",
+    "color": [
+        "#fdb462",
+        "#8dd3c7",
+        "#ffffb3",
+        "#fccde5",
+        "#ccebc5",
+        "#ffed6f",
+        "#bebada",
+        "#b3de69",
+        "#d9d9d9",
+        "#bc80bd",
+        "#80b1d3",
+        "#fb8072"
+    ],
+    "vis_type": "load_group_bar_chart",
+    "major_name": "c0",
+    "second_name": "o0",
+    "pre_gen_focus": [
+        {
+            "focus_id": [
+                0,
+                2,
+                4
+            ],
+            "compare_id": [
+                5,
+                9
+            ],
+            "type": "compare_trend"
+        },
+        {
+            "focus_id": [
+                0,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8,
+                9
+            ],
+            "compare_id": [],
+            "type": "sum_trend"
+        }
+    ],
+    "sentences": [
+        {
+            "type": "compare_trend",
+            "sentence": "The value of America increase greatly between 2010 and 2012, then it decrease greatly by 2014; while India keep stable between 2010 and 2014.",
+            "compare_id": [
+                5,
+                9
+            ],
+            "focus_id": [
+                0,
+                2,
+                4
+            ],
+            "sure": true
+        },
+        {
+            "type": "sum_trend",
+            "sentence": "The sum value of America and India increase greatly between 2010 and 2012, then it decrease greatly by 2013, then it decrease by 2014.",
+            "compare_id": [],
+            "focus_id": [
+                0,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8,
+                9
+            ],
+            "sure": true
+        }
+    ]
+}

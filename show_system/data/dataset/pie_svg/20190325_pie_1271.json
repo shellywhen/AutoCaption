@@ -1,0 +1,74 @@
+{
+  "user_name": "20190325_pie_1271.json",
+  "total_number": "2325",
+  "data": {
+    "title": "Production",
+    "unit": "billion",
+    "c0": [
+      "Australia",
+      "China",
+      "Iran",
+      "Others",
+      "Russia",
+      "UK"
+    ],
+    "data_array": [
+      {
+        "id": 0,
+        "c0": 0,
+        "q0": 83
+      },
+      {
+        "id": 1,
+        "c0": 1,
+        "q0": 46
+      },
+      {
+        "id": 2,
+        "c0": 2,
+        "q0": 55
+      },
+      {
+        "id": 3,
+        "c0": 3,
+        "q0": 88
+      },
+      {
+        "id": 4,
+        "c0": 4,
+        "q0": 57
+      },
+      {
+        "id": 5,
+        "c0": 5,
+        "q0": 79
+      }
+    ],
+    "type": "cq",
+    "major_name": "c0",
+    "second_name": "c0",
+    "color": [
+      "#bc80bd",
+      "#bebada",
+      "#fccde5",
+      "#ccebc5",
+      "#8dd3c7",
+      "#b3de69"
+    ],
+    "vis_type": "load_pie_chart",
+    "pre_gen_focus": [],
+    "sentences": [],
+    "x": "o0",
+    "y": "q0",
+    "unit1": "year",
+    "unit2": "billion",
+    "quan": "q0"
+  },
+  "svg_string": "<h5 id=\"chart-title\" class=\"text-center mb-0\"></h5>\n          <svg id=\"mySvg\" viewBox=\"0 0 800 660\" preserveAspectRatio=\"xMidYMid meet\" height=\"660\" width=\"800\">\n            <defs>\n            <filter id=\"blue-shadow\">\n            <feDropShadow dx=\"3\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#0080e0\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n\n            <defs>\n            <filter id=\"red-shadow\">\n            <feDropShadow dx=\"3\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#fa1919\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n\n            <defs>\n            <filter id=\"ordinary-shadow\">\n            <feDropShadow dx=\"2.5\" dy=\"3\" stdDeviation=\"1\" flood-color=\"grey\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n          <g transform=\"translate(400,330)\"><g class=\"brush\"></g><g class=\"arc\"><path d=\"M1.2858791391047208e-14,-210L0,0Z\" fill=\"#bc80bd\"></path><text transform=\"translate(1.1021821192326179e-14,-180)\" dy=\"0.35em\">Australia</text></g><g class=\"arc\"><path d=\"M1.2858791391047208e-14,-210A210,210,0,0,1,85.41469504591804,-191.84454610494618L0,0Z\" fill=\"#bebada\"></path><text transform=\"translate(37.4241043471967,-176.066568132085)\" dy=\"0.35em\">China</text></g><g class=\"arc\"><path d=\"M85.41469504591804,-191.84454610494618A210,210,0,0,1,199.72186842198224,-64.89356881873896L0,0Z\" fill=\"#fccde5\"></path><text transform=\"translate(133.76606858593095,-120.44350914459449)\" dy=\"0.35em\">Iran</text></g><g class=\"arc\"><path d=\"M199.72186842198224,-64.89356881873896A210,210,0,0,1,123.43490298141936,169.89356881873897L0,0Z\" fill=\"#ccebc5\"></path><text transform=\"translate(171.19017293312763,55.62305898749053)\" dy=\"0.35em\">Others</text></g><g class=\"arc\"><path d=\"M123.43490298141936,169.89356881873897A210,210,0,0,1,-181.8653347947321,105.00000000000007L0,0Z\" fill=\"#8dd3c7\"></path><text transform=\"translate(-37.42410434719664,176.06656813208502)\" dy=\"0.35em\">Russia</text></g><g class=\"arc\"><path d=\"M-181.8653347947321,105.00000000000007A210,210,0,0,1,-3.857637417314162e-14,-210L0,0Z\" fill=\"#b3de69\"></path><text transform=\"translate(-155.88457268119902,-89.99999999999989)\" dy=\"0.35em\">UK</text></g><g transform=\"translate(320,-176)\" class=\"legend-wrap\"><g transform=\"translate(0,0)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#bc80bd\" id=\"color-0\" color-data=\"#bc80bd\" custom-id=\"0\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Australia</text></g><g transform=\"translate(0,21.12)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#bebada\" id=\"color-1\" color-data=\"#bebada\" custom-id=\"1\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">China</text></g><g transform=\"translate(0,42.24)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#fccde5\" id=\"color-2\" color-data=\"#fccde5\" custom-id=\"2\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Iran</text></g><g transform=\"translate(0,63.36)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#ccebc5\" id=\"color-3\" color-data=\"#ccebc5\" custom-id=\"3\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Others</text></g><g transform=\"translate(0,84.48)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#8dd3c7\" id=\"color-4\" color-data=\"#8dd3c7\" custom-id=\"4\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Russia</text></g><g transform=\"translate(0,105.60000000000001)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#b3de69\" id=\"color-5\" color-data=\"#b3de69\" custom-id=\"5\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">UK</text></g></g><text class=\"title\" text-anchor=\"middle\" font-size=\"23.759999999999998\" x=\"0\" y=\"-264\">Production</text></g></svg>",
+  "sentences": [],
+  "major_dim": "c0",
+  "second_dim": "o0",
+  "vis_type": "load_pie_chart",
+  "type": "cq",
+  "pre_gen_focus": ""
+}

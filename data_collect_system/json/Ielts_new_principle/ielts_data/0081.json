@@ -1,0 +1,91 @@
+{
+  "title": "percentage of time adults spend in six areas including eating  developing hobbies  reading and socializing between 1998 and 2010 shopping  cooking ", 
+  "data_array": [
+    {
+      "q0": 10.0, 
+      "c0": 0, 
+      "id": 0, 
+      "o0": 0
+    }, 
+    {
+      "q0": 7.0, 
+      "c0": 1, 
+      "id": 1, 
+      "o0": 0
+    }, 
+    {
+      "q0": 6.0, 
+      "c0": 2, 
+      "id": 2, 
+      "o0": 0
+    }, 
+    {
+      "q0": 15.0, 
+      "c0": 3, 
+      "id": 3, 
+      "o0": 0
+    }, 
+    {
+      "q0": 13.0, 
+      "c0": 4, 
+      "id": 4, 
+      "o0": 0
+    }, 
+    {
+      "q0": 23.0, 
+      "c0": 5, 
+      "id": 5, 
+      "o0": 0
+    }, 
+    {
+      "q0": 15.0, 
+      "c0": 0, 
+      "id": 6, 
+      "o0": 1
+    }, 
+    {
+      "q0": 4.0, 
+      "c0": 1, 
+      "id": 7, 
+      "o0": 1
+    }, 
+    {
+      "q0": 2.0, 
+      "c0": 2, 
+      "id": 8, 
+      "o0": 1
+    }, 
+    {
+      "q0": 20.0, 
+      "c0": 3, 
+      "id": 9, 
+      "o0": 1
+    }, 
+    {
+      "q0": 13.0, 
+      "c0": 4, 
+      "id": 10, 
+      "o0": 1
+    }, 
+    {
+      "q0": 24.0, 
+      "c0": 5, 
+      "id": 11, 
+      "o0": 1
+    }
+  ], 
+  "c0": [
+    "shopping", 
+    "cooking", 
+    "developing", 
+    "hobbies", 
+    "reading", 
+    "socializing"
+  ], 
+  "ID": 87, 
+  "unit": "percent", 
+  "o0": [
+    "1998", 
+    "2010"
+  ]
+}

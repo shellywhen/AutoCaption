@@ -1,0 +1,455 @@
+{
+  "user_name": "super_rule_ocq_web",
+  "total_number": "6",
+  "data": {
+    "title": "The Value of Fruit Asumption",
+    "unit": "billion",
+    "c0": [
+      "Britain",
+      "Dutch",
+      "America",
+      "India"
+    ],
+    "o0": [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016"
+    ],
+    "data_array": [
+      {
+        "c0": 0,
+        "id": 0,
+        "o0": 0,
+        "q0": 0.34237611167658877
+      },
+      {
+        "c0": 0,
+        "id": 1,
+        "o0": 1,
+        "q0": 0.34378194601699774
+      },
+      {
+        "c0": 0,
+        "id": 2,
+        "o0": 2,
+        "q0": 0.4141181664322641
+      },
+      {
+        "c0": 0,
+        "id": 3,
+        "o0": 3,
+        "q0": 0.4817632568124328
+      },
+      {
+        "c0": 0,
+        "id": 4,
+        "o0": 4,
+        "q0": 0.27758992508705194
+      },
+      {
+        "c0": 0,
+        "id": 5,
+        "o0": 5,
+        "q0": 0.5105759625139679
+      },
+      {
+        "c0": 0,
+        "id": 6,
+        "o0": 6,
+        "q0": 0.5691638609446007
+      },
+      {
+        "c0": 1,
+        "id": 7,
+        "o0": 0,
+        "q0": 1
+      },
+      {
+        "c0": 1,
+        "id": 8,
+        "o0": 1,
+        "q0": 0.959797755957932
+      },
+      {
+        "c0": 1,
+        "id": 9,
+        "o0": 2,
+        "q0": 0.9112650163518982
+      },
+      {
+        "c0": 1,
+        "id": 10,
+        "o0": 3,
+        "q0": 0.8864724753291171
+      },
+      {
+        "c0": 1,
+        "id": 11,
+        "o0": 4,
+        "q0": 0.5006261297071993
+      },
+      {
+        "c0": 1,
+        "id": 12,
+        "o0": 5,
+        "q0": 0.8564431218109506
+      },
+      {
+        "c0": 1,
+        "id": 13,
+        "o0": 6,
+        "q0": 0.8278983241562499
+      },
+      {
+        "c0": 2,
+        "id": 14,
+        "o0": 0,
+        "q0": 0.9955935403606541
+      },
+      {
+        "c0": 2,
+        "id": 15,
+        "o0": 1,
+        "q0": 1.0027124456947554
+      },
+      {
+        "c0": 2,
+        "id": 16,
+        "o0": 2,
+        "q0": 1.226160058935632
+      },
+      {
+        "c0": 2,
+        "id": 17,
+        "o0": 3,
+        "q0": 1.2721877772318382
+      },
+      {
+        "c0": 2,
+        "id": 18,
+        "o0": 4,
+        "q0": 0.7611767825378023
+      },
+      {
+        "c0": 2,
+        "id": 19,
+        "o0": 5,
+        "q0": 1.474625989265248
+      },
+      {
+        "c0": 2,
+        "id": 20,
+        "o0": 6,
+        "q0": 1.6550683416208714
+      },
+      {
+        "c0": 3,
+        "id": 21,
+        "o0": 0,
+        "q0": 0.28368194897889154
+      },
+      {
+        "c0": 3,
+        "id": 22,
+        "o0": 1,
+        "q0": 0.304491396689837
+      },
+      {
+        "c0": 3,
+        "id": 23,
+        "o0": 2,
+        "q0": 0.34517699762275245
+      },
+      {
+        "c0": 3,
+        "id": 24,
+        "o0": 3,
+        "q0": 0.36257459230585853
+      },
+      {
+        "c0": 3,
+        "id": 25,
+        "o0": 4,
+        "q0": 0.23156982797966005
+      },
+      {
+        "c0": 3,
+        "id": 26,
+        "o0": 5,
+        "q0": 0.45215385866065483
+      },
+      {
+        "c0": 3,
+        "id": 27,
+        "o0": 6,
+        "q0": 0.4715910598156246
+      }
+    ],
+    "type": "ocq",
+    "color": [
+      "#bc80bd",
+      "#fdb462",
+      "#fccde5",
+      "#bebada",
+      "#d9d9d9",
+      "#b3de69",
+      "#ccebc5",
+      "#ffed6f",
+      "#ffffb3",
+      "#fb8072",
+      "#8dd3c7",
+      "#80b1d3"
+    ],
+    "vis_type": "load_stack_bar_chart_horizontal",
+    "major_name": "o0",
+    "second_name": "c0",
+    "pre_gen_focus": [
+      {
+        "focus_id": [
+          7,
+          13
+        ],
+        "compare_id": [
+          0,
+          6,
+          14,
+          20,
+          21,
+          27
+        ],
+        "type": "compare_trend"
+      },
+      {
+        "focus_id": [
+          3,
+          4,
+          5,
+          10,
+          11,
+          12,
+          17,
+          18,
+          19,
+          24,
+          25,
+          26
+        ],
+        "compare_id": [],
+        "type": "local_sum_trend"
+      },
+      {
+        "focus_id": [
+          3,
+          4,
+          5,
+          10,
+          11,
+          12,
+          17,
+          18,
+          19,
+          24,
+          25,
+          26
+        ],
+        "compare_id": [],
+        "type": "local_trend"
+      },
+      {
+        "focus_id": [
+          0,
+          3,
+          4,
+          6,
+          7,
+          10,
+          11,
+          13,
+          14,
+          17,
+          18,
+          20,
+          21,
+          24,
+          25,
+          27
+        ],
+        "compare_id": [],
+        "type": "sum_trend"
+      }
+    ],
+    "sentences": [
+      {
+        "type": "compare_trend",
+        "sentence": "The value of Dutch frustrated between 2010 and 2016; while Britain, America and India increase slightly between 2010 and 2016.",
+        "compare_id": [
+          0,
+          6,
+          14,
+          20,
+          21,
+          27
+        ],
+        "focus_id": [
+          7,
+          13
+        ],
+        "sure": true
+      },
+      {
+        "type": "local_sum_trend",
+        "sentence": "The sum value of Britain, Dutch, America and India has an unusual drop in 2014.",
+        "compare_id": [],
+        "focus_id": [
+          3,
+          4,
+          5,
+          10,
+          11,
+          12,
+          17,
+          18,
+          19,
+          24,
+          25,
+          26
+        ],
+        "sure": true
+      },
+      {
+        "type": "local_trend",
+        "sentence": "There is an unusual drop in 2014 of Britain, Dutch, America and India.",
+        "compare_id": [],
+        "focus_id": [
+          3,
+          4,
+          5,
+          10,
+          11,
+          12,
+          17,
+          18,
+          19,
+          24,
+          25,
+          26
+        ],
+        "sure": true
+      },
+      {
+        "type": "sum_trend",
+        "sentence": "The sum value of Britain, Dutch, America and India increase slightly with steady steps between 2010 and 2013, then it decrease greatly by 2014, then it increase greatly by 2016.",
+        "compare_id": [],
+        "focus_id": [
+          0,
+          3,
+          4,
+          6,
+          7,
+          10,
+          11,
+          13,
+          14,
+          17,
+          18,
+          20,
+          21,
+          24,
+          25,
+          27
+        ],
+        "sure": true
+      }
+    ]
+  },
+  "svg_string": "<svg width=\"718\" height=\"718\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(143.6,143.6)\"><g><g fill=\"#bc80bd\"><rect class=\"bar elements\" id=\"0\" o0=\"0\" c0=\"0\" q0=\"0.34237611167658877\" y=\"369\" x=\"0\" width=\"42\" height=\"47\"></rect><rect class=\"bar elements\" id=\"1\" o0=\"1\" c0=\"0\" q0=\"0.34378194601699774\" y=\"310\" x=\"0\" width=\"42\" height=\"47\"></rect><rect class=\"bar elements\" id=\"2\" o0=\"2\" c0=\"0\" q0=\"0.4141181664322641\" y=\"251\" x=\"0\" width=\"51\" height=\"47\"></rect><rect class=\"bar elements\" id=\"3\" o0=\"3\" c0=\"0\" q0=\"0.4817632568124328\" y=\"192\" x=\"0\" width=\"59\" height=\"47\"></rect><rect class=\"bar elements\" id=\"4\" o0=\"4\" c0=\"0\" q0=\"0.27758992508705194\" y=\"133\" x=\"0\" width=\"34\" height=\"47\"></rect><rect class=\"bar elements\" id=\"5\" o0=\"5\" c0=\"0\" q0=\"0.5105759625139679\" y=\"74\" x=\"0\" width=\"62\" height=\"47\"></rect><rect class=\"bar elements\" id=\"6\" o0=\"6\" c0=\"0\" q0=\"0.5691638609446007\" y=\"15\" x=\"0\" width=\"70\" height=\"47\"></rect></g><g fill=\"#fdb462\"><rect class=\"bar elements\" id=\"7\" o0=\"0\" c0=\"1\" q0=\"1\" y=\"369\" x=\"42\" width=\"122\" height=\"47\"></rect><rect class=\"bar elements\" id=\"8\" o0=\"1\" c0=\"1\" q0=\"0.959797755957932\" y=\"310\" x=\"42\" width=\"117\" height=\"47\"></rect><rect class=\"bar elements\" id=\"9\" o0=\"2\" c0=\"1\" q0=\"0.9112650163518982\" y=\"251\" x=\"51\" width=\"111\" height=\"47\"></rect><rect class=\"bar elements\" id=\"10\" o0=\"3\" c0=\"1\" q0=\"0.8864724753291171\" y=\"192\" x=\"59\" width=\"108\" height=\"47\"></rect><rect class=\"bar elements\" id=\"11\" o0=\"4\" c0=\"1\" q0=\"0.5006261297071993\" y=\"133\" x=\"34\" width=\"61\" height=\"47\"></rect><rect class=\"bar elements\" id=\"12\" o0=\"5\" c0=\"1\" q0=\"0.8564431218109506\" y=\"74\" x=\"62\" width=\"105\" height=\"47\"></rect><rect class=\"bar elements\" id=\"13\" o0=\"6\" c0=\"1\" q0=\"0.8278983241562499\" y=\"15\" x=\"70\" width=\"101\" height=\"47\"></rect></g><g fill=\"#fccde5\"><rect class=\"bar elements\" id=\"14\" o0=\"0\" c0=\"2\" q0=\"0.9955935403606541\" y=\"369\" x=\"164\" width=\"122\" height=\"47\"></rect><rect class=\"bar elements\" id=\"15\" o0=\"1\" c0=\"2\" q0=\"1.0027124456947554\" y=\"310\" x=\"159\" width=\"123\" height=\"47\"></rect><rect class=\"bar elements\" id=\"16\" o0=\"2\" c0=\"2\" q0=\"1.226160058935632\" y=\"251\" x=\"162\" width=\"150\" height=\"47\"></rect><rect class=\"bar elements\" id=\"17\" o0=\"3\" c0=\"2\" q0=\"1.2721877772318382\" y=\"192\" x=\"167\" width=\"156\" height=\"47\"></rect><rect class=\"bar elements\" id=\"18\" o0=\"4\" c0=\"2\" q0=\"0.7611767825378023\" y=\"133\" x=\"95\" width=\"93\" height=\"47\"></rect><rect class=\"bar elements\" id=\"19\" o0=\"5\" c0=\"2\" q0=\"1.474625989265248\" y=\"74\" x=\"167\" width=\"180\" height=\"47\"></rect><rect class=\"bar elements\" id=\"20\" o0=\"6\" c0=\"2\" q0=\"1.6550683416208714\" y=\"15\" x=\"171\" width=\"202\" height=\"47\"></rect></g><g fill=\"#bebada\"><rect class=\"bar elements\" id=\"21\" o0=\"0\" c0=\"3\" q0=\"0.28368194897889154\" y=\"369\" x=\"286\" width=\"35\" height=\"47\"></rect><rect class=\"bar elements\" id=\"22\" o0=\"1\" c0=\"3\" q0=\"0.304491396689837\" y=\"310\" x=\"282\" width=\"37\" height=\"47\"></rect><rect class=\"bar elements\" id=\"23\" o0=\"2\" c0=\"3\" q0=\"0.34517699762275245\" y=\"251\" x=\"312\" width=\"42\" height=\"47\"></rect><rect class=\"bar elements\" id=\"24\" o0=\"3\" c0=\"3\" q0=\"0.36257459230585853\" y=\"192\" x=\"323\" width=\"44\" height=\"47\"></rect><rect class=\"bar elements\" id=\"25\" o0=\"4\" c0=\"3\" q0=\"0.23156982797966005\" y=\"133\" x=\"188\" width=\"29\" height=\"47\"></rect><rect class=\"bar elements\" id=\"26\" o0=\"5\" c0=\"3\" q0=\"0.45215385866065483\" y=\"74\" x=\"347\" width=\"56\" height=\"47\"></rect><rect class=\"bar elements\" id=\"27\" o0=\"6\" c0=\"3\" q0=\"0.4715910598156246\" y=\"15\" x=\"373\" width=\"58\" height=\"47\"></rect></g></g><text class=\"title\" text-anchor=\"middle\" font-size=\"19.386\" x=\"215.4\" y=\"-6.462\">The Value of Fruit Asumption</text><g transform=\"translate(430.8,0)\" class=\"legend-wrap\"><g transform=\"translate(0,0)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#bc80bd\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">Britain</text></g><g transform=\"translate(0,17.232)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#fdb462\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">Dutch</text></g><g transform=\"translate(0,34.464)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#fccde5\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">America</text></g><g transform=\"translate(0,51.696)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#bebada\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">India</text></g></g><g class=\"axis\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"end\"><path class=\"domain\" stroke=\"#000\" d=\"M-6,431.3H0.5V0.5H-6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(0,392.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2010</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,333.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2011</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,274.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2012</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,215.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2013</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,156.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2014</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,97.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2015</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,38.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2016</text></g></g><g class=\"axis\" transform=\"translate(0,430.8)\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"middle\"><path class=\"domain\" stroke=\"#000\" d=\"M0.5,6V0.5H431.3V6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(0.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(61.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.5</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(122.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">1.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(183.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">1.5</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(245.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(306.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2.5</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(367.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">3.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(428.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">3.5</text></g></g><text transform=\"translate(430.8,430.8)\" dy=\"-.2rem\" text-anchor=\"end\" font-size=\"12.924\">billion</text></g></svg>",
+  "sentences": [
+    {
+      "type": "compare_trend",
+      "sentence": "The value of Dutch frustrated between 2010 and 2016; while Britain, America and India increase slightly between 2010 and 2016.",
+      "compare_id": [
+        0,
+        6,
+        14,
+        20,
+        21,
+        27
+      ],
+      "focus_id": [
+        7,
+        13
+      ],
+      "sure": true
+    },
+    {
+      "type": "local_sum_trend",
+      "sentence": "The sum value of Britain, Dutch, America and India has an unusual drop in 2014.",
+      "compare_id": [],
+      "focus_id": [
+        3,
+        4,
+        5,
+        10,
+        11,
+        12,
+        17,
+        18,
+        19,
+        24,
+        25,
+        26
+      ],
+      "sure": true
+    },
+    {
+      "type": "local_trend",
+      "sentence": "There is an unusual drop in 2014 of Britain, Dutch, America and India.",
+      "compare_id": [],
+      "focus_id": [
+        3,
+        4,
+        5,
+        10,
+        11,
+        12,
+        17,
+        18,
+        19,
+        24,
+        25,
+        26
+      ],
+      "sure": true
+    },
+    {
+      "type": "sum_trend",
+      "sentence": "The sum value of Britain, Dutch, America and India increase slightly with steady steps between 2010 and 2013, then it decrease greatly by 2014, then it increase greatly by 2016.",
+      "compare_id": [],
+      "focus_id": [
+        0,
+        3,
+        4,
+        6,
+        7,
+        10,
+        11,
+        13,
+        14,
+        17,
+        18,
+        20,
+        21,
+        24,
+        25,
+        27
+      ],
+      "sure": true
+    }
+  ],
+  "major_dim": "o0",
+  "second_dim": "c0"
+}

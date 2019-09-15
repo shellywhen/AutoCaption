@@ -1,0 +1,192 @@
+{
+    "title": "The Value of Fruit Consumption",
+    "unit": "billion",
+    "c0": [
+        "India",
+        "China"
+    ],
+    "o0": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017"
+    ],
+    "data_array": [
+        {
+            "c0": 0,
+            "id": 0,
+            "o0": 0,
+            "q0": 0.6123772482027738
+        },
+        {
+            "c0": 0,
+            "id": 1,
+            "o0": 1,
+            "q0": 0.614168218744956
+        },
+        {
+            "c0": 0,
+            "id": 2,
+            "o0": 2,
+            "q0": 0.6176939960984336
+        },
+        {
+            "c0": 0,
+            "id": 3,
+            "o0": 3,
+            "q0": 0.6210869438273312
+        },
+        {
+            "c0": 0,
+            "id": 4,
+            "o0": 4,
+            "q0": 0.6249971647178992
+        },
+        {
+            "c0": 0,
+            "id": 5,
+            "o0": 5,
+            "q0": 0.627022135114006
+        },
+        {
+            "c0": 0,
+            "id": 6,
+            "o0": 6,
+            "q0": 0.6502282167014898
+        },
+        {
+            "c0": 0,
+            "id": 7,
+            "o0": 7,
+            "q0": 0.6779580539467545
+        },
+        {
+            "c0": 1,
+            "id": 8,
+            "o0": 0,
+            "q0": 1
+        },
+        {
+            "c0": 1,
+            "id": 9,
+            "o0": 1,
+            "q0": 1.2663970808086746
+        },
+        {
+            "c0": 1,
+            "id": 10,
+            "o0": 2,
+            "q0": 1.2780700620003107
+        },
+        {
+            "c0": 1,
+            "id": 11,
+            "o0": 3,
+            "q0": 1.0305629546063415
+        },
+        {
+            "c0": 1,
+            "id": 12,
+            "o0": 4,
+            "q0": 0.9623204161778385
+        },
+        {
+            "c0": 1,
+            "id": 13,
+            "o0": 5,
+            "q0": 0.794871585782923
+        },
+        {
+            "c0": 1,
+            "id": 14,
+            "o0": 6,
+            "q0": 0.6332033169390514
+        },
+        {
+            "c0": 1,
+            "id": 15,
+            "o0": 7,
+            "q0": 0.5384647379934452
+        }
+    ],
+    "type": "ocq",
+    "color": [
+        "#fdb462",
+        "#fccde5",
+        "#d9d9d9",
+        "#bebada",
+        "#ffffb3",
+        "#b3de69",
+        "#bc80bd",
+        "#ffed6f",
+        "#8dd3c7",
+        "#80b1d3",
+        "#fb8072",
+        "#ccebc5"
+    ],
+    "vis_type": "load_stack_bar_chart",
+    "major_name": "o0",
+    "second_name": "c0",
+    "pre_gen_focus": [
+        {
+            "focus_id": [
+                8,
+                10,
+                15
+            ],
+            "compare_id": [],
+            "type": "all_trend"
+        },
+        {
+            "focus_id": [
+                0,
+                1,
+                2,
+                3,
+                7,
+                8,
+                9,
+                10,
+                11,
+                15
+            ],
+            "compare_id": [],
+            "type": "sum_trend"
+        }
+    ],
+    "sentences": [
+        {
+            "type": "all_trend",
+            "sentence": "The value of China increase between 2010 and 2012, then it decrease with steady steps by 2017.",
+            "compare_id": [],
+            "focus_id": [
+                8,
+                10,
+                15
+            ],
+            "sure": false
+        },
+        {
+            "type": "sum_trend",
+            "sentence": "The sum value of India and China increase greatly between 2010 and 2011, then it keeps stable by 2012, then it decrease by 2013, then it decrease with steady steps by 2017.",
+            "compare_id": [],
+            "focus_id": [
+                0,
+                1,
+                2,
+                3,
+                7,
+                8,
+                9,
+                10,
+                11,
+                15
+            ],
+            "sure": true
+        }
+    ]
+}

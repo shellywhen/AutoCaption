@@ -1,0 +1,78 @@
+{
+  "title": "major reasons for students to choose a UK university", 
+  "data_array": [
+    {
+      "q0": 20.0, 
+      "c0": 0, 
+      "id": 0, 
+      "o0": 0
+    }, 
+    {
+      "q0": 15.0, 
+      "c0": 1, 
+      "id": 1, 
+      "o0": 0
+    }, 
+    {
+      "q0": 10.0, 
+      "c0": 2, 
+      "id": 2, 
+      "o0": 0
+    }, 
+    {
+      "q0": 37.0, 
+      "c0": 3, 
+      "id": 3, 
+      "o0": 0
+    }, 
+    {
+      "q0": 23.0, 
+      "c0": 4, 
+      "id": 4, 
+      "o0": 0
+    }, 
+    {
+      "q0": 5.0, 
+      "c0": 0, 
+      "id": 5, 
+      "o0": 1
+    }, 
+    {
+      "q0": 13.0, 
+      "c0": 1, 
+      "id": 6, 
+      "o0": 1
+    }, 
+    {
+      "q0": 20.0, 
+      "c0": 2, 
+      "id": 7, 
+      "o0": 1
+    }, 
+    {
+      "q0": 28.0, 
+      "c0": 3, 
+      "id": 8, 
+      "o0": 1
+    }, 
+    {
+      "q0": 17.0, 
+      "c0": 4, 
+      "id": 9, 
+      "o0": 1
+    }
+  ], 
+  "c0": [
+    "sports facilities", 
+    "teachirf", 
+    "how close to home", 
+    "suitable level courses", 
+    "resources"
+  ], 
+  "ID": 100, 
+  "unit": "percent", 
+  "o0": [
+    "1985", 
+    "2005"
+  ]
+}

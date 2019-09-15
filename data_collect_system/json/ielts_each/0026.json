@@ -1,0 +1,62 @@
+{
+  "title": "Estimated maximum population of Asian elephants", 
+  "first_dimension": [
+    "Vietnam", 
+    "India", 
+    "Malaysia", 
+    "SirLanka", 
+    "Cambodia", 
+    "Laos", 
+    "Myanmar", 
+    "Thailand", 
+    "China"
+  ], 
+  "dimension": [
+    9, 
+    2
+  ], 
+  "second_dimension": [
+    "1997", 
+    "2004"
+  ], 
+  "data": {
+    "Myanmar": [
+      5200.0, 
+      4800.0
+    ], 
+    "India": [
+      9900.0, 
+      7500.0
+    ], 
+    "Cambodia": [
+      1200.0, 
+      1300.0
+    ], 
+    "Malaysia": [
+      3100.0, 
+      1100.0
+    ], 
+    "Vietnam": [
+      1200.0, 
+      1100.0
+    ], 
+    "China": [
+      1000.0, 
+      500.0
+    ], 
+    "Laos": [
+      1100.0, 
+      1100.0
+    ], 
+    "Thailand": [
+      3800.0, 
+      1200.0
+    ], 
+    "SirLanka": [
+      3000.0, 
+      2800.0
+    ]
+  }, 
+  "ID": 204, 
+  "unit": ""
+}

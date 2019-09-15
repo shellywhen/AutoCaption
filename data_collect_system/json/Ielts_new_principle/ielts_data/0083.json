@@ -1,0 +1,78 @@
+{
+  "title": "difference  in  the  percentage  of  sports  in outdoor school hours according to different genders ", 
+  "data_array": [
+    {
+      "q0": 13.0, 
+      "c1": 0, 
+      "c0": 0, 
+      "id": 0
+    }, 
+    {
+      "q0": 20.0, 
+      "c1": 1, 
+      "c0": 0, 
+      "id": 1
+    }, 
+    {
+      "q0": 2.0, 
+      "c1": 2, 
+      "c0": 0, 
+      "id": 2
+    }, 
+    {
+      "q0": 8.0, 
+      "c1": 3, 
+      "c0": 0, 
+      "id": 3
+    }, 
+    {
+      "q0": 4.0, 
+      "c1": 4, 
+      "c0": 0, 
+      "id": 4
+    }, 
+    {
+      "q0": 16.0, 
+      "c1": 0, 
+      "c0": 1, 
+      "id": 5
+    }, 
+    {
+      "q0": 4.0, 
+      "c1": 1, 
+      "c0": 1, 
+      "id": 6
+    }, 
+    {
+      "q0": 18.0, 
+      "c1": 2, 
+      "c0": 1, 
+      "id": 7
+    }, 
+    {
+      "q0": 7.0, 
+      "c1": 3, 
+      "c0": 1, 
+      "id": 8
+    }, 
+    {
+      "q0": 5.0, 
+      "c1": 4, 
+      "c0": 1, 
+      "id": 9
+    }
+  ], 
+  "c1": [
+    "swimming", 
+    "football", 
+    "netball", 
+    "basketball", 
+    "no sports"
+  ], 
+  "c0": [
+    "boy", 
+    "girl"
+  ], 
+  "ID": 90, 
+  "unit": "percent"
+}

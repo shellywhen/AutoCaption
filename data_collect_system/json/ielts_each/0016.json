@@ -1,0 +1,39 @@
+{
+  "title": "Mobile Phones and Land Lines ", 
+  "first_dimension": [
+    "Mobile Phones", 
+    "Land Lines"
+  ], 
+  "dimension": [
+    2, 
+    6
+  ], 
+  "second_dimension": [
+    "Canada", 
+    "US", 
+    "German", 
+    "Denmark", 
+    "UK", 
+    "Sweden"
+  ], 
+  "data": {
+    "Mobile Phones": [
+      38.0, 
+      48.0, 
+      72.0, 
+      82.0, 
+      84.0, 
+      88.0
+    ], 
+    "Land Lines": [
+      65.0, 
+      67.0, 
+      60.0, 
+      88.0, 
+      58.0, 
+      67.0
+    ]
+  }, 
+  "ID": 194, 
+  "unit": "per 100 people"
+}

@@ -1,0 +1,39 @@
+{
+  "title": "percentage of male and female teachers in six different types of educational setting  in the UK in 2010", 
+  "first_dimension": [
+    "men", 
+    "women"
+  ], 
+  "dimension": [
+    2, 
+    6
+  ], 
+  "second_dimension": [
+    "nursery/pre-school", 
+    "primary school", 
+    "secondary school", 
+    "college", 
+    "private traning institute", 
+    "university"
+  ], 
+  "data": {
+    "men": [
+      4.0, 
+      8.0, 
+      48.0, 
+      50.0, 
+      55.0, 
+      70.0
+    ], 
+    "women": [
+      95.0, 
+      90.0, 
+      55.0, 
+      50.0, 
+      58.0, 
+      30.0
+    ]
+  }, 
+  "ID": 207, 
+  "unit": "%"
+}

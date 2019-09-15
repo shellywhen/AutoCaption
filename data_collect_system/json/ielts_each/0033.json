@@ -1,0 +1,52 @@
+{
+  "title": "consumers in the United States  Canada  the United Kingdom  and Japan allocated different shares of total spending to categories in 2009", 
+  "first_dimension": [
+    "unites states", 
+    "canada", 
+    "united kingdom", 
+    "japan"
+  ], 
+  "dimension": [
+    4, 
+    5
+  ], 
+  "second_dimension": [
+    "food", 
+    "housing", 
+    "transportation", 
+    "health", 
+    "clothing"
+  ], 
+  "data": {
+    "canada": [
+      15.0, 
+      21.0, 
+      20.0, 
+      4.0, 
+      6.5
+    ], 
+    "unites states": [
+      14.0, 
+      26.0, 
+      12.5, 
+      7.5, 
+      4.0
+    ], 
+    "japan": [
+      23.0, 
+      22.0, 
+      10.0, 
+      4.0, 
+      4.0
+    ], 
+    "united kingdom": [
+      20.0, 
+      24.0, 
+      15.0, 
+      2.0, 
+      6.0
+    ]
+  }, 
+  "ID": 211, 
+  "unit": "%"
+}

@@ -1,0 +1,37 @@
+{
+  "title": "unemployment rates among women in  the countries that make up the United Kingdom  both in 2013 and in 2014.", 
+  "first_dimension": [
+    "england", 
+    "wales", 
+    "scotland", 
+    "northern ireland"
+  ], 
+  "dimension": [
+    4, 
+    2
+  ], 
+  "second_dimension": [
+    "2013", 
+    "2014"
+  ], 
+  "data": {
+    "wales": [
+      5.4, 
+      5.0
+    ], 
+    "scotland": [
+      6.1, 
+      6.7
+    ], 
+    "england": [
+      6.8, 
+      6.5
+    ], 
+    "northern ireland": [
+      5.6, 
+      4.6
+    ]
+  }, 
+  "ID": 213, 
+  "unit": "%"
+}

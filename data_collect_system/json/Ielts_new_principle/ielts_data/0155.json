@@ -1,0 +1,82 @@
+{
+  "title": "HCT Graduates by College", 
+  "data_array": [
+    {
+      "q0": 131.0, 
+      "c1": 0, 
+      "c0": 0, 
+      "id": 0
+    }, 
+    {
+      "q0": 218.0, 
+      "c1": 0, 
+      "c0": 1, 
+      "id": 1
+    }, 
+    {
+      "q0": 273.0, 
+      "c1": 0, 
+      "c0": 2, 
+      "id": 2
+    }, 
+    {
+      "q0": 293.0, 
+      "c1": 0, 
+      "c0": 3, 
+      "id": 3
+    }, 
+    {
+      "q0": 426.0, 
+      "c1": 0, 
+      "c0": 4, 
+      "id": 4
+    }, 
+    {
+      "q0": 547.0, 
+      "c1": 0, 
+      "c0": 5, 
+      "id": 5
+    }, 
+    {
+      "q0": 102.0, 
+      "c1": 0, 
+      "c0": 6, 
+      "id": 6
+    }, 
+    {
+      "q0": 178.0, 
+      "c1": 0, 
+      "c0": 7, 
+      "id": 7
+    }, 
+    {
+      "q0": 165.0, 
+      "c1": 0, 
+      "c0": 8, 
+      "id": 8
+    }, 
+    {
+      "q0": 186.0, 
+      "c1": 0, 
+      "c0": 9, 
+      "id": 9
+    }
+  ], 
+  "c1": [
+    "student"
+  ], 
+  "c0": [
+    "A/Ain Men's", 
+    "A/Ain Women's", 
+    "Abu Dhabi Men's", 
+    "Abu Dhabi Women's", 
+    "Dubsi Men's", 
+    "Dubsi Women's", 
+    "Ras A/Khaimah Men's", 
+    "Ras A/Khaimah Women's", 
+    "Sharjah Men's", 
+    "Sharjah Women's"
+  ], 
+  "ID": 175, 
+  "unit": "student"
+}

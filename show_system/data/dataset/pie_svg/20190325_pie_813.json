@@ -1,0 +1,53 @@
+{
+  "user_name": "20190325_pie_813.json",
+  "total_number": "2325",
+  "data": {
+    "title": "Fruit Consumption",
+    "unit": "billion",
+    "c0": [
+      "Banana",
+      "Peach",
+      "Strawberry"
+    ],
+    "data_array": [
+      {
+        "id": 0,
+        "c0": 0,
+        "q0": 41
+      },
+      {
+        "id": 1,
+        "c0": 1,
+        "q0": 66
+      },
+      {
+        "id": 2,
+        "c0": 2,
+        "q0": 13
+      }
+    ],
+    "type": "cq",
+    "major_name": "c0",
+    "second_name": "c0",
+    "color": [
+      "#b3de69",
+      "#fdb462",
+      "#fccde5"
+    ],
+    "vis_type": "load_pie_chart",
+    "pre_gen_focus": [],
+    "sentences": [],
+    "x": "o0",
+    "y": "q0",
+    "unit1": "year",
+    "unit2": "billion",
+    "quan": "q0"
+  },
+  "svg_string": "<h5 id=\"chart-title\" class=\"text-center mb-0\"></h5>\n          <svg id=\"mySvg\" viewBox=\"0 0 800 660\" preserveAspectRatio=\"xMidYMid meet\" height=\"660\" width=\"800\">\n            <defs>\n            <filter id=\"blue-shadow\">\n            <feDropShadow dx=\"3\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#0080e0\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n\n            <defs>\n            <filter id=\"red-shadow\">\n            <feDropShadow dx=\"3\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#fa1919\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n\n            <defs>\n            <filter id=\"ordinary-shadow\">\n            <feDropShadow dx=\"2.5\" dy=\"3\" stdDeviation=\"1\" flood-color=\"grey\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n          <g transform=\"translate(400,330)\"><g class=\"brush\"></g><g class=\"arc\"><path d=\"M1.2858791391047208e-14,-210L0,0Z\" fill=\"#b3de69\"></path><text transform=\"translate(1.1021821192326179e-14,-180)\" dy=\"0.35em\">Banana</text></g><g class=\"arc\"><path d=\"M1.2858791391047208e-14,-210A210,210,0,0,1,181.86533479473212,104.99999999999997L0,0Z\" fill=\"#fdb462\"></path><text transform=\"translate(155.88457268119896,-90)\" dy=\"0.35em\">Peach</text></g><g class=\"arc\"><path d=\"M181.86533479473212,104.99999999999997A210,210,0,1,1,-3.857637417314162e-14,-210L0,0Z\" fill=\"#fccde5\"></path><text transform=\"translate(-155.88457268119893,90.00000000000006)\" dy=\"0.35em\">Strawberry</text></g><g transform=\"translate(320,-176)\" class=\"legend-wrap\"><g transform=\"translate(0,0)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#b3de69\" id=\"color-0\" color-data=\"#b3de69\" custom-id=\"0\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Banana</text></g><g transform=\"translate(0,21.12)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#fdb462\" id=\"color-1\" color-data=\"#fdb462\" custom-id=\"1\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Peach</text></g><g transform=\"translate(0,42.24)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#fccde5\" id=\"color-2\" color-data=\"#fccde5\" custom-id=\"2\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Strawberry</text></g></g><text class=\"title\" text-anchor=\"middle\" font-size=\"23.759999999999998\" x=\"0\" y=\"-264\">Fruit Consumption</text></g></svg>",
+  "sentences": [],
+  "major_dim": "c0",
+  "second_dim": "o0",
+  "vis_type": "load_pie_chart",
+  "type": "cq",
+  "pre_gen_focus": ""
+}

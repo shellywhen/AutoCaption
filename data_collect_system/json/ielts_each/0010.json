@@ -1,0 +1,30 @@
+{
+  "title": "hart attacks per year USA(000s)", 
+  "first_dimension": [
+    "men", 
+    "women"
+  ], 
+  "dimension": [
+    2, 
+    3
+  ], 
+  "second_dimension": [
+    "29-44", 
+    "45-64", 
+    "65+"
+  ], 
+  "data": {
+    "men": [
+      123.0, 
+      424.0, 
+      440.0
+    ], 
+    "women": [
+      3.0, 
+      136.0, 
+      374.0
+    ]
+  }, 
+  "ID": 188, 
+  "unit": ""
+}

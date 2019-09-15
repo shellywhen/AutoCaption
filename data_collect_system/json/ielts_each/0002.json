@@ -1,0 +1,30 @@
+{
+  "title": "percentage of people who buy music", 
+  "first_dimension": [
+    "Pop Music"
+  ], 
+  "dimension": [
+    1, 
+    6
+  ], 
+  "second_dimension": [
+    "male", 
+    "female", 
+    "16-24", 
+    "25-34", 
+    "35-44", 
+    "45+"
+  ], 
+  "data": {
+    "Pop Music": [
+      28.0, 
+      19.0, 
+      30.0, 
+      32.0, 
+      26.0, 
+      10.0
+    ]
+  }, 
+  "ID": 180, 
+  "unit": "9"
+}

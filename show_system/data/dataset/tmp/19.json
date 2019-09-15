@@ -1,0 +1,323 @@
+{
+    "title": "The Value of Fruit Consumption",
+    "unit": "billion",
+    "c0": [
+        "Japan",
+        "Dutch",
+        "India"
+    ],
+    "o0": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017"
+    ],
+    "data_array": [
+        {
+            "c0": 0,
+            "id": 0,
+            "o0": 0,
+            "q0": 0.5435995932897763
+        },
+        {
+            "c0": 0,
+            "id": 1,
+            "o0": 1,
+            "q0": 0.45920255435509894
+        },
+        {
+            "c0": 0,
+            "id": 2,
+            "o0": 2,
+            "q0": 0.42319801094119264
+        },
+        {
+            "c0": 0,
+            "id": 3,
+            "o0": 3,
+            "q0": 0.4205565188004121
+        },
+        {
+            "c0": 0,
+            "id": 4,
+            "o0": 4,
+            "q0": 0.417729272276958
+        },
+        {
+            "c0": 0,
+            "id": 5,
+            "o0": 5,
+            "q0": 0.3081950028416707
+        },
+        {
+            "c0": 0,
+            "id": 6,
+            "o0": 6,
+            "q0": 0.21005167365468136
+        },
+        {
+            "c0": 0,
+            "id": 7,
+            "o0": 7,
+            "q0": 0.24951582905407704
+        },
+        {
+            "c0": 1,
+            "id": 8,
+            "o0": 0,
+            "q0": 1
+        },
+        {
+            "c0": 1,
+            "id": 9,
+            "o0": 1,
+            "q0": 1.0374463163508283
+        },
+        {
+            "c0": 1,
+            "id": 10,
+            "o0": 2,
+            "q0": 1.2940881315161663
+        },
+        {
+            "c0": 1,
+            "id": 11,
+            "o0": 3,
+            "q0": 1.3537558282141893
+        },
+        {
+            "c0": 1,
+            "id": 12,
+            "o0": 4,
+            "q0": 1.4952466076289306
+        },
+        {
+            "c0": 1,
+            "id": 13,
+            "o0": 5,
+            "q0": 1.546464692385645
+        },
+        {
+            "c0": 1,
+            "id": 14,
+            "o0": 6,
+            "q0": 1.2913514591760198
+        },
+        {
+            "c0": 1,
+            "id": 15,
+            "o0": 7,
+            "q0": 1.6558192448716693
+        },
+        {
+            "c0": 2,
+            "id": 16,
+            "o0": 0,
+            "q0": 0.9180117256075165
+        },
+        {
+            "c0": 2,
+            "id": 17,
+            "o0": 1,
+            "q0": 0.8148387578696696
+        },
+        {
+            "c0": 2,
+            "id": 18,
+            "o0": 2,
+            "q0": 0.7291820759433751
+        },
+        {
+            "c0": 2,
+            "id": 19,
+            "o0": 3,
+            "q0": 0.684019142682368
+        },
+        {
+            "c0": 2,
+            "id": 20,
+            "o0": 4,
+            "q0": 0.6576162398497583
+        },
+        {
+            "c0": 2,
+            "id": 21,
+            "o0": 5,
+            "q0": 0.6465695397990154
+        },
+        {
+            "c0": 2,
+            "id": 22,
+            "o0": 6,
+            "q0": 0.35082377985215774
+        },
+        {
+            "c0": 2,
+            "id": 23,
+            "o0": 7,
+            "q0": 0.4213734881773897
+        }
+    ],
+    "type": "ocq",
+    "color": [
+        "#bc80bd",
+        "#ffed6f",
+        "#ffffb3",
+        "#bebada",
+        "#8dd3c7",
+        "#fb8072",
+        "#80b1d3",
+        "#fdb462",
+        "#fccde5",
+        "#d9d9d9",
+        "#ccebc5",
+        "#b3de69"
+    ],
+    "vis_type": "load_stack_bar_chart_horizontal",
+    "major_name": "o0",
+    "second_name": "c0",
+    "pre_gen_focus": [
+        {
+            "focus_id": [
+                8,
+                15
+            ],
+            "compare_id": [
+                0,
+                7,
+                16,
+                23
+            ],
+            "type": "compare_trend"
+        },
+        {
+            "focus_id": [
+                5,
+                6,
+                7,
+                13,
+                14,
+                15,
+                21,
+                22,
+                23
+            ],
+            "compare_id": [],
+            "type": "local_sum_trend"
+        },
+        {
+            "focus_id": [
+                5,
+                6,
+                7,
+                13,
+                14,
+                15,
+                21,
+                22,
+                23
+            ],
+            "compare_id": [],
+            "type": "local_trend"
+        },
+        {
+            "focus_id": [
+                0,
+                1,
+                5,
+                6,
+                7,
+                8,
+                9,
+                13,
+                14,
+                15,
+                16,
+                17,
+                21,
+                22,
+                23
+            ],
+            "compare_id": [],
+            "type": "sum_trend"
+        }
+    ],
+    "sentences": [
+        {
+            "type": "compare_trend",
+            "sentence": "The value of Dutch increase between 2010 and 2017; while Japan and India decrease slightly with steady steps between 2010 and 2017.",
+            "compare_id": [
+                0,
+                7,
+                16,
+                23
+            ],
+            "focus_id": [
+                8,
+                15
+            ],
+            "sure": true
+        },
+        {
+            "type": "local_sum_trend",
+            "sentence": "The sum value of Japan, Dutch and India has an unusual drop in 2016.",
+            "compare_id": [],
+            "focus_id": [
+                5,
+                6,
+                7,
+                13,
+                14,
+                15,
+                21,
+                22,
+                23
+            ],
+            "sure": true
+        },
+        {
+            "type": "local_trend",
+            "sentence": "There is an unusual drop in 2016 of Japan, Dutch and India.",
+            "compare_id": [],
+            "focus_id": [
+                5,
+                6,
+                7,
+                13,
+                14,
+                15,
+                21,
+                22,
+                23
+            ],
+            "sure": true
+        },
+        {
+            "type": "sum_trend",
+            "sentence": "The sum value of Japan, Dutch and India decrease between 2010 and 2011, then it keeps stable by 2015, then it decrease greatly by 2016, then it increase greatly by 2017.",
+            "compare_id": [],
+            "focus_id": [
+                0,
+                1,
+                5,
+                6,
+                7,
+                8,
+                9,
+                13,
+                14,
+                15,
+                16,
+                17,
+                21,
+                22,
+                23
+            ],
+            "sure": true
+        }
+    ]
+}

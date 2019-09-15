@@ -1,0 +1,57 @@
+{
+  "title": "international students among university graduates  in different Canadian provinces between 2001 and 2006", 
+  "first_dimension": [
+    "new brunswick", 
+    "nova scotia", 
+    "quebec", 
+    "alberta", 
+    "british columbia", 
+    "manitoba", 
+    "newfoundland and labrador", 
+    "ontario"
+  ], 
+  "dimension": [
+    8, 
+    2
+  ], 
+  "second_dimension": [
+    "2001", 
+    "2006"
+  ], 
+  "data": {
+    "ontario": [
+      3.0, 
+      6.0
+    ], 
+    "newfoundland and labrador": [
+      3.5, 
+      7.0
+    ], 
+    "british columbia": [
+      4.5, 
+      10.5
+    ], 
+    "nova scotia": [
+      6.5, 
+      10.5
+    ], 
+    "quebec": [
+      6.0, 
+      8.0
+    ], 
+    "alberta": [
+      4.5, 
+      7.5
+    ], 
+    "manitoba": [
+      3.5, 
+      7.0
+    ], 
+    "new brunswick": [
+      7.0, 
+      12.0
+    ]
+  }, 
+  "ID": 210, 
+  "unit": "%"
+}

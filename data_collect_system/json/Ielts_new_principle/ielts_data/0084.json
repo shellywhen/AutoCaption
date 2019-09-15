@@ -1,0 +1,54 @@
+{
+  "title": "reasons for immigants to a eurpean country in 2009 ", 
+  "data_array": [
+    {
+      "q0": 15.0, 
+      "c1": 0, 
+      "c0": 0, 
+      "id": 0
+    }, 
+    {
+      "q0": 7.0, 
+      "c1": 1, 
+      "c0": 0, 
+      "id": 1
+    }, 
+    {
+      "q0": 13.0, 
+      "c1": 2, 
+      "c0": 0, 
+      "id": 2
+    }, 
+    {
+      "q0": 38.0, 
+      "c1": 3, 
+      "c0": 0, 
+      "id": 3
+    }, 
+    {
+      "q0": 4.0, 
+      "c1": 4, 
+      "c0": 0, 
+      "id": 4
+    }, 
+    {
+      "q0": 23.0, 
+      "c1": 5, 
+      "c0": 0, 
+      "id": 5
+    }
+  ], 
+  "c1": [
+    "accompany", 
+    "study", 
+    "look for job", 
+    "definite job", 
+    "no reason", 
+    "other reasons"
+  ], 
+  "c0": [
+    "2009"
+  ], 
+  "ID": 92, 
+  "unit": "percent"
+}

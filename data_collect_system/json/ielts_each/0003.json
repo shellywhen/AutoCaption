@@ -1,0 +1,30 @@
+{
+  "title": "unpaid work hours per week ", 
+  "first_dimension": [
+    "women", 
+    "men"
+  ], 
+  "dimension": [
+    2, 
+    3
+  ], 
+  "second_dimension": [
+    "without children", 
+    "with 1 to 2 children", 
+    "with 3 or more children"
+  ], 
+  "data": {
+    "men": [
+      18.0, 
+      18.0, 
+      17.0
+    ], 
+    "women": [
+      30.0, 
+      52.0, 
+      55.0
+    ]
+  }, 
+  "ID": 181, 
+  "unit": "hours"
+}

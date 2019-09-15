@@ -1,0 +1,252 @@
+{
+  "user_name": "super_rule_ocq_web",
+  "total_number": "2",
+  "data": {
+    "title": "The Value of Fruit Asumption",
+    "unit": "billion",
+    "c0": [
+      "India",
+      "China",
+      "America"
+    ],
+    "o0": [
+      "2010",
+      "2011",
+      "2012",
+      "2013"
+    ],
+    "data_array": [
+      {
+        "c0": 0,
+        "id": 0,
+        "o0": 0,
+        "q0": 0.9327350994285797
+      },
+      {
+        "c0": 0,
+        "id": 1,
+        "o0": 1,
+        "q0": 1.2907239624087128
+      },
+      {
+        "c0": 0,
+        "id": 2,
+        "o0": 2,
+        "q0": 1.18485830091984
+      },
+      {
+        "c0": 0,
+        "id": 3,
+        "o0": 3,
+        "q0": 1.2274320011848046
+      },
+      {
+        "c0": 1,
+        "id": 4,
+        "o0": 0,
+        "q0": 0.585116270111611
+      },
+      {
+        "c0": 1,
+        "id": 5,
+        "o0": 1,
+        "q0": 0.6137718358027665
+      },
+      {
+        "c0": 1,
+        "id": 6,
+        "o0": 2,
+        "q0": 0.7985107956726751
+      },
+      {
+        "c0": 1,
+        "id": 7,
+        "o0": 3,
+        "q0": 0.8029470399292686
+      },
+      {
+        "c0": 2,
+        "id": 8,
+        "o0": 0,
+        "q0": 1
+      },
+      {
+        "c0": 2,
+        "id": 9,
+        "o0": 1,
+        "q0": 1.125231557380292
+      },
+      {
+        "c0": 2,
+        "id": 10,
+        "o0": 2,
+        "q0": 1.2694709812818061
+      },
+      {
+        "c0": 2,
+        "id": 11,
+        "o0": 3,
+        "q0": 1.309570643585218
+      }
+    ],
+    "type": "ocq",
+    "color": [
+      "#b3de69",
+      "#ffed6f",
+      "#80b1d3",
+      "#bc80bd",
+      "#fb8072",
+      "#d9d9d9",
+      "#ccebc5",
+      "#bebada",
+      "#fccde5",
+      "#ffffb3",
+      "#8dd3c7",
+      "#fdb462"
+    ],
+    "vis_type": "load_group_bar_chart",
+    "major_name": "c0",
+    "second_name": "o0",
+    "pre_gen_focus": [
+      {
+        "focus_id": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11
+        ],
+        "compare_id": [],
+        "type": "all_trend"
+      },
+      {
+        "focus_id": [
+          0,
+          1,
+          2
+        ],
+        "compare_id": [],
+        "type": "local_trend"
+      },
+      {
+        "focus_id": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "compare_id": [
+          0,
+          1,
+          2,
+          3,
+          8,
+          9,
+          10,
+          11
+        ],
+        "type": "compare_ave"
+      }
+    ],
+    "sentences": [
+      {
+        "type": "all_trend",
+        "sentence": "The value of India, China and America increase with steady steps between 2010 and 2013.",
+        "compare_id": [],
+        "focus_id": [
+          0,
+          3,
+          4,
+          7,
+          8,
+          11
+        ],
+        "sure": false
+      },
+      {
+        "type": "local_trend",
+        "sentence": "There is an unusual rise in 2011 of India.",
+        "compare_id": [],
+        "focus_id": [
+          0,
+          1,
+          2
+        ],
+        "sure": true
+      },
+      {
+        "type": "compare_ave",
+        "sentence": "China has the lowest average value of 2010, 2011, 2012 and 2013.",
+        "compare_id": [
+          0,
+          1,
+          2,
+          3,
+          8,
+          9,
+          10,
+          11
+        ],
+        "focus_id": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "sure": true
+      }
+    ]
+  },
+  "svg_string": "<svg width=\"718\" height=\"718\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(143.6,143.6)\"><g class=\"bars\"><rect transform=\"translate(2,0)\" fill=\"#b3de69\" id=\"0\" c0=\"0\" o0=\"0\" q0=\"0.9327350994285797\" class=\"bar elements\" x=\"28\" y=\"124\" height=\"306.8\" width=\"26\"></rect><rect transform=\"translate(28,0)\" fill=\"#ffed6f\" id=\"1\" c0=\"0\" o0=\"1\" q0=\"1.2907239624087128\" class=\"bar elements\" x=\"28\" y=\"6\" height=\"424.8\" width=\"26\"></rect><rect transform=\"translate(54,0)\" fill=\"#80b1d3\" id=\"2\" c0=\"0\" o0=\"2\" q0=\"1.18485830091984\" class=\"bar elements\" x=\"28\" y=\"41\" height=\"389.8\" width=\"26\"></rect><rect transform=\"translate(80,0)\" fill=\"#bc80bd\" id=\"3\" c0=\"0\" o0=\"3\" q0=\"1.2274320011848046\" class=\"bar elements\" x=\"28\" y=\"27\" height=\"403.8\" width=\"26\"></rect><rect transform=\"translate(2,0)\" fill=\"#b3de69\" id=\"4\" c0=\"1\" o0=\"0\" q0=\"0.585116270111611\" class=\"bar elements\" x=\"162\" y=\"238\" height=\"192.8\" width=\"26\"></rect><rect transform=\"translate(28,0)\" fill=\"#ffed6f\" id=\"5\" c0=\"1\" o0=\"1\" q0=\"0.6137718358027665\" class=\"bar elements\" x=\"162\" y=\"229\" height=\"201.8\" width=\"26\"></rect><rect transform=\"translate(54,0)\" fill=\"#80b1d3\" id=\"6\" c0=\"1\" o0=\"2\" q0=\"0.7985107956726751\" class=\"bar elements\" x=\"162\" y=\"168\" height=\"262.8\" width=\"26\"></rect><rect transform=\"translate(80,0)\" fill=\"#bc80bd\" id=\"7\" c0=\"1\" o0=\"3\" q0=\"0.8029470399292686\" class=\"bar elements\" x=\"162\" y=\"167\" height=\"263.8\" width=\"26\"></rect><rect transform=\"translate(2,0)\" fill=\"#b3de69\" id=\"8\" c0=\"2\" o0=\"0\" q0=\"1\" class=\"bar elements\" x=\"296\" y=\"102\" height=\"328.8\" width=\"26\"></rect><rect transform=\"translate(28,0)\" fill=\"#ffed6f\" id=\"9\" c0=\"2\" o0=\"1\" q0=\"1.125231557380292\" class=\"bar elements\" x=\"296\" y=\"61\" height=\"369.8\" width=\"26\"></rect><rect transform=\"translate(54,0)\" fill=\"#80b1d3\" id=\"10\" c0=\"2\" o0=\"2\" q0=\"1.2694709812818061\" class=\"bar elements\" x=\"296\" y=\"13\" height=\"417.8\" width=\"26\"></rect><rect transform=\"translate(80,0)\" fill=\"#bc80bd\" id=\"11\" c0=\"2\" o0=\"3\" q0=\"1.309570643585218\" class=\"bar elements\" x=\"296\" y=\"0\" height=\"430.8\" width=\"26\"></rect></g><text class=\"title\" text-anchor=\"middle\" font-size=\"19.386\" x=\"215.4\" y=\"-6.462\">The Value of Fruit Asumption</text><g transform=\"translate(430.8,0)\" class=\"legend-wrap\"><g transform=\"translate(0,0)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#b3de69\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">2010</text></g><g transform=\"translate(0,17.232)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#ffed6f\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">2011</text></g><g transform=\"translate(0,34.464)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#80b1d3\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">2012</text></g><g transform=\"translate(0,51.696)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#bc80bd\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">2013</text></g></g><g class=\"axis\" transform=\"translate(0,430.8)\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"middle\"><path class=\"domain\" stroke=\"#000\" d=\"M0.5,6V0.5H431.3V6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(81.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">India</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(215.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">China</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(349.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">America</text></g></g><g class=\"axis\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"end\"><path class=\"domain\" stroke=\"#000\" d=\"M-6,431.3H0.5V0.5H-6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(0,431.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,398.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.1</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,365.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.2</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,332.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.3</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,299.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.4</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,266.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.5</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,233.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.6</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,201.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.7</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,168.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.8</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,135.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.9</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,102.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,69.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.1</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,36.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.2</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,3.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.3</text></g></g><text transform=\"rotate(-90)\" y=\"6\" dy=\"0.71em\" text-anchor=\"end\" font-size=\"12.924\">billion</text></g></svg>",
+  "sentences": [
+    {
+      "type": "all_trend",
+      "sentence": "The value of India, China and America increase with steady steps between 2010 and 2013.",
+      "compare_id": [],
+      "focus_id": [
+        0,
+        3,
+        4,
+        7,
+        8,
+        11
+      ],
+      "sure": false
+    },
+    {
+      "type": "local_trend",
+      "sentence": "There is an unusual rise in 2011 of India.",
+      "compare_id": [],
+      "focus_id": [
+        0,
+        1,
+        2
+      ],
+      "sure": true
+    },
+    {
+      "type": "compare_ave",
+      "sentence": "China has the lowest average value of 2010, 2011, 2012 and 2013.",
+      "compare_id": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11
+      ],
+      "focus_id": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "sure": true
+    }
+  ],
+  "major_dim": "c0",
+  "second_dim": "o0"
+}

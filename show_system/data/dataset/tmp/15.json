@@ -1,0 +1,254 @@
+{
+    "title": "The Value of Fruit Consumption",
+    "unit": "billion",
+    "c0": [
+        "China",
+        "Britain",
+        "India"
+    ],
+    "o0": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014"
+    ],
+    "data_array": [
+        {
+            "c0": 0,
+            "id": 0,
+            "o0": 0,
+            "q0": 1
+        },
+        {
+            "c0": 0,
+            "id": 1,
+            "o0": 1,
+            "q0": 0.39656136167726574
+        },
+        {
+            "c0": 0,
+            "id": 2,
+            "o0": 2,
+            "q0": 0.2214868539031272
+        },
+        {
+            "c0": 0,
+            "id": 3,
+            "o0": 3,
+            "q0": 0.24350846096808498
+        },
+        {
+            "c0": 0,
+            "id": 4,
+            "o0": 4,
+            "q0": 0.23923469409245368
+        },
+        {
+            "c0": 1,
+            "id": 5,
+            "o0": 0,
+            "q0": 0.45506705113242224
+        },
+        {
+            "c0": 1,
+            "id": 6,
+            "o0": 1,
+            "q0": 0.5153242161667807
+        },
+        {
+            "c0": 1,
+            "id": 7,
+            "o0": 2,
+            "q0": 0.43335440779514783
+        },
+        {
+            "c0": 1,
+            "id": 8,
+            "o0": 3,
+            "q0": 0.5569970040002206
+        },
+        {
+            "c0": 1,
+            "id": 9,
+            "o0": 4,
+            "q0": 0.5708387410443242
+        },
+        {
+            "c0": 2,
+            "id": 10,
+            "o0": 0,
+            "q0": 0.52240971086704
+        },
+        {
+            "c0": 2,
+            "id": 11,
+            "o0": 1,
+            "q0": 0.4479872545592435
+        },
+        {
+            "c0": 2,
+            "id": 12,
+            "o0": 2,
+            "q0": 0.24792353555636676
+        },
+        {
+            "c0": 2,
+            "id": 13,
+            "o0": 3,
+            "q0": 0.24772153895057392
+        },
+        {
+            "c0": 2,
+            "id": 14,
+            "o0": 4,
+            "q0": 0.1249785273702035
+        }
+    ],
+    "type": "ocq",
+    "color": [
+        "#fccde5",
+        "#ffffb3",
+        "#fb8072",
+        "#8dd3c7",
+        "#ccebc5",
+        "#b3de69",
+        "#ffed6f",
+        "#fdb462",
+        "#bebada",
+        "#80b1d3",
+        "#bc80bd",
+        "#d9d9d9"
+    ],
+    "vis_type": "load_stack_bar_chart",
+    "major_name": "o0",
+    "second_name": "c0",
+    "pre_gen_focus": [
+        {
+            "focus_id": [
+                5,
+                9
+            ],
+            "compare_id": [
+                0,
+                4,
+                10,
+                14
+            ],
+            "type": "compare_trend"
+        },
+        {
+            "focus_id": [
+                1,
+                2,
+                3,
+                6,
+                7,
+                8,
+                11,
+                12,
+                13
+            ],
+            "compare_id": [],
+            "type": "local_sum_trend"
+        },
+        {
+            "focus_id": [
+                1,
+                2,
+                3,
+                6,
+                7,
+                8,
+                11,
+                12,
+                13
+            ],
+            "compare_id": [],
+            "type": "local_trend"
+        },
+        {
+            "focus_id": [
+                0,
+                2,
+                4,
+                5,
+                7,
+                9,
+                10,
+                12,
+                14
+            ],
+            "compare_id": [],
+            "type": "sum_trend"
+        }
+    ],
+    "sentences": [
+        {
+            "type": "compare_trend",
+            "sentence": "The value of Britain keeps stable between 2010 and 2014; while China and India decrease greatly between 2010 and 2014.",
+            "compare_id": [
+                0,
+                4,
+                10,
+                14
+            ],
+            "focus_id": [
+                5,
+                9
+            ],
+            "sure": true
+        },
+        {
+            "type": "local_sum_trend",
+            "sentence": "The sum value of China, Britain and India has an unusual drop in 2012.",
+            "compare_id": [],
+            "focus_id": [
+                1,
+                2,
+                3,
+                6,
+                7,
+                8,
+                11,
+                12,
+                13
+            ],
+            "sure": true
+        },
+        {
+            "type": "local_trend",
+            "sentence": "There is an unusual drop in 2012 of China, Britain and India.",
+            "compare_id": [],
+            "focus_id": [
+                1,
+                2,
+                3,
+                6,
+                7,
+                8,
+                11,
+                12,
+                13
+            ],
+            "sure": true
+        },
+        {
+            "type": "sum_trend",
+            "sentence": "The sum value of China, Britain and India decrease greatly between 2010 and 2012, then it keeps stable by 2014.",
+            "compare_id": [],
+            "focus_id": [
+                0,
+                2,
+                4,
+                5,
+                7,
+                9,
+                10,
+                12,
+                14
+            ],
+            "sure": true
+        }
+    ]
+}

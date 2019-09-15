@@ -1,0 +1,9 @@
+*.pyc
+*.png
+*.DS_Store
+*.svg
+*.pth
+*.pyc
+checkpoints/
+datasets/
+results/

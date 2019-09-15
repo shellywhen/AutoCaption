@@ -1,0 +1,33 @@
+{
+  "title": "Chart A Films screened in the UK and Australia 2014", 
+  "first_dimension": [
+    "Australia", 
+    "UK"
+  ], 
+  "dimension": [
+    2, 
+    4
+  ], 
+  "second_dimension": [
+    "US Films", 
+    "UK Films", 
+    "Australian Films", 
+    "Others"
+  ], 
+  "data": {
+    "Australia": [
+      65.0, 
+      5.0, 
+      2.0, 
+      1.0
+    ], 
+    "UK": [
+      76.0, 
+      21.0, 
+      11.0, 
+      4.0
+    ]
+  }, 
+  "ID": 201, 
+  "unit": "%"
+}

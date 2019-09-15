@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://unpkg.com/d3-fetch"></script>
+  <style>
+    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+  </style>
+</head>
+
+<body>
+  <script>
+    // Feel free to change or delete any of the code you see in this editor!
+    var svg = d3.select("body").append("svg")
+      .attr("width", 960)
+      .attr("height", 500)
+
+    d3.json('http://192.168.10.20:5000/', {
+      method:"POST",
+      body: JSON.stringify({
+        title: 'Hello',
+        body: '_d3-fetch_ is it',
+        userId: 1,
+        friends: [2,3,4]
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+    .then(json => {
+      console.log(json)
+     svg.append("text")
+      .text(JSON.stringify(json))
+      .attr("y", 200)
+      .attr("x", 120)
+      .attr("font-size", 16)
+      .attr("font-family", "monospace")
+
+    });
+
+  </script>
+</body>

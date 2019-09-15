@@ -1,0 +1,42 @@
+{
+  "title": "mode of transport and years", 
+  "first_dimension": [
+    "train", 
+    "car", 
+    "tube", 
+    "bus"
+  ], 
+  "dimension": [
+    4, 
+    3
+  ], 
+  "second_dimension": [
+    "1960", 
+    "1980", 
+    "2000"
+  ], 
+  "data": {
+    "car": [
+      7.0, 
+      23.0, 
+      38.0
+    ], 
+    "tube": [
+      28.0, 
+      22.0, 
+      25.0
+    ], 
+    "train": [
+      19.0, 
+      27.0, 
+      22.0
+    ], 
+    "bus": [
+      39.0, 
+      27.0, 
+      15.0
+    ]
+  }, 
+  "ID": 183, 
+  "unit": "percentage"
+}

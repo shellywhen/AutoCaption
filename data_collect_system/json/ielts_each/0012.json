@@ -1,0 +1,42 @@
+{
+  "title": "HCT Graduates by College",
+  "first_dimension": [
+    "al ain",
+    "abu dhabi",
+    "dubai ",
+    "ras ai khaimah",
+    "sharjah"
+  ],
+  "dimension": [
+    5,
+    2
+  ],
+  "second_dimension": [
+    "men",
+    "women"
+  ],
+  "data": {
+    "al ain": [
+      131.0,
+      218.0
+    ],
+    "ras ai khaimah": [
+      102.0,
+      178.0
+    ],
+    "dubai ": [
+      426.0,
+      547.0
+    ],
+    "sharjah": [
+      165.0,
+      186.0
+    ],
+    "abu dhabi": [
+      273.0,
+      293.0
+    ]
+  },
+  "ID": 190,
+  "unit": ""
+}

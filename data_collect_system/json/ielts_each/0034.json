@@ -1,0 +1,39 @@
+{
+  "title": "genres of TV programmes that Australian men and women and different age groups watch.", 
+  "first_dimension": [
+    "reality shows", 
+    "game shows"
+  ], 
+  "dimension": [
+    2, 
+    6
+  ], 
+  "second_dimension": [
+    "male", 
+    "female", 
+    "16-24", 
+    "25-34", 
+    "35-44", 
+    "45+"
+  ], 
+  "data": {
+    "game shows": [
+      61.0, 
+      60.0, 
+      51.0, 
+      38.0, 
+      41.0, 
+      69.0
+    ], 
+    "reality shows": [
+      35.0, 
+      69.0, 
+      52.0, 
+      60.0, 
+      66.0, 
+      68.0
+    ]
+  }, 
+  "ID": 212, 
+  "unit": "%"
+}

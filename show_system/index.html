@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Auto-Caption</title>
+
+  <link rel="stylesheet" href="vis2description/css/lib/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="vis2description/css/lib/bootstrap-colorpicker.min.css">
+  <link rel="stylesheet" href="vis2description/css/page.css">
+  <link rel="icon" type="image/png" href="vis2description/image/auto.png" sizes="32x32">
+  <script src="vis2description/js/lib/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="vis2description/js/lib/popper.min.js" crossorigin="anonymous"></script>
+  <script src="vis2description/js/lib/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="vis2description/js/lib/d3-queue.v3.min.js"></script>
+  <script src="vis2description/js/lib/bootstrap-colorpicker.min.js"></script>
+  <script src="vis2description/js/lib/d3.v4.min.js"></script>
+  <script src="vis2description/js/adjust.js"></script>
+  <script src="vis2description/js/loadData.js"></script>
+  <script src="vis2description/js/element.js"></script>
+  <script src="vis2description/js/data_handler.js"></script>
+  <script src="vis2description/js/page.js"></script>
+  <script src="vis2description/js/network.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+    <span class="navbar-brand mb-0 mx-9 h1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automatic Caption Generation for Charts&nbsp;&nbsp;&nbsp;</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse mt-2 mt-md-0" id="navbarSupportedContent">
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="m-0">
+         <button type="button" id="user-study" class="btn btn-outline-info" style="padding:.3rem;" onclick="reloadJson()">  <img src="vis2description/image/shuffle.png" height="25" />&nbsp;&nbsp;Random</button>
+      </li>
+      <li class="m-0">
+        &nbsp;&nbsp;
+      </li>
+      <li class="m-0">
+        <label class="btn btn-outline-info btn-file" style="padding:.3rem;">    <input id="openFile" style="display: none;" type="file" id="input-svg" name="input-file" accept="image/svg" /> <img src="vis2description/image/upload.png" height="25" />&nbsp;&nbsp;Open</label>
+      </li>
+      <li class="nav-item dropdown m-0">
+        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Chart Type
+        </a>
+        <ul class="dropdown-menu" id="chart-type">
+        </ul>
+      </li>
+
+
+      <li class="nav-item m-0">
+        <a href="#/" class="nav-link active" data-toggle="modal" data-target="#guide-video">Guide</a>
+      </li>
+      <li class="nav-item m-0">
+        <a class="nav-link active" href="#" data-toggle="modal" data-target="#about-info">About</a>
+      </li>
+    </ul>
+        </div>
+  </nav>
+
+  <div class="container-fluid" id="wrapper">
+    <div class="container-fluid row m-0">
+      <div class="col-7" id="left-wrapper">
+        <div class="shadow p-0 mb-0 mt-3 bg-whight rounded" id="visualization">
+          <h5 id="chart-title" class="text-center mb-0"></h5>
+          <svg>
+            <defs>
+            <filter id="blue-shadow">
+            <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="#0080e0" flood-opacity="50%"/>
+            </filter>
+            </defs>
+
+            <defs>
+            <filter id="red-shadow">
+            <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="#fa1919" flood-opacity="50%"/>
+            </filter>
+            </defs>
+
+            <defs>
+            <filter id="ordinary-shadow">
+            <feDropShadow dx="2.5" dy="3" stdDeviation="1" flood-color="grey" flood-opacity = "50%" />
+            </filter>
+            </defs>
+          </svg>
+
+        </div>
+      </div>
+      <div class="col m-0" id="right-wrapper">
+        <div class="shadow p-3 mt-3 bg-white rounded" id="sentences_div">
+          <div>
+
+          <p class="text-justify">
+            Internet Users as Percentage of Population keeps growing from 1999 to 2009.
+          </p>
+          </div>
+          <div>
+          <p class="text-justify">
+            Mexico increases more steadily than that of Canada.
+          </p>
+        </div>
+        <div>
+                    <p class="text-justify">
+            Mexico has the least internet users as pencentage of population of the three states in 1999.
+          </p>
+</div>
+        </div>
+        <!-- configure -->
+        <div class="shadow p-3 mb-0 mt-3 bg-white rounded" id="configure">
+          <div class="row m-0 p-0">
+
+          </div>
+          <!-- table -->
+          <div class='table-responsive'>
+            <table class="table table-sm mt-3 mb-0" id="data-table">
+              <thead>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- sentence -->
+
+      </div>
+
+    </div>
+  </div>
+  <div class="modal fade" id="guide-video" tabindex="-1" role="dialog" aria-labelledby="guideModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="guideModalLabel">GUIDE</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="about-info" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">ABOUT</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+        </div>
+        <div class="modal-body">
+          This is a demo demonstrating a deep-learning-driven approach to generate captions from visualizations. Slight changes can be observed when adjust the chart. For more infomation about our research, please visit our group website : <a href="http://vis.pku.edu.cn">vis.pku.edu.cn</a>
+        </div>
+        <div class="modal-footer m-0 p-2" style="text-align:center">
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button> -->
+      <p class="m-0 text-center" style="text-align:center">
+       Visualization and Visual Analytics Group (Peking University), 2018
+      </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

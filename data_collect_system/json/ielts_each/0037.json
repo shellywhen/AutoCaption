@@ -1,0 +1,42 @@
+{
+  "title": "percentages of boys and girls who were successful in their high school competency exams_2010 to 2011", 
+  "first_dimension": [
+    "girls", 
+    "boys"
+  ], 
+  "dimension": [
+    2, 
+    7
+  ], 
+  "second_dimension": [
+    "physics", 
+    "chemistry", 
+    "history", 
+    "geography", 
+    "forreign languages", 
+    "mathematics", 
+    "cumputer science"
+  ], 
+  "data": {
+    "boys": [
+      34.6, 
+      14.1, 
+      22.9, 
+      30.4, 
+      46.8, 
+      48.4, 
+      42.1
+    ], 
+    "girls": [
+      36.7, 
+      30.2, 
+      25.6, 
+      20.1, 
+      47.4, 
+      49.2, 
+      56.3
+    ]
+  }, 
+  "ID": 215, 
+  "unit": "%"
+}

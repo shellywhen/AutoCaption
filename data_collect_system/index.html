@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<head>
+  <!--标题-->
+  <meta charset="utf-8">
+  <style>
+
+  .kuang {
+    border:4px solid #DDD
+  }
+
+  .button rect{
+    stroke-opacity: 0.3;
+    stroke-width: 3px;
+    fill: "white";
+    fill-opacity: 0;
+
+  }
+
+  .button.select rect{
+    stroke-opacity: 1;
+  }
+  .button text{
+    color: red
+  }
+
+  .button.select text{
+    color: #555
+  }
+
+
+  rect.elements{
+    opacity: 1
+  }
+
+  rect.elements.focus{
+    opacity: 1;
+    stroke-width: 3;
+    stroke: red
+  }
+
+  rect.elements.compare {
+    opacity: 1 ;
+    stroke-width: 3;
+    stroke: blue;
+
+  }
+  rect.elements.none {
+    opacity: 0.2 ;
+  }
+
+
+  .sentence {
+    border:2px solid #DDD;
+    border-radius:25px;
+    margin:10px;
+    padding:10px;
+    box-shadow: 10px 10px 5px #888888;
+
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: #555;
+  }
+  .sentence.hightlight {
+    background: #ddd
+  }
+
+  .selected_sentence {
+    margin:5px;
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #555;
+    font-family: sans-serif;
+  }
+
+  .selected_sentence.hightlight {
+    background: #ddd
+  }
+
+  #submit {
+    border:2px solid #DDD;
+    border-radius:5px;
+    position:absolute;
+    margin:10px;
+    padding:10px;
+    bottom:1%;
+    right:1%;
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #555;
+    font-family: sans-serif;
+  }
+  button#skip{
+    border:2px solid #DDD;
+    border-radius:5px;
+    position:absolute;
+    margin:10px;
+    padding:10px;
+    bottom:1%;
+    left:1%;
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #555;
+    font-family: sans-serif;
+  }
+
+  input {border: 1px dotted #ccc; background: white; font-family: monospace; padding: 10px 20px; font-size: 18px; margin: 20px 10px 20px 0; }
+
+  </style>
+  <title>Caption from Visualization</title>
+
+
+
+</head>
+<body  style = 'font-family: monospace'>
+  <!--填充主体的内容-->
+
+  <!-- <div id = "our_version" style="position: absolute; top: 1 %; left: 1%; width: 98%; height: 98%; margin: 0px; padding: 0px;"> -->
+  <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=0&id=451727467&auto=1&height=32"></iframe> -->
+  <div id = 'all'  style="position: absolute; top: 1%; left: 0%; width: 100%; height: 98%; margin: 0px; padding: 0px;">
+    <!-- <div id = "visualization_father" class = "kuang" style="position: absolute; top: 1%; left: 1%; width: 70%; height: 98%; margin: 0px; padding: 0px;">
+    </div> -->
+    <!-- <div id = "sentences_div" class = "kuang" style="position: absolute; top: 1%; left: 72%; width: 26%; height: 58%; margin: 0px; padding: 0px; overflow:auto;">
+    </div> -->
+    <!-- <div id = "selected_sentences_div" class = "kuang" style="position: absolute; top: 60%; height: 39%; margin: 0px; padding: 0px; overflow:auto;"> -->
+      <!-- <button  -->
+      <!-- <button id = "submit"> -->
+        <!-- Submit -->
+      <!-- </button> -->
+      <div id = 'form'  style="position: absolute; top: 35%; left: 45%; width: 10%; height: 10%; margin: 0px; padding: 0px;">
+        <form name="myform" onSubmit="return loggin()" style = 'font-size: 18px'>
+              请输入您的名字：<br>
+              注：汉语拼音，不留空白<br>
+              <input type="text" id="name" placeholder="zhangsan"><br>
+              <input name="Submit"  type="submit" value="开始描述" ><br>
+        </form>
+      </div>
+    </div>
+
+
+
+  <script src="vis2description/js/library/d3.v4.min.js"></script>
+  <script src="vis2description/js/library/jquery-3.3.1.min.js"></script>
+  <script src='vis2description/js/initialize.js'></script>
+  <script src="vis2description/js/global_control.js"></script>
+  <script src="vis2description/js/read_data_from_json.js"></script>
+  <script src="vis2description/js/post_information.js"></script>
+  <script src="vis2description/js/focus_compare.js"></script>
+  <script src="vis2description/js/network.js"></script>
+  <script src="vis2description/js/show_sentence.js"></script>
+  <script src='vis2description/js/selected_sentences.js'></script>
+  <script src="vis2description/js/load_visualization.js"></script>
+  <script src='vis2description/js/add_login.js'></script>
+
+  <script >
+    if (!need_login){
+      user_name = 'try'
+      d3.select("#all").selectAll("#form").remove()
+      initialize()
+      is_show = false
+    }
+
+    // function load_home() {
+    //   document.getElementById("visualization").innerHTML = '<object type="text/html" data="http://vis.pku.edu.cn/~can.liu/drill_analysis/index.html" width="100%" height="100%"></object>';
+    // }
+    // load_home()
+    // initialize()
+
+
+    // init_change_vis()
+    // load_bar_chart()
+    // load_show_choose()
+
+  </script>
+</body>

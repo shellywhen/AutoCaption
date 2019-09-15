@@ -1,0 +1,57 @@
+{
+  "title": "", 
+  "first_dimension": [
+    "Accommodation", 
+    "Food bills household goods", 
+    "Essential travel", 
+    "Non-essential travel", 
+    "Children", 
+    "Course expenditure", 
+    "Entertainment", 
+    "Other"
+  ], 
+  "dimension": [
+    8, 
+    2
+  ], 
+  "second_dimension": [
+    "1999", 
+    "1996"
+  ], 
+  "data": {
+    "Food bills household goods": [
+      18.0, 
+      20.0
+    ], 
+    "Entertainment": [
+      31.0, 
+      26.0
+    ], 
+    "Essential travel": [
+      6.0, 
+      4.0
+    ], 
+    "Non-essential travel": [
+      3.0, 
+      4.0
+    ], 
+    "Accommodation": [
+      20.0, 
+      23.0
+    ], 
+    "Other": [
+      16.0, 
+      12.0
+    ], 
+    "Children": [
+      0.0, 
+      2.0
+    ], 
+    "Course expenditure": [
+      7.0, 
+      10.0
+    ]
+  }, 
+  "ID": 199, 
+  "unit": "minutes"
+}

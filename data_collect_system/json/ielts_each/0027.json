@@ -1,0 +1,57 @@
+{
+  "title": "Estimated sales of jeans next year in Turkey", 
+  "first_dimension": [
+    "Mango Co.", 
+    "Jack & JONES Co"
+  ], 
+  "dimension": [
+    2, 
+    12
+  ], 
+  "second_dimension": [
+    "Jan", 
+    "Feb", 
+    "Mar", 
+    "Apr", 
+    "May", 
+    "June", 
+    "July", 
+    "Aug", 
+    "Sept", 
+    "Oct", 
+    "Nov", 
+    "Dec\r\n"
+  ], 
+  "data": {
+    "Jack & JONES Co": [
+      430.0, 
+      220.0, 
+      300.0, 
+      320.0, 
+      350.0, 
+      400.0, 
+      400.0, 
+      400.0, 
+      600.0, 
+      600.0, 
+      700.0, 
+      900.0
+    ], 
+    "Mango Co.": [
+      130.0, 
+      100.0, 
+      120.0, 
+      130.0, 
+      200.0, 
+      250.0, 
+      420.0, 
+      500.0, 
+      490.0, 
+      500.0, 
+      500.0, 
+      600.0
+    ]
+  }, 
+  "ID": 205, 
+  "unit": ""
+}

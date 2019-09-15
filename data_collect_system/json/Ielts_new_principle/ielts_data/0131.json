@@ -1,0 +1,78 @@
+{
+  "title": "leisure time in a typical week: by sex and employment status  1998-1999", 
+  "data_array": [
+    {
+      "q0": 42.0, 
+      "c1": 0, 
+      "c0": 0, 
+      "id": 0
+    }, 
+    {
+      "q0": 0.0, 
+      "c1": 1, 
+      "c0": 0, 
+      "id": 1
+    }, 
+    {
+      "q0": 85.0, 
+      "c1": 2, 
+      "c0": 0, 
+      "id": 2
+    }, 
+    {
+      "q0": 83.0, 
+      "c1": 3, 
+      "c0": 0, 
+      "id": 3
+    }, 
+    {
+      "q0": 0.0, 
+      "c1": 4, 
+      "c0": 0, 
+      "id": 4
+    }, 
+    {
+      "q0": 38.0, 
+      "c1": 0, 
+      "c0": 1, 
+      "id": 5
+    }, 
+    {
+      "q0": 40.0, 
+      "c1": 1, 
+      "c0": 1, 
+      "id": 6
+    }, 
+    {
+      "q0": 79.0, 
+      "c1": 2, 
+      "c0": 1, 
+      "id": 7
+    }, 
+    {
+      "q0": 79.0, 
+      "c1": 3, 
+      "c0": 1, 
+      "id": 8
+    }, 
+    {
+      "q0": 50.0, 
+      "c1": 4, 
+      "c0": 1, 
+      "id": 9
+    }
+  ], 
+  "c1": [
+    "employed (full time)", 
+    "employed (part time)", 
+    "unemployed", 
+    "retires", 
+    "housewives"
+  ], 
+  "c0": [
+    "male", 
+    "female"
+  ], 
+  "ID": 149, 
+  "unit": "hour"
+}

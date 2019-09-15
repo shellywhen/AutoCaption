@@ -1,0 +1,65 @@
+{
+  "title": "Online sales for retail sectors in Canada", 
+  "data_array": [
+    {
+      "q0": 35.0, 
+      "c0": 0, 
+      "id": 0, 
+      "o0": 0
+    }, 
+    {
+      "q0": 30.0, 
+      "c0": 0, 
+      "id": 1, 
+      "o0": 1
+    }, 
+    {
+      "q0": 22.0, 
+      "c0": 1, 
+      "id": 2, 
+      "o0": 0
+    }, 
+    {
+      "q0": 32.0, 
+      "c0": 1, 
+      "id": 3, 
+      "o0": 1
+    }, 
+    {
+      "q0": 25.0, 
+      "c0": 2, 
+      "id": 4, 
+      "o0": 0
+    }, 
+    {
+      "q0": 15.0, 
+      "c0": 2, 
+      "id": 5, 
+      "o0": 1
+    }, 
+    {
+      "q0": 18.0, 
+      "c0": 3, 
+      "id": 6, 
+      "o0": 0
+    }, 
+    {
+      "q0": 23.0, 
+      "c0": 3, 
+      "id": 7, 
+      "o0": 1
+    }
+  ], 
+  "c0": [
+    "Electronics&Appliance", 
+    "Food&Beverage", 
+    "Home Furnishings", 
+    "Video Games"
+  ], 
+  "ID": 49, 
+  "unit": "percent", 
+  "o0": [
+    "2005", 
+    "2010"
+  ]
+}

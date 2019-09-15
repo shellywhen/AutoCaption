@@ -1,0 +1,169 @@
+{
+  "title": "Internet Users as Percentage of Population",
+  "type": "cqq",
+  "vis_type": "cqq",
+  "data_array": [
+    {
+      "q0": 30.0,
+      "c0": 0,
+      "id": 0,
+      "q1": 0
+    },
+    {
+      "q0": 50.0,
+      "c0": 0,
+      "id": 1,
+      "q1": 1
+    },
+    {
+      "q0": 60.0,
+      "c0": 0,
+      "id": 2,
+      "q1": 2
+    },
+    {
+      "q0": 60.0,
+      "c0": 0,
+      "id": 3,
+      "q1": 3
+    },
+    {
+      "q0": 75.0,
+      "c0": 0,
+      "id": 4,
+      "q1": 4
+    },
+    {
+      "q0": 80.0,
+      "c0": 0,
+      "id": 5,
+      "q1": 5
+    },
+    {
+      "q0": 20.0,
+      "c0": 1,
+      "id": 6,
+      "q1": 0
+    },
+    {
+      "q0": 50.0,
+      "c0": 1,
+      "id": 7,
+      "q1": 1
+    },
+    {
+      "q0": 65.0,
+      "c0": 1,
+      "id": 8,
+      "q1": 2
+    },
+    {
+      "q0": 65.0,
+      "c0": 1,
+      "id": 9,
+      "q1": 3
+    },
+    {
+      "q0": 80.0,
+      "c0": 1,
+      "id": 10,
+      "q1": 4
+    },
+    {
+      "q0": 100.0,
+      "c0": 1,
+      "id": 11,
+      "q1": 5
+    },
+    {
+      "q0": 10.0,
+      "c0": 2,
+      "id": 12,
+      "q1": 0
+    },
+    {
+      "q0": 30.0,
+      "c0": 2,
+      "id": 13,
+      "q1": 1
+    },
+    {
+      "q0": 35.0,
+      "c0": 2,
+      "id": 14,
+      "q1": 2
+    },
+    {
+      "q0": 40.0,
+      "c0": 2,
+      "id": 15,
+      "q1": 3
+    },
+    {
+      "q0": 45.0,
+      "c0": 2,
+      "id": 16,
+      "q1": 4
+    },
+    {
+      "q0": 50.0,
+      "c0": 2,
+      "id": 17,
+      "q1": 5
+    }
+  ],
+  "c0": [
+    "USA",
+    "Canada",
+    "Mexico"
+  ],
+  "ID": 19,
+  "unit1": "percent",
+  "unit2": "category",
+  "sentences": [
+      {
+          "type": "all_trend",
+          "sentence": "The value of China and Britain keep stable between 2010 and 2015.",
+          "compare_id": [],
+          "focus_id": [
+              0,
+              5,
+              6,
+              11
+          ],
+          "sure": false
+      },
+      {
+          "type": "local_trend",
+          "sentence": "There is an unusual drop in 2013 of Britain.",
+          "compare_id": [],
+          "focus_id": [
+              8,
+              9,
+              10
+          ],
+          "sure": true
+      },
+      {
+          "type": "compare_ave",
+          "sentence": "Britain has the lowest average value of 2010, 2011, 2012, 2013, 2014 and 2015.",
+          "compare_id": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+          ],
+          "focus_id": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+          ],
+          "sure": true
+      }
+  ]
+}

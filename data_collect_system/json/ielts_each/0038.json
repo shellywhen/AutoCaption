@@ -1,0 +1,33 @@
+{
+  "title": "percentage of people who hold a science qualification in Singapore and Malaysia.", 
+  "first_dimension": [
+    "malaysia", 
+    "singapore"
+  ], 
+  "dimension": [
+    2, 
+    4
+  ], 
+  "second_dimension": [
+    "master`s degree", 
+    "bachelor`s degree", 
+    "school leaving exams", 
+    "no qualification in science"
+  ], 
+  "data": {
+    "malaysia": [
+      3.0, 
+      10.0, 
+      35.0, 
+      65.0
+    ], 
+    "singapore": [
+      3.0, 
+      20.0, 
+      30.0, 
+      60.0
+    ]
+  }, 
+  "ID": 216, 
+  "unit": "%"
+}

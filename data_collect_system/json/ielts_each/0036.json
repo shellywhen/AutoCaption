@@ -1,0 +1,48 @@
+{
+  "title": "airport visitors 1995-2000", 
+  "first_dimension": [
+    "John F.Kennedy", 
+    "LaGuardia", 
+    "Newark"
+  ], 
+  "dimension": [
+    3, 
+    6
+  ], 
+  "second_dimension": [
+    "1995", 
+    "1996", 
+    "1997", 
+    "1998", 
+    "1999", 
+    "2000"
+  ], 
+  "data": {
+    "Newark": [
+      15.0, 
+      25.0, 
+      39.0, 
+      42.0, 
+      42.0, 
+      42.0
+    ], 
+    "John F.Kennedy": [
+      26.0, 
+      35.0, 
+      47.0, 
+      35.0, 
+      32.0, 
+      44.0
+    ], 
+    "LaGuardia": [
+      35.0, 
+      40.0, 
+      43.0, 
+      46.0, 
+      50.0, 
+      68.0
+    ]
+  }, 
+  "ID": 214, 
+  "unit": "millions of passengers"
+}

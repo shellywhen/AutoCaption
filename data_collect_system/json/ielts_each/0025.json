@@ -1,0 +1,40 @@
+{
+  "title": "GDP growth", 
+  "first_dimension": [
+    "Tunisia", 
+    "Japan", 
+    "Eduador"
+  ], 
+  "dimension": [
+    3, 
+    4
+  ], 
+  "second_dimension": [
+    "2007", 
+    "2008", 
+    "2009", 
+    "2010"
+  ], 
+  "data": {
+    "Tunisia": [
+      6.3, 
+      4.5, 
+      3.2, 
+      3.0
+    ], 
+    "Japan": [
+      2.0, 
+      4.2, 
+      5.3, 
+      6.5
+    ], 
+    "Eduador": [
+      3.2, 
+      4.9, 
+      1.2, 
+      2.2
+    ]
+  }, 
+  "ID": 203, 
+  "unit": "%"
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Division of household tasks:by gender Great Britain", 
+  "first_dimension": [
+    "males", 
+    "females"
+  ], 
+  "dimension": [
+    2, 
+    6
+  ], 
+  "second_dimension": [
+    "cooking baking washing up", 
+    "cleaning house tIDying", 
+    " gardening pet care", 
+    " care of own children and play", 
+    "maintenance of jobs", 
+    "clothes washing ironinf sewing"
+  ], 
+  "data": {
+    "males": [
+      30.0, 
+      13.0, 
+      49.5, 
+      20.0, 
+      26.0, 
+      2.0
+    ], 
+    "females": [
+      74.0, 
+      8.0, 
+      21.0, 
+      45.0, 
+      9.5, 
+      25.0
+    ]
+  }, 
+  "ID": 200, 
+  "unit": ""
+}

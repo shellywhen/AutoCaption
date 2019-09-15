@@ -1,0 +1,36 @@
+{
+  "title": "expendtrure on fast foods by income groups uk 1990", 
+  "first_dimension": [
+    "hyanburger", 
+    "fish & chips", 
+    "pizza"
+  ], 
+  "dimension": [
+    3, 
+    3
+  ], 
+  "second_dimension": [
+    "high income", 
+    "average income", 
+    "low income"
+  ], 
+  "data": {
+    "pizza": [
+      19.0, 
+      12.0, 
+      7.0
+    ], 
+    "fish & chips": [
+      16.0, 
+      25.0, 
+      16.0
+    ], 
+    "hyanburger": [
+      42.0, 
+      32.0, 
+      14.0
+    ]
+  }, 
+  "ID": 185, 
+  "unit": "%"
+}

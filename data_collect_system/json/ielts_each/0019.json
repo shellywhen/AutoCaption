@@ -1,0 +1,51 @@
+{
+  "title": "", 
+  "first_dimension": [
+    "18-30", 
+    "45-60"
+  ], 
+  "dimension": [
+    2, 
+    10
+  ], 
+  "second_dimension": [
+    " Team spirit", 
+    "Chance for personal development", 
+    "Relaxed working environment", 
+    " Competent boss", 
+    " Job security", 
+    "Respectfrom colleagues", 
+    " Promption prospects", 
+    " Job satisfaction", 
+    " Work environment", 
+    " Money"
+  ], 
+  "data": {
+    "18-30": [
+      60.0, 
+      85.0, 
+      80.0, 
+      50.0, 
+      40.0, 
+      40.0, 
+      80.0, 
+      52.0, 
+      30.0, 
+      73.0
+    ], 
+    "45-60": [
+      60.0, 
+      40.0, 
+      30.0, 
+      52.0, 
+      20.0, 
+      45.0, 
+      50.0, 
+      50.0, 
+      30.0, 
+      70.0
+    ]
+  }, 
+  "ID": 197, 
+  "unit": ""
+}

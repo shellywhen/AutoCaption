@@ -1,0 +1,341 @@
+{
+  "user_name": "super_rule_ocq_web",
+  "total_number": "30",
+  "data": {
+    "title": "The Value of Fruit Asumption",
+    "unit": "billion",
+    "c0": [
+      "China",
+      "Dutch",
+      "Britain",
+      "Japan"
+    ],
+    "o0": [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "data_array": [
+      {
+        "c0": 0,
+        "id": 0,
+        "o0": 0,
+        "q0": 0.4238918663673665
+      },
+      {
+        "c0": 0,
+        "id": 1,
+        "o0": 1,
+        "q0": 0.43543937512985736
+      },
+      {
+        "c0": 0,
+        "id": 2,
+        "o0": 2,
+        "q0": 0.47140633158048223
+      },
+      {
+        "c0": 0,
+        "id": 3,
+        "o0": 3,
+        "q0": 0.5205107431509101
+      },
+      {
+        "c0": 0,
+        "id": 4,
+        "o0": 4,
+        "q0": 0.5353755510266253
+      },
+      {
+        "c0": 0,
+        "id": 5,
+        "o0": 5,
+        "q0": 0.6344760320918127
+      },
+      {
+        "c0": 1,
+        "id": 6,
+        "o0": 0,
+        "q0": 0.15696162560997268
+      },
+      {
+        "c0": 1,
+        "id": 7,
+        "o0": 1,
+        "q0": 0.12968368844978181
+      },
+      {
+        "c0": 1,
+        "id": 8,
+        "o0": 2,
+        "q0": 0.12408001695107097
+      },
+      {
+        "c0": 1,
+        "id": 9,
+        "o0": 3,
+        "q0": 0.10861520196192903
+      },
+      {
+        "c0": 1,
+        "id": 10,
+        "o0": 4,
+        "q0": 0.06350144632377393
+      },
+      {
+        "c0": 1,
+        "id": 11,
+        "o0": 5,
+        "q0": 0.042941284834190574
+      },
+      {
+        "c0": 2,
+        "id": 12,
+        "o0": 0,
+        "q0": 0.8936672772084455
+      },
+      {
+        "c0": 2,
+        "id": 13,
+        "o0": 1,
+        "q0": 0.9143268948169528
+      },
+      {
+        "c0": 2,
+        "id": 14,
+        "o0": 2,
+        "q0": 0.9607530507339787
+      },
+      {
+        "c0": 2,
+        "id": 15,
+        "o0": 3,
+        "q0": 1.1333484739551352
+      },
+      {
+        "c0": 2,
+        "id": 16,
+        "o0": 4,
+        "q0": 1.314991378208821
+      },
+      {
+        "c0": 2,
+        "id": 17,
+        "o0": 5,
+        "q0": 1.3376299784013976
+      },
+      {
+        "c0": 3,
+        "id": 18,
+        "o0": 0,
+        "q0": 1
+      },
+      {
+        "c0": 3,
+        "id": 19,
+        "o0": 1,
+        "q0": 1.1922139000956933
+      },
+      {
+        "c0": 3,
+        "id": 20,
+        "o0": 2,
+        "q0": 1.2140250780316566
+      },
+      {
+        "c0": 3,
+        "id": 21,
+        "o0": 3,
+        "q0": 1.3169599122743312
+      },
+      {
+        "c0": 3,
+        "id": 22,
+        "o0": 4,
+        "q0": 1.3737248269145386
+      },
+      {
+        "c0": 3,
+        "id": 23,
+        "o0": 5,
+        "q0": 1.4967874649945352
+      }
+    ],
+    "type": "ocq",
+    "major_name": "o0",
+    "second_name": "c0",
+    "color": [
+      "#bc80bd",
+      "#bebada",
+      "#8dd3c7",
+      "#b3de69",
+      "#80b1d3",
+      "#fb8072",
+      "#ccebc5",
+      "#fdb462",
+      "#fccde5",
+      "#d9d9d9",
+      "#ffed6f",
+      "#ffffb3"
+    ],
+    "vis_type": "load_group_bar_chart",
+    "pre_gen_focus": [
+      {
+        "focus_id": [
+          0,
+          5,
+          12,
+          17,
+          18,
+          23
+        ],
+        "compare_id": [
+          6,
+          11
+        ],
+        "type": "compare_trend"
+      },
+      {
+        "focus_id": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "compare_id": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "type": "compare_ave"
+      }
+    ],
+    "sentences": [
+      {
+        "type": "compare_trend",
+        "sentence": "The value of China, Britain and Japan increase with steady steps between 2010 and 2015; while Dutch keep stable between 2010 and 2015.",
+        "compare_id": [
+          6,
+          11
+        ],
+        "focus_id": [
+          0,
+          5,
+          12,
+          17,
+          18,
+          23
+        ],
+        "sure": true
+      },
+      {
+        "type": "compare_ave",
+        "sentence": "The value of China and Dutch is greatly lower than others in 2010, 2011, 2012, 2013, 2014 and 2015.",
+        "compare_id": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "focus_id": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "sure": false
+      }
+    ]
+  },
+  "svg_string": "<svg width=\"718\" height=\"718\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(143.6,143.6)\"><g class=\"bars\"><rect transform=\"translate(2,0)\" fill=\"#bc80bd\" id=\"0\" o0=\"0\" c0=\"0\" q0=\"0.4238918663673665\" class=\"bar elements\" x=\"15\" y=\"309\" height=\"121.80000000000001\" width=\"13\"></rect><rect transform=\"translate(2,0)\" fill=\"#bc80bd\" id=\"1\" o0=\"1\" c0=\"0\" q0=\"0.43543937512985736\" class=\"bar elements\" x=\"84\" y=\"305\" height=\"125.80000000000001\" width=\"13\"></rect><rect transform=\"translate(2,0)\" fill=\"#bc80bd\" id=\"2\" o0=\"2\" c0=\"0\" q0=\"0.47140633158048223\" class=\"bar elements\" x=\"153\" y=\"295\" height=\"135.8\" width=\"13\"></rect><rect transform=\"translate(2,0)\" fill=\"#bc80bd\" id=\"3\" o0=\"3\" c0=\"0\" q0=\"0.5205107431509101\" class=\"bar elements\" x=\"222\" y=\"281\" height=\"149.8\" width=\"13\"></rect><rect transform=\"translate(2,0)\" fill=\"#bc80bd\" id=\"4\" o0=\"4\" c0=\"0\" q0=\"0.5353755510266253\" class=\"bar elements\" x=\"291\" y=\"277\" height=\"153.8\" width=\"13\"></rect><rect transform=\"translate(2,0)\" fill=\"#bc80bd\" id=\"5\" o0=\"5\" c0=\"0\" q0=\"0.6344760320918127\" class=\"bar elements\" x=\"360\" y=\"248\" height=\"182.8\" width=\"13\"></rect><rect transform=\"translate(15,0)\" fill=\"#bebada\" id=\"6\" o0=\"0\" c0=\"1\" q0=\"0.15696162560997268\" class=\"bar elements\" x=\"15\" y=\"386\" height=\"44.80000000000001\" width=\"13\"></rect><rect transform=\"translate(15,0)\" fill=\"#bebada\" id=\"7\" o0=\"1\" c0=\"1\" q0=\"0.12968368844978181\" class=\"bar elements\" x=\"84\" y=\"393\" height=\"37.80000000000001\" width=\"13\"></rect><rect transform=\"translate(15,0)\" fill=\"#bebada\" id=\"8\" o0=\"2\" c0=\"1\" q0=\"0.12408001695107097\" class=\"bar elements\" x=\"153\" y=\"395\" height=\"35.80000000000001\" width=\"13\"></rect><rect transform=\"translate(15,0)\" fill=\"#bebada\" id=\"9\" o0=\"3\" c0=\"1\" q0=\"0.10861520196192903\" class=\"bar elements\" x=\"222\" y=\"400\" height=\"30.80000000000001\" width=\"13\"></rect><rect transform=\"translate(15,0)\" fill=\"#bebada\" id=\"10\" o0=\"4\" c0=\"1\" q0=\"0.06350144632377393\" class=\"bar elements\" x=\"291\" y=\"413\" height=\"17.80000000000001\" width=\"13\"></rect><rect transform=\"translate(15,0)\" fill=\"#bebada\" id=\"11\" o0=\"5\" c0=\"1\" q0=\"0.042941284834190574\" class=\"bar elements\" x=\"360\" y=\"418\" height=\"12.800000000000011\" width=\"13\"></rect><rect transform=\"translate(28,0)\" fill=\"#8dd3c7\" id=\"12\" o0=\"0\" c0=\"2\" q0=\"0.8936672772084455\" class=\"bar elements\" x=\"15\" y=\"174\" height=\"256.8\" width=\"13\"></rect><rect transform=\"translate(28,0)\" fill=\"#8dd3c7\" id=\"13\" o0=\"1\" c0=\"2\" q0=\"0.9143268948169528\" class=\"bar elements\" x=\"84\" y=\"168\" height=\"262.8\" width=\"13\"></rect><rect transform=\"translate(28,0)\" fill=\"#8dd3c7\" id=\"14\" o0=\"2\" c0=\"2\" q0=\"0.9607530507339787\" class=\"bar elements\" x=\"153\" y=\"154\" height=\"276.8\" width=\"13\"></rect><rect transform=\"translate(28,0)\" fill=\"#8dd3c7\" id=\"15\" o0=\"3\" c0=\"2\" q0=\"1.1333484739551352\" class=\"bar elements\" x=\"222\" y=\"105\" height=\"325.8\" width=\"13\"></rect><rect transform=\"translate(28,0)\" fill=\"#8dd3c7\" id=\"16\" o0=\"4\" c0=\"2\" q0=\"1.314991378208821\" class=\"bar elements\" x=\"291\" y=\"52\" height=\"378.8\" width=\"13\"></rect><rect transform=\"translate(28,0)\" fill=\"#8dd3c7\" id=\"17\" o0=\"5\" c0=\"2\" q0=\"1.3376299784013976\" class=\"bar elements\" x=\"360\" y=\"46\" height=\"384.8\" width=\"13\"></rect><rect transform=\"translate(41,0)\" fill=\"#b3de69\" id=\"18\" o0=\"0\" c0=\"3\" q0=\"1\" class=\"bar elements\" x=\"15\" y=\"143\" height=\"287.8\" width=\"13\"></rect><rect transform=\"translate(41,0)\" fill=\"#b3de69\" id=\"19\" o0=\"1\" c0=\"3\" q0=\"1.1922139000956933\" class=\"bar elements\" x=\"84\" y=\"88\" height=\"342.8\" width=\"13\"></rect><rect transform=\"translate(41,0)\" fill=\"#b3de69\" id=\"20\" o0=\"2\" c0=\"3\" q0=\"1.2140250780316566\" class=\"bar elements\" x=\"153\" y=\"81\" height=\"349.8\" width=\"13\"></rect><rect transform=\"translate(41,0)\" fill=\"#b3de69\" id=\"21\" o0=\"3\" c0=\"3\" q0=\"1.3169599122743312\" class=\"bar elements\" x=\"222\" y=\"52\" height=\"378.8\" width=\"13\"></rect><rect transform=\"translate(41,0)\" fill=\"#b3de69\" id=\"22\" o0=\"4\" c0=\"3\" q0=\"1.3737248269145386\" class=\"bar elements\" x=\"291\" y=\"35\" height=\"395.8\" width=\"13\"></rect><rect transform=\"translate(41,0)\" fill=\"#b3de69\" id=\"23\" o0=\"5\" c0=\"3\" q0=\"1.4967874649945352\" class=\"bar elements\" x=\"360\" y=\"0\" height=\"430.8\" width=\"13\"></rect></g><text class=\"title\" text-anchor=\"middle\" font-size=\"19.386\" x=\"215.4\" y=\"-6.462\">The Value of Fruit Asumption</text><g transform=\"translate(430.8,0)\" class=\"legend-wrap\"><g transform=\"translate(0,0)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#bc80bd\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">China</text></g><g transform=\"translate(0,17.232)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#bebada\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">Dutch</text></g><g transform=\"translate(0,34.464)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#8dd3c7\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">Britain</text></g><g transform=\"translate(0,51.696)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#b3de69\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">Japan</text></g></g><g class=\"axis\" transform=\"translate(0,430.8)\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"middle\"><path class=\"domain\" stroke=\"#000\" d=\"M0.5,6V0.5H431.3V6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(42.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2010</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(111.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2011</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(180.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2012</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(249.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2013</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(318.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2014</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(387.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2015</text></g></g><g class=\"axis\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"end\"><path class=\"domain\" stroke=\"#000\" d=\"M-6,431.3H0.5V0.5H-6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(0,431.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,373.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.2</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,316.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.4</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,258.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.6</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,201.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.8</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,143.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,85.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.2</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,28.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.4</text></g></g><text transform=\"rotate(-90)\" y=\"6\" dy=\"0.71em\" text-anchor=\"end\" font-size=\"12.924\">billion</text></g></svg>",
+  "sentences": [
+    {
+      "type": "compare_trend",
+      "sentence": "The value of China, Britain and Japan increase with steady steps between 2010 and 2015; while Dutch keep stable between 2010 and 2015.",
+      "compare_id": [
+        6,
+        11
+      ],
+      "focus_id": [
+        0,
+        5,
+        12,
+        17,
+        18,
+        23
+      ],
+      "sure": true
+    },
+    {
+      "type": "compare_ave",
+      "sentence": "The value of China and Dutch is greatly lower than others in 2010, 2011, 2012, 2013, 2014 and 2015.",
+      "compare_id": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "focus_id": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "sure": false
+    }
+  ],
+  "major_dim": "o0",
+  "second_dim": "c0"
+}

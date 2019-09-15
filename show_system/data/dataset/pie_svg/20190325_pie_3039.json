@@ -1,0 +1,102 @@
+{
+  "user_name": "20190325_pie_3039.json",
+  "total_number": "2325",
+  "data": {
+    "title": "Fruit Consumption",
+    "unit": "billion",
+    "c0": [
+      "Apple",
+      "Banana",
+      "Blueberry",
+      "Grape",
+      "Grapefruit",
+      "Lemon",
+      "Melon",
+      "Orange",
+      "Peach",
+      "Strawberry"
+    ],
+    "data_array": [
+      {
+        "id": 0,
+        "c0": 0,
+        "q0": 82
+      },
+      {
+        "id": 1,
+        "c0": 1,
+        "q0": 50
+      },
+      {
+        "id": 2,
+        "c0": 2,
+        "q0": 59
+      },
+      {
+        "id": 3,
+        "c0": 3,
+        "q0": 61
+      },
+      {
+        "id": 4,
+        "c0": 4,
+        "q0": 36
+      },
+      {
+        "id": 5,
+        "c0": 5,
+        "q0": 87
+      },
+      {
+        "id": 6,
+        "c0": 6,
+        "q0": 69
+      },
+      {
+        "id": 7,
+        "c0": 7,
+        "q0": 56
+      },
+      {
+        "id": 8,
+        "c0": 8,
+        "q0": 10
+      },
+      {
+        "id": 9,
+        "c0": 9,
+        "q0": 14
+      }
+    ],
+    "type": "cq",
+    "major_name": "c0",
+    "second_name": "c0",
+    "color": [
+      "#d9d9d9",
+      "#fb8072",
+      "#ffed6f",
+      "#bebada",
+      "#fccde5",
+      "#b3de69",
+      "#bc80bd",
+      "#ccebc5",
+      "#80b1d3",
+      "#fdb462"
+    ],
+    "vis_type": "load_pie_chart",
+    "pre_gen_focus": [],
+    "sentences": [],
+    "x": "o0",
+    "y": "q0",
+    "unit1": "year",
+    "unit2": "billion",
+    "quan": "q0"
+  },
+  "svg_string": "<h5 id=\"chart-title\" class=\"text-center mb-0\"></h5>\n          <svg id=\"mySvg\" viewBox=\"0 0 800 660\" preserveAspectRatio=\"xMidYMid meet\" height=\"660\" width=\"800\">\n            <defs>\n            <filter id=\"blue-shadow\">\n            <feDropShadow dx=\"3\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#0080e0\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n\n            <defs>\n            <filter id=\"red-shadow\">\n            <feDropShadow dx=\"3\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#fa1919\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n\n            <defs>\n            <filter id=\"ordinary-shadow\">\n            <feDropShadow dx=\"2.5\" dy=\"3\" stdDeviation=\"1\" flood-color=\"grey\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n          <g transform=\"translate(400,330)\"><g class=\"brush\"></g><g class=\"arc\"><path d=\"M1.2858791391047208e-14,-210L0,0Z\" fill=\"#d9d9d9\"></path><text transform=\"translate(1.1021821192326179e-14,-180)\" dy=\"0.35em\">Apple</text></g><g class=\"arc\"><path d=\"M1.2858791391047208e-14,-210A210,210,0,0,1,29.22635120161375,-207.95629443572977L0,0Z\" fill=\"#fb8072\"></path><text transform=\"translate(12.556165273942582,-179.56152904676836)\" dy=\"0.35em\">Banana</text></g><g class=\"arc\"><path d=\"M29.22635120161375,-207.95629443572977A210,210,0,0,1,85.41469504591808,-191.84454610494618L0,0Z\" fill=\"#ffed6f\"></path><text transform=\"translate(49.61472404705985,-173.0271052688974)\" dy=\"0.35em\">Blueberry</text></g><g class=\"arc\"><path d=\"M85.41469504591808,-191.84454610494618A210,210,0,0,1,156.0604133502528,-140.5174273353602L0,0Z\" fill=\"#bebada\"></path><text transform=\"translate(105.80134541264516,-145.62305898749054)\" dy=\"0.35em\">Grape</text></g><g class=\"arc\"><path d=\"M156.0604133502528,-140.5174273353602A210,210,0,0,1,206.80962813256372,-36.46611731005533L0,0Z\" fill=\"#fccde5\"></path><text transform=\"translate(161.7829283338501,-78.9068064220339)\" dy=\"0.35em\">Grapefruit</text></g><g class=\"arc\"><path d=\"M206.80962813256372,-36.46611731005533A210,210,0,0,1,181.8653347947321,105.00000000000004L0,0Z\" fill=\"#b3de69\"></path><text transform=\"translate(177.26539554219744,31.256671980047503)\" dy=\"0.35em\">Lemon</text></g><g class=\"arc\"><path d=\"M181.8653347947321,105.00000000000004A210,210,0,0,1,43.66145507172935,205.41099615409922L0,0Z\" fill=\"#bc80bd\"></path><text transform=\"translate(105.8013454126451,145.6230589874906)\" dy=\"0.35em\">Melon</text></g><g class=\"arc\"><path d=\"M43.66145507172935,205.41099615409922A210,210,0,0,1,-145.8782577963895,151.06135807111664L0,0Z\" fill=\"#ccebc5\"></path><text transform=\"translate(-49.61472404705991,173.02710526889737)\" dy=\"0.35em\">Orange</text></g><g class=\"arc\"><path d=\"M-145.8782577963895,151.06135807111664A210,210,0,0,1,-199.7218684219822,-64.8935688187391L0,0Z\" fill=\"#80b1d3\"></path><text transform=\"translate(-174.6532307296794,43.54594120794004)\" dy=\"0.35em\">Peach</text></g><g class=\"arc\"><path d=\"M-199.7218684219822,-64.8935688187391A210,210,0,0,1,1.4794109396388468e-13,-210L0,0Z\" fill=\"#fdb462\"></path><text transform=\"translate(-105.80134541264506,-145.62305898749062)\" dy=\"0.35em\">Strawberry</text></g><g transform=\"translate(320,-176)\" class=\"legend-wrap\"><g transform=\"translate(0,0)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#d9d9d9\" id=\"color-0\" color-data=\"#d9d9d9\" custom-id=\"0\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Apple</text></g><g transform=\"translate(0,21.12)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#fb8072\" id=\"color-1\" color-data=\"#fb8072\" custom-id=\"1\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Banana</text></g><g transform=\"translate(0,42.24)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#ffed6f\" id=\"color-2\" color-data=\"#ffed6f\" custom-id=\"2\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Blueberry</text></g><g transform=\"translate(0,63.36)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#bebada\" id=\"color-3\" color-data=\"#bebada\" custom-id=\"3\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Grape</text></g><g transform=\"translate(0,84.48)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#fccde5\" id=\"color-4\" color-data=\"#fccde5\" custom-id=\"4\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Grapefruit</text></g><g transform=\"translate(0,105.60000000000001)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#b3de69\" id=\"color-5\" color-data=\"#b3de69\" custom-id=\"5\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Lemon</text></g><g transform=\"translate(0,126.72)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#bc80bd\" id=\"color-6\" color-data=\"#bc80bd\" custom-id=\"6\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Melon</text></g><g transform=\"translate(0,147.84)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#ccebc5\" id=\"color-7\" color-data=\"#ccebc5\" custom-id=\"7\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Orange</text></g><g transform=\"translate(0,168.96)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#80b1d3\" id=\"color-8\" color-data=\"#80b1d3\" custom-id=\"8\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Peach</text></g><g transform=\"translate(0,190.08)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#fdb462\" id=\"color-9\" color-data=\"#fdb462\" custom-id=\"9\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Strawberry</text></g></g><text class=\"title\" text-anchor=\"middle\" font-size=\"23.759999999999998\" x=\"0\" y=\"-264\">Fruit Consumption</text></g></svg>",
+  "sentences": [],
+  "major_dim": "c0",
+  "second_dim": "o0",
+  "vis_type": "load_pie_chart",
+  "type": "cq",
+  "pre_gen_focus": ""
+}

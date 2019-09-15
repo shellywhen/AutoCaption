@@ -1,0 +1,36 @@
+{
+  "title": "leisure time in a typical week: by sex and employment status  1998-1999", 
+  "first_dimension": [
+    "male", 
+    "female"
+  ], 
+  "dimension": [
+    2, 
+    5
+  ], 
+  "second_dimension": [
+    "employed full time", 
+    "employed part time", 
+    "unemployed", 
+    "retired", 
+    "housewives"
+  ], 
+  "data": {
+    "males": [
+      48.0, 
+      0.0, 
+      85.0, 
+      85.0, 
+      0.0
+    ], 
+    "females": [
+      37.0, 
+      42.0, 
+      74.0, 
+      74.0, 
+      52.0
+    ]
+  }, 
+  "ID": 179, 
+  "unit": ""
+}

@@ -1,0 +1,231 @@
+{
+    "title": "The Value of Fruit Consumption",
+    "unit": "billion",
+    "c0": [
+        "China",
+        "Britain"
+    ],
+    "o0": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016"
+    ],
+    "data_array": [
+        {
+            "c0": 0,
+            "id": 0,
+            "o0": 0,
+            "q0": 1
+        },
+        {
+            "c0": 0,
+            "id": 1,
+            "o0": 1,
+            "q0": 0.7562215654096589
+        },
+        {
+            "c0": 0,
+            "id": 2,
+            "o0": 2,
+            "q0": 0.5541523566588369
+        },
+        {
+            "c0": 0,
+            "id": 3,
+            "o0": 3,
+            "q0": 0.39812203648761857
+        },
+        {
+            "c0": 0,
+            "id": 4,
+            "o0": 4,
+            "q0": 0.3873755772026326
+        },
+        {
+            "c0": 0,
+            "id": 5,
+            "o0": 5,
+            "q0": 0.22195152173457788
+        },
+        {
+            "c0": 0,
+            "id": 6,
+            "o0": 6,
+            "q0": 0.08841906451874437
+        },
+        {
+            "c0": 1,
+            "id": 7,
+            "o0": 0,
+            "q0": 0.9142873458768418
+        },
+        {
+            "c0": 1,
+            "id": 8,
+            "o0": 1,
+            "q0": 1.031361412365293
+        },
+        {
+            "c0": 1,
+            "id": 9,
+            "o0": 2,
+            "q0": 1.0936792709655219
+        },
+        {
+            "c0": 1,
+            "id": 10,
+            "o0": 3,
+            "q0": 1.1329031189949563
+        },
+        {
+            "c0": 1,
+            "id": 11,
+            "o0": 4,
+            "q0": 2.049843537780576
+        },
+        {
+            "c0": 1,
+            "id": 12,
+            "o0": 5,
+            "q0": 1.3539466469493409
+        },
+        {
+            "c0": 1,
+            "id": 13,
+            "o0": 6,
+            "q0": 1.5667400688577606
+        }
+    ],
+    "type": "ocq",
+    "color": [
+        "#ffed6f",
+        "#d9d9d9",
+        "#80b1d3",
+        "#ccebc5",
+        "#b3de69",
+        "#bc80bd",
+        "#ffffb3",
+        "#fdb462",
+        "#bebada",
+        "#8dd3c7",
+        "#fb8072",
+        "#fccde5"
+    ],
+    "vis_type": "load_stack_bar_chart_horizontal",
+    "major_name": "o0",
+    "second_name": "c0",
+    "pre_gen_focus": [
+        {
+            "focus_id": [
+                0,
+                6
+            ],
+            "compare_id": [
+                7,
+                13
+            ],
+            "type": "compare_trend"
+        },
+        {
+            "focus_id": [
+                3,
+                4,
+                5,
+                10,
+                11,
+                12
+            ],
+            "compare_id": [],
+            "type": "local_sum_trend"
+        },
+        {
+            "focus_id": [
+                3,
+                4,
+                5,
+                10,
+                11,
+                12
+            ],
+            "compare_id": [],
+            "type": "local_trend"
+        },
+        {
+            "focus_id": [
+                0,
+                3,
+                4,
+                6,
+                7,
+                10,
+                11,
+                13
+            ],
+            "compare_id": [],
+            "type": "sum_trend"
+        }
+    ],
+    "sentences": [
+        {
+            "type": "compare_trend",
+            "sentence": "The value of China decrease with steady steps between 2010 and 2016; while Britain increase between 2010 and 2016.",
+            "compare_id": [
+                7,
+                13
+            ],
+            "focus_id": [
+                0,
+                6
+            ],
+            "sure": true
+        },
+        {
+            "type": "local_sum_trend",
+            "sentence": "The sum value of China and Britain has an unusual rise in 2014.",
+            "compare_id": [],
+            "focus_id": [
+                3,
+                4,
+                5,
+                10,
+                11,
+                12
+            ],
+            "sure": true
+        },
+        {
+            "type": "local_trend",
+            "sentence": "There is an unusual rise in 2014 of China and Britain.",
+            "compare_id": [],
+            "focus_id": [
+                3,
+                4,
+                5,
+                10,
+                11,
+                12
+            ],
+            "sure": true
+        },
+        {
+            "type": "sum_trend",
+            "sentence": "The sum value of China and Britain decrease with steady steps between 2010 and 2013, then it increase greatly by 2014, then it decrease greatly by 2016.",
+            "compare_id": [],
+            "focus_id": [
+                0,
+                3,
+                4,
+                6,
+                7,
+                10,
+                11,
+                13
+            ],
+            "sure": true
+        }
+    ]
+}

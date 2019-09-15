@@ -1,0 +1,105 @@
+{
+  "user_name": "190320_line_9769537.json",
+  "total_number": "186",
+  "data": {
+    "title": "The Value of Fruit Asumption",
+    "unit": "billion",
+    "c0": ["India", "Britain", "China"],
+    "o0": ["2010", "2011", "2012", "2013"],
+    "data_array": [{
+      "c0": 0,
+      "id": 0,
+      "o0": 0,
+      "q0": 1
+    }, {
+      "c0": 0,
+      "id": 1,
+      "o0": 1,
+      "q0": 1.2481075721849235
+    }, {
+      "c0": 0,
+      "id": 2,
+      "o0": 2,
+      "q0": 1.4936708979067461
+    }, {
+      "c0": 0,
+      "id": 3,
+      "o0": 3,
+      "q0": 1.9299423635039574
+    }, {
+      "c0": 1,
+      "id": 4,
+      "o0": 0,
+      "q0": 0.3894636740450129
+    }, {
+      "c0": 1,
+      "id": 5,
+      "o0": 1,
+      "q0": 0.637464130258237
+    }, {
+      "c0": 1,
+      "id": 6,
+      "o0": 2,
+      "q0": 0.6524976096714047
+    }, {
+      "c0": 1,
+      "id": 7,
+      "o0": 3,
+      "q0": 0.7516424435853671
+    }, {
+      "c0": 2,
+      "id": 8,
+      "o0": 0,
+      "q0": 0.987622014854265
+    }, {
+      "c0": 2,
+      "id": 9,
+      "o0": 1,
+      "q0": 0.5941678614230168
+    }, {
+      "c0": 2,
+      "id": 10,
+      "o0": 2,
+      "q0": 0.6981976789025732
+    }, {
+      "c0": 2,
+      "id": 11,
+      "o0": 3,
+      "q0": 1.6681449944153952
+    }],
+    "type": "cqq",
+    "color": ["#bc80bd", "#ffed6f", "#b3de69", "#80b1d3", "#fccde5", "#d9d9d9", "#fdb462", "#ccebc5", "#bebada", "#8dd3c7", "#ffffb3", "#fb8072"],
+    "vis_type": "load_scatter_line_plot",
+    "major_name": "o0",
+    "second_name": "c0",
+    "pre_gen_focus": [{
+      "focus_id": [8, 9, 11],
+      "compare_id": [0, 3, 4, 7],
+      "type": "compare_trend"
+    }],
+    "sentences": [{
+      "type": "compare_trend",
+      "sentence": "The value of China decrease greatly between 2010 and 2011, then it increase greatly by 2013; while India and Britain increase with steady steps between 2010 and 2013.",
+      "compare_id": [0, 3, 4, 7],
+      "focus_id": [8, 9, 11],
+      "sure": true
+    }],
+    "x": "o0",
+    "y": "q0",
+    "unit1": "year",
+    "unit2": "billion",
+    "quan": "q0"
+  },
+  "svg_string": "<svg id=\"mySvg\" viewBox=\"0 0 800 660\" preserveAspectRatio=\"xMidYMid meet\" height=\"1328.8000000000002\" width=\"1465.85\">\n            <defs>\n            <filter id=\"blue-shadow\">\n            <feDropShadow dx=\"3\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#0080e0\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n\n            <defs>\n            <filter id=\"red-shadow\">\n            <feDropShadow dx=\"3\" dy=\"3\" stdDeviation=\"3\" flood-color=\"#fa1919\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n\n            <defs>\n            <filter id=\"ordinary-shadow\">\n            <feDropShadow dx=\"2.5\" dy=\"3\" stdDeviation=\"1\" flood-color=\"grey\" flood-opacity=\"50%\"></feDropShadow>\n            </filter>\n            </defs>\n          <g transform=\"translate(80,66)\"><g class=\"brush\"></g><g class=\"axis axis--x\" transform=\"translate(0,528)\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"middle\"><path class=\"domain\" stroke=\"#000\" d=\"M0.5,6V0.5H640.5V6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(0.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2010</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(213.83333333333334,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2011</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(427.1666666666667,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2012</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(640.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2013</text></g><text transform=\"translate(640,0)\" dy=\"-0.2rem\" text-anchor=\"end\" class=\"text-truncate\" font-size=\"12px\" style=\"stroke: black;\">year</text></g><g class=\"axis axis--y\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"end\"><path class=\"domain\" stroke=\"#000\" d=\"M-6,528.5H0.5V0.5H-6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(0,524.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.4</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,456.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.6</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,387.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.8</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,319.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,250.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.2</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,182.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.4</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,113.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.6</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,45.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.8</text></g><text transform=\"rotate(-90)\" y=\"6\" dy=\"0.71em\" text-anchor=\"end\" font-size=\"12px\" style=\"stroke: black;\">billion</text></g><path class=\"line\" d=\"M0,319C71.11111111111111,290.5833333333333,142.22222222222223,262.1666666666667,213.33333333333334,234C284.44444444444446,205.83333333333334,355.55555555555554,189,426.6666666666667,150C497.77777777777777,111,568.8888888888889,55.49999999999999,640,0\" stroke=\"#bc80bd\" style=\"fill: none;\"></path><path class=\"line\" d=\"M0,528C71.11111111111111,487.1666666666667,142.22222222222223,446.3333333333333,213.33333333333334,443C284.44444444444446,439.6666666666667,355.55555555555554,441.3333333333333,426.6666666666667,438C497.77777777777777,434.6666666666667,568.8888888888889,419.3333333333333,640,404\" stroke=\"#ffed6f\" style=\"fill: none;\"></path><path class=\"line\" d=\"M0,323C71.11111111111111,390.5,142.22222222222223,458,213.33333333333334,458C284.44444444444446,458,355.55555555555554,446,426.6666666666667,422C497.77777777777777,398,568.8888888888889,243.99999999999997,640,90\" stroke=\"#b3de69\" style=\"fill: none;\"></path><path class=\"line\" stroke=\"\" style=\"fill: none;\"></path><circle class=\"circle elements ordinary\" id=\"0\" q0=\"1\" o0=\"2010\" cx=\"0\" cy=\"319\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#bc80bd\"></circle><circle class=\"circle elements ordinary\" id=\"1\" q0=\"1.2481075721849235\" o0=\"2011\" cx=\"213.33333333333334\" cy=\"234\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#bc80bd\"></circle><circle class=\"circle elements ordinary\" id=\"2\" q0=\"1.4936708979067461\" o0=\"2012\" cx=\"426.6666666666667\" cy=\"150\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#bc80bd\"></circle><circle class=\"circle elements ordinary\" id=\"3\" q0=\"1.9299423635039574\" o0=\"2013\" cx=\"640\" cy=\"0\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#bc80bd\"></circle><circle class=\"circle elements ordinary\" id=\"4\" q0=\"0.3894636740450129\" o0=\"2010\" cx=\"0\" cy=\"528\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#ffed6f\"></circle><circle class=\"circle elements ordinary\" id=\"5\" q0=\"0.637464130258237\" o0=\"2011\" cx=\"213.33333333333334\" cy=\"443\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#ffed6f\"></circle><circle class=\"circle elements ordinary\" id=\"6\" q0=\"0.6524976096714047\" o0=\"2012\" cx=\"426.6666666666667\" cy=\"438\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#ffed6f\"></circle><circle class=\"circle elements ordinary\" id=\"7\" q0=\"0.7516424435853671\" o0=\"2013\" cx=\"640\" cy=\"404\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#ffed6f\"></circle><circle class=\"circle elements ordinary\" id=\"8\" q0=\"0.987622014854265\" o0=\"2010\" cx=\"0\" cy=\"323\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#b3de69\"></circle><circle class=\"circle elements ordinary\" id=\"9\" q0=\"0.5941678614230168\" o0=\"2011\" cx=\"213.33333333333334\" cy=\"458\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#b3de69\"></circle><circle class=\"circle elements ordinary\" id=\"10\" q0=\"0.6981976789025732\" o0=\"2012\" cx=\"426.6666666666667\" cy=\"422\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#b3de69\"></circle><circle class=\"circle elements ordinary\" id=\"11\" q0=\"1.6681449944153952\" o0=\"2013\" cx=\"640\" cy=\"90\" r=\"0.5vh\" alpha=\"0.5\" fill=\"#b3de69\"></circle><g transform=\"translate(640,0)\" class=\"legend-wrap\"><g transform=\"translate(0,0)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#bc80bd\" id=\"color-0\" color-data=\"#bc80bd\" custom-id=\"0\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">India</text></g><g transform=\"translate(0,21.12)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#ffed6f\" id=\"color-1\" color-data=\"#ffed6f\" custom-id=\"1\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">Britain</text></g><g transform=\"translate(0,42.24)\"><rect width=\"19.2\" height=\"19.008000000000003\" fill=\"#b3de69\" id=\"color-2\" color-data=\"#b3de69\" custom-id=\"2\" data-toggle=\"popover\" data-container=\"body\" data-placement=\"right\" onclick=\"addColorPicker(this)\"></rect><text x=\"22.368\" y=\"15.84\" text-anchor=\"start\" font-size=\"15.84\">China</text></g></g><text class=\"title\" text-anchor=\"middle\" font-size=\"23.759999999999998\" x=\"320\" y=\"-31.68\">The Value of Fruit Asumption</text></g></svg>",
+  "sentences": [{
+    "type": "compare_trend",
+    "sentence": "The value of China decrease greatly between 2010 and 2011, then it increase greatly by 2013; while India and Britain increase with steady steps between 2010 and 2013.",
+    "compare_id": [0, 3, 4, 7],
+    "focus_id": [8, 9, 11],
+    "sure": true
+  }],
+  "major_dim": "c0",
+  "second_dim": "o0",
+  "vis_type": "load_scatter_line_plot",
+  "type": "cqq"
+}

@@ -1,0 +1,11 @@
+*.pyc
+*.png
+*.DS_Store
+*.svg
+*.pth
+*.pyc
+.idea/
+checkpoints/
+user_data/
+server/user_collected_data/
+datasets/

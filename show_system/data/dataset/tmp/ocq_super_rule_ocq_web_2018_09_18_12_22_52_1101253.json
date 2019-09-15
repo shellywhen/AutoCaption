@@ -1,0 +1,238 @@
+{
+  "user_name": "super_rule_ocq_web",
+  "total_number": "4",
+  "data": {
+    "title": "The Value of Fruit Asumption",
+    "unit": "billion",
+    "c0": [
+      "Dutch",
+      "China"
+    ],
+    "o0": [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016"
+    ],
+    "data_array": [
+      {
+        "c0": 0,
+        "id": 0,
+        "o0": 0,
+        "q0": 0.19489155999111052
+      },
+      {
+        "c0": 0,
+        "id": 1,
+        "o0": 1,
+        "q0": 0.20066786989142624
+      },
+      {
+        "c0": 0,
+        "id": 2,
+        "o0": 2,
+        "q0": 0.2053856394289032
+      },
+      {
+        "c0": 0,
+        "id": 3,
+        "o0": 3,
+        "q0": 0.20858772184005128
+      },
+      {
+        "c0": 0,
+        "id": 4,
+        "o0": 4,
+        "q0": 0.21292763000085935
+      },
+      {
+        "c0": 0,
+        "id": 5,
+        "o0": 5,
+        "q0": 0.21389785690441873
+      },
+      {
+        "c0": 0,
+        "id": 6,
+        "o0": 6,
+        "q0": 0.22846965497005842
+      },
+      {
+        "c0": 1,
+        "id": 7,
+        "o0": 0,
+        "q0": 1
+      },
+      {
+        "c0": 1,
+        "id": 8,
+        "o0": 1,
+        "q0": 0.9003175454809687
+      },
+      {
+        "c0": 1,
+        "id": 9,
+        "o0": 2,
+        "q0": 0.8355182305165283
+      },
+      {
+        "c0": 1,
+        "id": 10,
+        "o0": 3,
+        "q0": 0.7227172756293087
+      },
+      {
+        "c0": 1,
+        "id": 11,
+        "o0": 4,
+        "q0": 0.6879634225540641
+      },
+      {
+        "c0": 1,
+        "id": 12,
+        "o0": 5,
+        "q0": 0.5966705217674795
+      },
+      {
+        "c0": 1,
+        "id": 13,
+        "o0": 6,
+        "q0": 0.4355943624301646
+      }
+    ],
+    "type": "ocq",
+    "major_name": "o0",
+    "second_name": "c0",
+    "color": [
+      "#ffffb3",
+      "#b3de69",
+      "#d9d9d9",
+      "#8dd3c7",
+      "#bebada",
+      "#fccde5",
+      "#fb8072",
+      "#ccebc5",
+      "#80b1d3",
+      "#ffed6f",
+      "#fdb462",
+      "#bc80bd"
+    ],
+    "vis_type": "load_group_bar_chart",
+    "pre_gen_focus": [
+      {
+        "focus_id": [
+          0,
+          6
+        ],
+        "compare_id": [
+          7,
+          13
+        ],
+        "type": "compare_trend"
+      },
+      {
+        "focus_id": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "compare_id": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "type": "compare_ave"
+      }
+    ],
+    "sentences": [
+      {
+        "type": "compare_trend",
+        "sentence": "The value of Dutch keep stable between 2010 and 2016; while China decrease with steady steps between 2010 and 2016.",
+        "compare_id": [
+          7,
+          13
+        ],
+        "focus_id": [
+          0,
+          6
+        ],
+        "sure": true
+      },
+      {
+        "type": "compare_ave",
+        "sentence": "The value of 2010, 2011, 2012, 2013, 2014, 2015 and 2016 in Dutch is greatly lower China.",
+        "compare_id": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "focus_id": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "sure": true
+      }
+    ]
+  },
+  "svg_string": "<svg width=\"718\" height=\"718\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(143.6,143.6)\"><g class=\"bars\"><rect transform=\"translate(1,0)\" fill=\"#ffffb3\" id=\"0\" o0=\"0\" c0=\"0\" q0=\"0.19489155999111052\" class=\"bar elements\" x=\"15\" y=\"347\" height=\"83.80000000000001\" width=\"23\"></rect><rect transform=\"translate(1,0)\" fill=\"#ffffb3\" id=\"1\" o0=\"1\" c0=\"0\" q0=\"0.20066786989142624\" class=\"bar elements\" x=\"74\" y=\"344\" height=\"86.80000000000001\" width=\"23\"></rect><rect transform=\"translate(1,0)\" fill=\"#ffffb3\" id=\"2\" o0=\"2\" c0=\"0\" q0=\"0.2053856394289032\" class=\"bar elements\" x=\"133\" y=\"342\" height=\"88.80000000000001\" width=\"23\"></rect><rect transform=\"translate(1,0)\" fill=\"#ffffb3\" id=\"3\" o0=\"3\" c0=\"0\" q0=\"0.20858772184005128\" class=\"bar elements\" x=\"192\" y=\"341\" height=\"89.80000000000001\" width=\"23\"></rect><rect transform=\"translate(1,0)\" fill=\"#ffffb3\" id=\"4\" o0=\"4\" c0=\"0\" q0=\"0.21292763000085935\" class=\"bar elements\" x=\"251\" y=\"339\" height=\"91.80000000000001\" width=\"23\"></rect><rect transform=\"translate(1,0)\" fill=\"#ffffb3\" id=\"5\" o0=\"5\" c0=\"0\" q0=\"0.21389785690441873\" class=\"bar elements\" x=\"310\" y=\"339\" height=\"91.80000000000001\" width=\"23\"></rect><rect transform=\"translate(1,0)\" fill=\"#ffffb3\" id=\"6\" o0=\"6\" c0=\"0\" q0=\"0.22846965497005842\" class=\"bar elements\" x=\"369\" y=\"332\" height=\"98.80000000000001\" width=\"23\"></rect><rect transform=\"translate(24,0)\" fill=\"#b3de69\" id=\"7\" o0=\"0\" c0=\"1\" q0=\"1\" class=\"bar elements\" x=\"15\" y=\"0\" height=\"430.8\" width=\"23\"></rect><rect transform=\"translate(24,0)\" fill=\"#b3de69\" id=\"8\" o0=\"1\" c0=\"1\" q0=\"0.9003175454809687\" class=\"bar elements\" x=\"74\" y=\"43\" height=\"387.8\" width=\"23\"></rect><rect transform=\"translate(24,0)\" fill=\"#b3de69\" id=\"9\" o0=\"2\" c0=\"1\" q0=\"0.8355182305165283\" class=\"bar elements\" x=\"133\" y=\"71\" height=\"359.8\" width=\"23\"></rect><rect transform=\"translate(24,0)\" fill=\"#b3de69\" id=\"10\" o0=\"3\" c0=\"1\" q0=\"0.7227172756293087\" class=\"bar elements\" x=\"192\" y=\"119\" height=\"311.8\" width=\"23\"></rect><rect transform=\"translate(24,0)\" fill=\"#b3de69\" id=\"11\" o0=\"4\" c0=\"1\" q0=\"0.6879634225540641\" class=\"bar elements\" x=\"251\" y=\"134\" height=\"296.8\" width=\"23\"></rect><rect transform=\"translate(24,0)\" fill=\"#b3de69\" id=\"12\" o0=\"5\" c0=\"1\" q0=\"0.5966705217674795\" class=\"bar elements\" x=\"310\" y=\"174\" height=\"256.8\" width=\"23\"></rect><rect transform=\"translate(24,0)\" fill=\"#b3de69\" id=\"13\" o0=\"6\" c0=\"1\" q0=\"0.4355943624301646\" class=\"bar elements\" x=\"369\" y=\"243\" height=\"187.8\" width=\"23\"></rect></g><text class=\"title\" text-anchor=\"middle\" font-size=\"19.386\" x=\"215.4\" y=\"-6.462\">The Value of Fruit Asumption</text><g transform=\"translate(430.8,0)\" class=\"legend-wrap\"><g transform=\"translate(0,0)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#ffffb3\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">Dutch</text></g><g transform=\"translate(0,17.232)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#b3de69\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">China</text></g></g><g class=\"axis\" transform=\"translate(0,430.8)\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"middle\"><path class=\"domain\" stroke=\"#000\" d=\"M0.5,6V0.5H431.3V6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(38.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2010</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(97.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2011</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(156.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2012</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(215.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2013</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(274.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2014</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(333.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2015</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(392.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">2016</text></g></g><g class=\"axis\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"end\"><path class=\"domain\" stroke=\"#000\" d=\"M-6,431.3H0.5V0.5H-6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(0,431.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,388.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.1</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,345.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.2</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,302.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.3</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,258.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.4</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,215.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.5</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,172.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.6</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,129.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.7</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,86.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.8</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,43.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">0.9</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,0.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">1.0</text></g></g><text transform=\"rotate(-90)\" y=\"6\" dy=\"0.71em\" text-anchor=\"end\" font-size=\"12.924\">billion</text></g></svg>",
+  "sentences": [
+    {
+      "type": "compare_trend",
+      "sentence": "The value of Dutch keep stable between 2010 and 2016; while China decrease with steady steps between 2010 and 2016.",
+      "compare_id": [
+        7,
+        13
+      ],
+      "focus_id": [
+        0,
+        6
+      ],
+      "sure": true
+    },
+    {
+      "type": "compare_ave",
+      "sentence": "The value of 2010, 2011, 2012, 2013, 2014, 2015 and 2016 in Dutch is greatly lower China.",
+      "compare_id": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "focus_id": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "sure": true
+    }
+  ],
+  "major_dim": "o0",
+  "second_dim": "c0"
+}

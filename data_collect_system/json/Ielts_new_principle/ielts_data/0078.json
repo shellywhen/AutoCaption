@@ -1,0 +1,82 @@
+{
+  "title": "the UAE government\ufffds spending in different sectors for the year 2000", 
+  "data_array": [
+    {
+      "q0": 22.0, 
+      "c1": 0, 
+      "c0": 0, 
+      "id": 0
+    }, 
+    {
+      "q0": 13.0, 
+      "c1": 1, 
+      "c0": 0, 
+      "id": 1
+    }, 
+    {
+      "q0": 38.0, 
+      "c1": 2, 
+      "c0": 0, 
+      "id": 2
+    }, 
+    {
+      "q0": 17.0, 
+      "c1": 3, 
+      "c0": 0, 
+      "id": 3
+    }, 
+    {
+      "q0": 53.0, 
+      "c1": 4, 
+      "c0": 0, 
+      "id": 4
+    }, 
+    {
+      "q0": 9.0, 
+      "c1": 5, 
+      "c0": 0, 
+      "id": 5
+    }, 
+    {
+      "q0": 100.0, 
+      "c1": 6, 
+      "c0": 0, 
+      "id": 6
+    }, 
+    {
+      "q0": 15.0, 
+      "c1": 7, 
+      "c0": 0, 
+      "id": 7
+    }, 
+    {
+      "q0": 23.0, 
+      "c1": 8, 
+      "c0": 0, 
+      "id": 8
+    }, 
+    {
+      "q0": 23.0, 
+      "c1": 9, 
+      "c0": 0, 
+      "id": 9
+    }
+  ], 
+  "c1": [
+    "defence", 
+    "industry agriculture&emplyment", 
+    "education", 
+    "law and order", 
+    "health and personal social services", 
+    "transport", 
+    "social security", 
+    "housing herritage and environment", 
+    "debtinterest", 
+    "other expenditure"
+  ], 
+  "c0": [
+    "2000"
+  ], 
+  "ID": 82, 
+  "unit": "billion"
+}

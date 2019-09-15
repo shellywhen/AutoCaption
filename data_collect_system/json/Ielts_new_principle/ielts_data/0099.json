@@ -1,0 +1,78 @@
+{
+  "title": "the  difference  in  the  participation  of  boys  and  girls  in  different  extra-curriculum activities", 
+  "data_array": [
+    {
+      "q0": 3.0, 
+      "c1": 0, 
+      "c0": 0, 
+      "id": 0
+    }, 
+    {
+      "q0": 4.0, 
+      "c1": 1, 
+      "c0": 0, 
+      "id": 1
+    }, 
+    {
+      "q0": 2.0, 
+      "c1": 0, 
+      "c0": 1, 
+      "id": 2
+    }, 
+    {
+      "q0": 27.0, 
+      "c1": 1, 
+      "c0": 1, 
+      "id": 3
+    }, 
+    {
+      "q0": 5.0, 
+      "c1": 0, 
+      "c0": 2, 
+      "id": 4
+    }, 
+    {
+      "q0": 8.0, 
+      "c1": 1, 
+      "c0": 2, 
+      "id": 5
+    }, 
+    {
+      "q0": 17.0, 
+      "c1": 0, 
+      "c0": 3, 
+      "id": 6
+    }, 
+    {
+      "q0": 15.0, 
+      "c1": 1, 
+      "c0": 3, 
+      "id": 7
+    }, 
+    {
+      "q0": 68.0, 
+      "c1": 0, 
+      "c0": 4, 
+      "id": 8
+    }, 
+    {
+      "q0": 57.0, 
+      "c1": 1, 
+      "c0": 4, 
+      "id": 9
+    }
+  ], 
+  "c1": [
+    "Boys", 
+    "Girls"
+  ], 
+  "c0": [
+    "Drama", 
+    "Dancing", 
+    "Singing", 
+    "MT", 
+    "Sports"
+  ], 
+  "ID": 108, 
+  "unit": "percent"
+}

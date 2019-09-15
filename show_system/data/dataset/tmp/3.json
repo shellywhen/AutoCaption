@@ -1,0 +1,204 @@
+{
+    "title": "The Value of Fruit Consumption",
+    "unit": "billion",
+    "c0": [
+        "China",
+        "Britain",
+        "India"
+    ],
+    "o0": [
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014"
+    ],
+    "data_array": [
+        {
+            "c0": 0,
+            "id": 0,
+            "o0": 0,
+            "q0": 0.49176322994371974
+        },
+        {
+            "c0": 0,
+            "id": 1,
+            "o0": 1,
+            "q0": 0.48519682458640595
+        },
+        {
+            "c0": 0,
+            "id": 2,
+            "o0": 2,
+            "q0": 0.44501019491174887
+        },
+        {
+            "c0": 0,
+            "id": 3,
+            "o0": 3,
+            "q0": 0.4432261806105802
+        },
+        {
+            "c0": 0,
+            "id": 4,
+            "o0": 4,
+            "q0": 0.40622193006950225
+        },
+        {
+            "c0": 1,
+            "id": 5,
+            "o0": 0,
+            "q0": 1
+        },
+        {
+            "c0": 1,
+            "id": 6,
+            "o0": 1,
+            "q0": 1.113346899022997
+        },
+        {
+            "c0": 1,
+            "id": 7,
+            "o0": 2,
+            "q0": 1.1713132040752492
+        },
+        {
+            "c0": 1,
+            "id": 8,
+            "o0": 3,
+            "q0": 1.4263353081227175
+        },
+        {
+            "c0": 1,
+            "id": 9,
+            "o0": 4,
+            "q0": 1.728772784256759
+        },
+        {
+            "c0": 2,
+            "id": 10,
+            "o0": 0,
+            "q0": 0.38542405365784915
+        },
+        {
+            "c0": 2,
+            "id": 11,
+            "o0": 1,
+            "q0": 0.6423192151002066
+        },
+        {
+            "c0": 2,
+            "id": 12,
+            "o0": 2,
+            "q0": 0.6468180943278771
+        },
+        {
+            "c0": 2,
+            "id": 13,
+            "o0": 3,
+            "q0": 0.651120979727789
+        },
+        {
+            "c0": 2,
+            "id": 14,
+            "o0": 4,
+            "q0": 0.6663106143616064
+        }
+    ],
+    "type": "ocq",
+    "major_name": "o0",
+    "second_name": "c0",
+    "color": [
+        "#fccde5",
+        "#bc80bd",
+        "#fb8072",
+        "#ffed6f",
+        "#ffffb3",
+        "#ccebc5",
+        "#fdb462",
+        "#bebada",
+        "#b3de69",
+        "#80b1d3",
+        "#8dd3c7",
+        "#d9d9d9"
+    ],
+    "vis_type": "load_group_bar_chart",
+    "pre_gen_focus": [
+        {
+            "focus_id": [
+                5,
+                9,
+                10,
+                14
+            ],
+            "compare_id": [
+                0,
+                4
+            ],
+            "type": "compare_trend"
+        },
+        {
+            "focus_id": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "compare_id": [
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "type": "compare_ave"
+        }
+    ],
+    "sentences": [
+        {
+            "type": "compare_trend",
+            "sentence": "The value of Britain and India increase with steady steps between 2010 and 2014; while China keeps stable between 2010 and 2014.",
+            "compare_id": [
+                0,
+                4
+            ],
+            "focus_id": [
+                5,
+                9,
+                10,
+                14
+            ],
+            "sure": true
+        },
+        {
+            "type": "compare_ave",
+            "sentence": "The value of China and India is greatly lower than Britain in 2010, 2011, 2012, 2013 and 2014.",
+            "compare_id": [
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "focus_id": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "sure": false
+        }
+    ]
+}

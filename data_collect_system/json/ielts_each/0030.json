@@ -1,0 +1,48 @@
+{
+  "title": "percentage of the population living in urban areas", 
+  "first_dimension": [
+    "1950", 
+    "2007", 
+    "2030"
+  ], 
+  "dimension": [
+    3, 
+    6
+  ], 
+  "second_dimension": [
+    "world", 
+    "africa", 
+    "asia", 
+    "europe", 
+    "latin america caribbean", 
+    "north america"
+  ], 
+  "data": {
+    "2030": [
+      60.0, 
+      51.0, 
+      54.0, 
+      78.0, 
+      84.0, 
+      87.0
+    ], 
+    "2007": [
+      49.0, 
+      37.0, 
+      41.0, 
+      72.0, 
+      76.0, 
+      79.0
+    ], 
+    "1950": [
+      29.0, 
+      15.0, 
+      17.0, 
+      51.0, 
+      42.0, 
+      64.0
+    ]
+  }, 
+  "ID": 208, 
+  "unit": "%"
+}

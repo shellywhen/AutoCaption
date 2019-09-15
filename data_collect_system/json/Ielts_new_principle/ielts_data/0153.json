@@ -1,0 +1,91 @@
+{
+  "title": "Division of household tasks:by gender Great Britain", 
+  "data_array": [
+    {
+      "q0": 30.0, 
+      "c1": 0, 
+      "c0": 0, 
+      "id": 0
+    }, 
+    {
+      "q0": 74.0, 
+      "c1": 1, 
+      "c0": 0, 
+      "id": 1
+    }, 
+    {
+      "q0": 13.0, 
+      "c1": 0, 
+      "c0": 1, 
+      "id": 2
+    }, 
+    {
+      "q0": 58.0, 
+      "c1": 1, 
+      "c0": 1, 
+      "id": 3
+    }, 
+    {
+      "q0": 49.5, 
+      "c1": 0, 
+      "c0": 2, 
+      "id": 4
+    }, 
+    {
+      "q0": 21.0, 
+      "c1": 1, 
+      "c0": 2, 
+      "id": 5
+    }, 
+    {
+      "q0": 20.0, 
+      "c1": 0, 
+      "c0": 3, 
+      "id": 6
+    }, 
+    {
+      "q0": 45.0, 
+      "c1": 1, 
+      "c0": 3, 
+      "id": 7
+    }, 
+    {
+      "q0": 26.0, 
+      "c1": 0, 
+      "c0": 4, 
+      "id": 8
+    }, 
+    {
+      "q0": 9.5, 
+      "c1": 1, 
+      "c0": 4, 
+      "id": 9
+    }, 
+    {
+      "q0": 2.0, 
+      "c1": 0, 
+      "c0": 5, 
+      "id": 10
+    }, 
+    {
+      "q0": 25.0, 
+      "c1": 1, 
+      "c0": 5, 
+      "id": 11
+    }
+  ], 
+  "c1": [
+    "males", 
+    "females"
+  ], 
+  "c0": [
+    "cooking baking washing up", 
+    "cleaning house tidying", 
+    "Gardening petcare", 
+    "care of own children and play", 
+    "maintenance odd jobs", 
+    "clothes washing ironing sewing"
+  ], 
+  "ID": 172, 
+  "unit": "minutes"
+}

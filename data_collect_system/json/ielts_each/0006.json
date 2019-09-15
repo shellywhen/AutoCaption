@@ -1,0 +1,30 @@
+{
+  "title": "expenditrue on health & education  UAE as % of GDP", 
+  "first_dimension": [
+    "health", 
+    "education"
+  ], 
+  "dimension": [
+    2, 
+    3
+  ], 
+  "second_dimension": [
+    "1985", 
+    "1990", 
+    "1993"
+  ], 
+  "data": {
+    "education": [
+      10.0, 
+      14.0, 
+      14.9
+    ], 
+    "health": [
+      7.9, 
+      6.9, 
+      10.0
+    ]
+  }, 
+  "ID": 184, 
+  "unit": "percentage"
+}

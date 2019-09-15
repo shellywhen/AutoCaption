@@ -1,0 +1,122 @@
+{
+    "title": "The Value of Fruit Consumption",
+    "unit": "billion",
+    "c0": [
+        "Britain",
+        "Dutch",
+        "China"
+    ],
+    "o0": [
+        "2010",
+        "2011",
+        "2012"
+    ],
+    "data_array": [
+        {
+            "c0": 0,
+            "id": 0,
+            "o0": 0,
+            "q0": 1
+        },
+        {
+            "c0": 0,
+            "id": 1,
+            "o0": 1,
+            "q0": 1.036815508853004
+        },
+        {
+            "c0": 0,
+            "id": 2,
+            "o0": 2,
+            "q0": 1.0386398304250117
+        },
+        {
+            "c0": 1,
+            "id": 3,
+            "o0": 0,
+            "q0": 0.14422412183928865
+        },
+        {
+            "c0": 1,
+            "id": 4,
+            "o0": 1,
+            "q0": 0.14475220648130102
+        },
+        {
+            "c0": 1,
+            "id": 5,
+            "o0": 2,
+            "q0": 0.149796917450355
+        },
+        {
+            "c0": 2,
+            "id": 6,
+            "o0": 0,
+            "q0": 0.37262984933868154
+        },
+        {
+            "c0": 2,
+            "id": 7,
+            "o0": 1,
+            "q0": 0.9175704156429112
+        },
+        {
+            "c0": 2,
+            "id": 8,
+            "o0": 2,
+            "q0": 0.47529206027928533
+        }
+    ],
+    "type": "ocq",
+    "color": [
+        "#80b1d3",
+        "#8dd3c7",
+        "#b3de69",
+        "#d9d9d9",
+        "#bc80bd",
+        "#ffed6f",
+        "#bebada",
+        "#fb8072",
+        "#fdb462",
+        "#ccebc5",
+        "#ffffb3",
+        "#fccde5"
+    ],
+    "vis_type": "load_group_bar_chart_horizontal",
+    "major_name": "c0",
+    "second_name": "o0",
+    "pre_gen_focus": [
+        {
+            "focus_id": [
+                6,
+                7,
+                8
+            ],
+            "compare_id": [
+                0,
+                2,
+                3,
+                5
+            ],
+            "type": "compare_trend"
+        }
+    ],
+    "sentences": [
+        {
+            "type": "compare_trend",
+            "sentence": "The value of China increase greatly between 2010 and 2011, then it decrease greatly by 2012; while Britain and Dutch keeps stable between 2010 and 2012.",
+            "compare_id": [
+                0,
+                2,
+                3,
+                5
+            ],
+            "focus_id": [
+                6,
+                7,
+                8
+            ],
+            "sure": true
+        }
+    ]
+}

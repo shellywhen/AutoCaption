@@ -1,0 +1,179 @@
+{
+  "user_name": "super_rule_ocq_web",
+  "total_number": "1",
+  "data": {
+    "title": "The Value of Fruit Asumption",
+    "unit": "billion",
+    "c0": [
+      "America",
+      "Britain"
+    ],
+    "o0": [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014"
+    ],
+    "data_array": [
+      {
+        "c0": 0,
+        "id": 0,
+        "o0": 0,
+        "q0": 1
+      },
+      {
+        "c0": 0,
+        "id": 1,
+        "o0": 1,
+        "q0": 0.9250140172270876
+      },
+      {
+        "c0": 0,
+        "id": 2,
+        "o0": 2,
+        "q0": 0.7696394156150094
+      },
+      {
+        "c0": 0,
+        "id": 3,
+        "o0": 3,
+        "q0": 0.5176242773036399
+      },
+      {
+        "c0": 0,
+        "id": 4,
+        "o0": 4,
+        "q0": 0.08004731395485043
+      },
+      {
+        "c0": 1,
+        "id": 5,
+        "o0": 0,
+        "q0": 0.3709498293844166
+      },
+      {
+        "c0": 1,
+        "id": 6,
+        "o0": 1,
+        "q0": 0.37235332626635953
+      },
+      {
+        "c0": 1,
+        "id": 7,
+        "o0": 2,
+        "q0": 0.37476816345440256
+      },
+      {
+        "c0": 1,
+        "id": 8,
+        "o0": 3,
+        "q0": 0.3786194282874275
+      },
+      {
+        "c0": 1,
+        "id": 9,
+        "o0": 4,
+        "q0": 0.3897597061996093
+      }
+    ],
+    "type": "ocq",
+    "color": [
+      "#fccde5",
+      "#fdb462",
+      "#80b1d3",
+      "#ccebc5",
+      "#bebada",
+      "#d9d9d9",
+      "#bc80bd",
+      "#ffffb3",
+      "#ffed6f",
+      "#fb8072",
+      "#8dd3c7",
+      "#b3de69"
+    ],
+    "vis_type": "load_stack_bar_chart_horizontal",
+    "major_name": "o0",
+    "second_name": "c0",
+    "pre_gen_focus": [
+      {
+        "focus_id": [
+          0,
+          4
+        ],
+        "compare_id": [
+          5,
+          9
+        ],
+        "type": "compare_trend"
+      },
+      {
+        "focus_id": [
+          0,
+          4,
+          5,
+          9
+        ],
+        "compare_id": [],
+        "type": "sum_trend"
+      }
+    ],
+    "sentences": [
+      {
+        "type": "compare_trend",
+        "sentence": "The value of America decrease greatly between 2010 and 2014; while Britain keep stable between 2010 and 2014.",
+        "compare_id": [
+          5,
+          9
+        ],
+        "focus_id": [
+          0,
+          4
+        ],
+        "sure": true
+      },
+      {
+        "type": "sum_trend",
+        "sentence": "The sum value of America and Britain decrease greatly with steady steps between 2010 and 2014.",
+        "compare_id": [],
+        "focus_id": [
+          0,
+          4,
+          5,
+          9
+        ],
+        "sure": true
+      }
+    ]
+  },
+  "svg_string": "<svg width=\"718\" height=\"718\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(143.6,143.6)\"><g><g fill=\"#fccde5\"><rect class=\"bar elements\" id=\"0\" o0=\"0\" c0=\"0\" q0=\"1\" y=\"347\" x=\"0\" width=\"314\" height=\"66\"></rect><rect class=\"bar elements\" id=\"1\" o0=\"1\" c0=\"0\" q0=\"0.9250140172270876\" y=\"265\" x=\"0\" width=\"291\" height=\"66\"></rect><rect class=\"bar elements\" id=\"2\" o0=\"2\" c0=\"0\" q0=\"0.7696394156150094\" y=\"183\" x=\"0\" width=\"242\" height=\"66\"></rect><rect class=\"bar elements\" id=\"3\" o0=\"3\" c0=\"0\" q0=\"0.5176242773036399\" y=\"101\" x=\"0\" width=\"163\" height=\"66\"></rect><rect class=\"bar elements\" id=\"4\" o0=\"4\" c0=\"0\" q0=\"0.08004731395485043\" y=\"19\" x=\"0\" width=\"25\" height=\"66\"></rect></g><g fill=\"#fdb462\"><rect class=\"bar elements\" id=\"5\" o0=\"0\" c0=\"1\" q0=\"0.3709498293844166\" y=\"347\" x=\"314\" width=\"117\" height=\"66\"></rect><rect class=\"bar elements\" id=\"6\" o0=\"1\" c0=\"1\" q0=\"0.37235332626635953\" y=\"265\" x=\"291\" width=\"117\" height=\"66\"></rect><rect class=\"bar elements\" id=\"7\" o0=\"2\" c0=\"1\" q0=\"0.37476816345440256\" y=\"183\" x=\"242\" width=\"118\" height=\"66\"></rect><rect class=\"bar elements\" id=\"8\" o0=\"3\" c0=\"1\" q0=\"0.3786194282874275\" y=\"101\" x=\"163\" width=\"119\" height=\"66\"></rect><rect class=\"bar elements\" id=\"9\" o0=\"4\" c0=\"1\" q0=\"0.3897597061996093\" y=\"19\" x=\"25\" width=\"123\" height=\"66\"></rect></g></g><text class=\"title\" text-anchor=\"middle\" font-size=\"19.386\" x=\"215.4\" y=\"-6.462\">The Value of Fruit Asumption</text><g transform=\"translate(430.8,0)\" class=\"legend-wrap\"><g transform=\"translate(0,0)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#fccde5\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">America</text></g><g transform=\"translate(0,17.232)\"><rect width=\"12.924\" height=\"15.508799999999999\" fill=\"#fdb462\"></rect><text x=\"15.508799999999999\" y=\"12.924\" text-anchor=\"start\" font-size=\"12.924\">Britain</text></g></g><g class=\"axis\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"end\"><path class=\"domain\" stroke=\"#000\" d=\"M-6,431.3H0.5V0.5H-6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(0,380.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2010</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,298.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2011</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,216.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2012</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,134.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2013</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(0,52.5)\"><line stroke=\"#000\" x2=\"-6\"></line><text fill=\"#000\" x=\"-9\" dy=\"0.32em\">2014</text></g></g><g class=\"axis\" transform=\"translate(0,430.8)\" fill=\"none\" font-size=\"10\" font-family=\"sans-serif\" text-anchor=\"middle\"><path class=\"domain\" stroke=\"#000\" d=\"M0.5,6V0.5H431.3V6\"></path><g class=\"tick\" opacity=\"1\" transform=\"translate(0.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(31.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.1</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(63.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.2</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(94.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.3</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(126.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.4</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(157.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.5</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(189.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.6</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(220.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.7</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(251.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.8</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(283.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">0.9</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(314.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">1.0</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(346.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">1.1</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(377.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">1.2</text></g><g class=\"tick\" opacity=\"1\" transform=\"translate(409.5,0)\"><line stroke=\"#000\" y2=\"6\"></line><text fill=\"#000\" y=\"9\" dy=\"0.71em\">1.3</text></g></g><text transform=\"translate(430.8,430.8)\" dy=\"-.2rem\" text-anchor=\"end\" font-size=\"12.924\">billion</text></g></svg>",
+  "sentences": [
+    {
+      "type": "compare_trend",
+      "sentence": "The value of America decrease greatly between 2010 and 2014; while Britain keep stable between 2010 and 2014.",
+      "compare_id": [
+        5,
+        9
+      ],
+      "focus_id": [
+        0,
+        4
+      ],
+      "sure": true
+    },
+    {
+      "type": "sum_trend",
+      "sentence": "The sum value of America and Britain decrease greatly with steady steps between 2010 and 2014.",
+      "compare_id": [],
+      "focus_id": [
+        0,
+        4,
+        5,
+        9
+      ],
+      "sure": true
+    }
+  ],
+  "major_dim": "o0",
+  "second_dim": "c0"
+}

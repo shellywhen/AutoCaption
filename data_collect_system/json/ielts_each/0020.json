@@ -1,0 +1,36 @@
+{
+  "title": "", 
+  "first_dimension": [
+    "girls", 
+    "boys"
+  ], 
+  "dimension": [
+    2, 
+    5
+  ], 
+  "second_dimension": [
+    "skateboarding or rollerblading", 
+    "bike rIDing", 
+    "watching TV or vIDeos", 
+    "electronic or computer games", 
+    "art and craft"
+  ], 
+  "data": {
+    "boys": [
+      25.0, 
+      56.0, 
+      100.0, 
+      60.0, 
+      56.0
+    ], 
+    "girls": [
+      38.0, 
+      75.0, 
+      100.0, 
+      81.0, 
+      35.0
+    ]
+  }, 
+  "ID": 198, 
+  "unit": "%"
+}

@@ -1,0 +1,78 @@
+{
+  "title": "the children\ufffds leisure activities in Australia", 
+  "data_array": [
+    {
+      "q0": 29.0, 
+      "c1": 0, 
+      "c0": 0, 
+      "id": 0
+    }, 
+    {
+      "q0": 68.0, 
+      "c1": 1, 
+      "c0": 0, 
+      "id": 1
+    }, 
+    {
+      "q0": 100.0, 
+      "c1": 2, 
+      "c0": 0, 
+      "id": 2
+    }, 
+    {
+      "q0": 81.0, 
+      "c1": 3, 
+      "c0": 0, 
+      "id": 3
+    }, 
+    {
+      "q0": 28.0, 
+      "c1": 4, 
+      "c0": 0, 
+      "id": 4
+    }, 
+    {
+      "q0": 22.0, 
+      "c1": 0, 
+      "c0": 1, 
+      "id": 5
+    }, 
+    {
+      "q0": 49.0, 
+      "c1": 1, 
+      "c0": 1, 
+      "id": 6
+    }, 
+    {
+      "q0": 100.0, 
+      "c1": 2, 
+      "c0": 1, 
+      "id": 7
+    }, 
+    {
+      "q0": 60.0, 
+      "c1": 3, 
+      "c0": 1, 
+      "id": 8
+    }, 
+    {
+      "q0": 49.0, 
+      "c1": 4, 
+      "c0": 1, 
+      "id": 9
+    }
+  ], 
+  "c1": [
+    "skateboarding or rollerblading", 
+    "bike riding", 
+    "watching TV or videos", 
+    "electronic or computer games", 
+    "art and craft"
+  ], 
+  "c0": [
+    "boys age 5-14", 
+    "girls age 5-14"
+  ], 
+  "ID": 142, 
+  "unit": "percent"
+}

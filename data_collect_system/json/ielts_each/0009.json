@@ -1,0 +1,57 @@
+{
+  "title": "spending of western countries", 
+  "first_dimension": [
+    "britain", 
+    "france", 
+    "italy", 
+    "germany"
+  ], 
+  "dimension": [
+    4, 
+    6
+  ], 
+  "second_dimension": [
+    "photographic file", 
+    "toys", 
+    "CDs", 
+    "perfumers", 
+    "tennis racquest", 
+    "personal stereos"
+  ], 
+  "data": {
+    "germany": [
+      146.0, 
+      148.0, 
+      147.0, 
+      148.0, 
+      150.0, 
+      148.0
+    ], 
+    "britain": [
+      172.0, 
+      168.0, 
+      162.0, 
+      160.0, 
+      154.0, 
+      154.0
+    ], 
+    "italy": [
+      156.0, 
+      158.0, 
+      152.0, 
+      153.0, 
+      152.0, 
+      150.0
+    ], 
+    "france": [
+      167.0, 
+      158.0, 
+      158.0, 
+      146.0, 
+      145.0, 
+      148.0
+    ]
+  }, 
+  "ID": 187, 
+  "unit": "thousand pounds sterling"
+}
