@@ -178,6 +178,7 @@ class getModifySvgSentence(tornado.web.RequestHandler):
         svg_string = self.get_body_argument('svg_string')
         print('svg_string, weird', svg_string)
         svg_string, data_json = get_modified_svg_data(svg_string)
+        print("data_json", data_json)
         print('modified svg_string', svg_string)
         input, id_array = get_data_svg(svg_string)
         machine_model.set_input(input)
