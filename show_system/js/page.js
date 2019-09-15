@@ -8,6 +8,19 @@ loadJsonData('../data/dataset/tmp/1.json')
 get_line_chart_svg_data()
 window.num = 0
 $(document).ready(function(){
+    $("#annotationDiv").css({
+      'position': 'absolute',
+      'display': 'block',
+      'top': 0,
+      'left': 0,
+      'pointer-events': 'none'
+    });
+    let origin = d3.select('#visualization').select('svg')
+    let overlay = d3.select('#annotationDiv').select('svg')
+    overlay.attr('width', origin.attr('width'))
+      .attr('height', origin.attr('height'))
+      .attr('viewBox', origin.attr('viewBox'))
+      .attr('preserveAspectRatio', origin.attr('preserveAspectRatio'))
     $('[data-toggle="popover"]').popover()
     document.getElementById('openFile')
             .addEventListener('change', function(){
@@ -137,6 +150,7 @@ function frush(data_pack){
   highLightShadow()
   showSentences(sentences)
   addDragging()
+   highLightText()
 }
 
 // Do not update the svg chart
@@ -172,6 +186,5 @@ function frush_no_update_svg(data_pack){
   // d3.select('#visualization').node().innerHTML = svg_string
   // highLightShadow()
    showSentences(sentences)
-   highLightText()
   // addDragging()
 }

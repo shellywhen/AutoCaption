@@ -39,6 +39,15 @@ table {
     width: 660px; */
     position: relative;
 }
+#annotationDiv {
+  height: 83vh;
+  width: 100%;
+  text-align:center;
+  z-index: 1000;
+}
+#annotationDiv svg{
+  position: relative;
+}
 #chart-title {
     position: relative;
     top: 10px;

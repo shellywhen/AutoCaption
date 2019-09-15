@@ -5,26 +5,38 @@ var TIME_LAST = 0
 var TIME_NOW = 0
 let highLightTableColor = '#fec44f'
 let highLightRectColor = '#d95f0e'
+
 let highLightText = function (textData=[]) {
-  let g = d3.select('#visualization').select('svg').append('g').attr('id', 'annotation')
+  let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
   let textCollection = {
-    'yAxis': [{'x': 10, 'y': 10, 'w': 20, 'h': 10 }, {'x': 10, 'y': 30, 'w': 20, 'h': 10 }, {'x': 10, 'y': 50, 'w': 20, 'h': 10 }],
-    'xAxis': [{'x': 30, 'y': 500, 'w': 20, 'h': 10 }, {'x': 50, 'y': 500, 'w': 20, 'h': 10 }, {'x': 70, 'y': 500, 'w': 20, 'h': 10 }],
-    'legend': [{'x': 300, 'y': 10, 'w': 20, 'h': 10 }, {'x': 300, 'y': 30, 'w': 20, 'h': 10 }, {'x': 300, 'y': 5, 'w': 20, 'h': 10 }]
+    'yAxis': {'text': [{'x': 30, 'y': 20, 'w': 20, 'h': 10 }, {'x': 30, 'y': 80, 'w': 20, 'h': 10 }, {'x': 30, 'y': 140, 'w': 20, 'h': 10 }]},
+    'xAxis': {'text': [{'x': 30, 'y': 500, 'w': 20, 'h': 10 }, {'x': 50, 'y': 500, 'w': 20, 'h': 10 }, {'x': 70, 'y': 500, 'w': 20, 'h': 10 }]},
+    'legend': {'text': [{'x': 300, 'y': 10, 'w': 20, 'h': 10 }, {'x': 300, 'y': 30, 'w': 20, 'h': 10 }, {'x': 300, 'y': 5, 'w': 20, 'h': 10 }]},
+    'unit': {'text': [{'x': 5, 'y': 10, 'w': 5, 'h': 30 }, {'x': 300, 'y': 500, 'w': 30, 'h': 5 }]},
+    'title': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20 }]}
   }
   let colorList = ['blanchedalmond', 'palegreen', 'mediumpurple', 'lightskyblue', 'lightpink']
   let attributeList = ['xAxis', 'yAxis', 'legend', 'unit', 'title']
-  for (let attribute in attributeList) {
-    let canvas = g.append('g').attr('id', `g_${attributeList[attribute]}`)
-    for (let item of textCollection[attributeList[attribute]].text) {
+  let i = 0
+  for (let attrName of attributeList) {
+    let canvas = g.append('g').attr('id', `g_${attrName}`)
+    for (let item of textCollection[attrName].text) {
       canvas.append('rect')
-        .style('stroke-width', 2)
-        .style('stroke-color', colorList[attribute])
-        .style('fill-opacity', 0)
+        .attr('x', item.x)
+        .attr('y', item.y)
+        .attr('width', item.w)
+        .attr('height', item.h)
+        .style('stroke-width', 3)
+        .style('stroke-color', colorList[i])
+        .style('fill-opacity', 0.5)
+        .style('fill', colorList[i])
+        .style('stroke-opacity', 1)
     }
+    i++
   }
 
 }
+
 let dragStart = function(d) {
     DRAG_HANDLER = d3.event.y
     INIT_HEIGHT = d3.select(this).attr('height')
@@ -35,6 +47,7 @@ let dragStart = function(d) {
     d3.select('#table-'+String(id))
       .style('background', highLightTableColor)
 }
+
 let dragging = function(d) {
     let yScale = cur.chart.yScale.invert
     let dy = d3.event.y - DRAG_HANDLER
@@ -55,6 +68,7 @@ let dragging = function(d) {
     d3.select('#table-'+String(id))
       .style('background', highLightTableColor)
 }
+
 let dragEnd = function(d) {
     let yScale = cur.chart.yScale.invert
     let dy = d3.event.y - DRAG_HANDLER
@@ -69,6 +83,7 @@ let dragEnd = function(d) {
       .style('background', null)
     update_sentence_data()
 }
+
 let mouseOver = function() {
     id = d3.select(this)
            .attr('id')
@@ -78,6 +93,7 @@ let mouseOver = function() {
       .style("stroke", highLightRectColor)
       .style('stroke-width', '0.5vh')
 }
+
 let mouseOut = function() {
    id = d3.select(this)
          .attr('id')
@@ -86,6 +102,7 @@ let mouseOut = function() {
    d3.select(this)
      .style('stroke-width', 0)
 }
+
 let highLightRect = function() {
     id = d3.select(this).attr('customid')
     d3.select(this)
@@ -95,6 +112,7 @@ let highLightRect = function() {
       .style('stroke-width', '0.5vh')
 
 }
+
 let normalRect = function() {
     id = d3.select(this).attr('customid')
     d3.select('.element_'+String(id))
@@ -102,6 +120,7 @@ let normalRect = function() {
     d3.select(this)
       .style('background', null)
 }
+
 let addDragging = function() {
     d3.selectAll('rect')
       .on('mouseover', mouseOver)
@@ -110,9 +129,9 @@ let addDragging = function() {
               .on('start', dragStart)
               .on('drag', dragging)
               .on('end', dragEnd))
-
 }
-let update_sentence_data = function(){
+
+let update_sentence_data = function() {
     SVG_string = d3.select('#visualization').node().innerHTML
     send_data = {'svg_string': SVG_string}
     get_modify_data_sentence_from_server(send_data)
