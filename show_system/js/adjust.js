@@ -13,7 +13,8 @@ let highLightText = function (textData=[]) {
     'xAxis': {'text': [{'x': 30, 'y': 500, 'w': 20, 'h': 10 }, {'x': 50, 'y': 500, 'w': 20, 'h': 10 }, {'x': 70, 'y': 500, 'w': 20, 'h': 10 }]},
     'legend': {'text': [{'x': 300, 'y': 10, 'w': 20, 'h': 10 }, {'x': 300, 'y': 30, 'w': 20, 'h': 10 }, {'x': 300, 'y': 5, 'w': 20, 'h': 10 }]},
     'unit': {'text': [{'x': 5, 'y': 10, 'w': 5, 'h': 30 }, {'x': 300, 'y': 500, 'w': 30, 'h': 5 }]},
-    'title': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20 }]}
+    'title': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20 }]},
+    'element': {[]} // 这里还要有元素的位置
   }
   let colorList = ['blanchedalmond', 'palegreen', 'mediumpurple', 'lightskyblue', 'lightpink']
   let attributeList = ['xAxis', 'yAxis', 'legend', 'unit', 'title']
@@ -26,13 +27,32 @@ let highLightText = function (textData=[]) {
         .attr('points', `${x1},${ y1} ${x2},${y1} ${x2},${y2} ${x1},${y2}`)
         .style('stroke-width', 3)
         .style('stroke', colorList[i])
-        .style('fill-opacity', 0.2)
+        .style('fill-opacity', 0.1)
         .style('fill', colorList[i])
         .style('stroke-opacity', 1)
     }
     i++
   }
+textCollection.element.forEach(ele => {
+  canvas.append('rect')
+    .datum(ele.data)
+    .attr('x', ele.x)
+    .attr('y', ele.y)
+    .attr('width', ele.w)
+    .attr('height', ele.h)
+    .style('opacity', 0)
+    .attr('id', ele.id)
+    .classed('fake_element', true)
+    .on('mouseover', function (d) {
+        // highlight legend
+        // show a line
+    })
+    .on('mouseout', function (d) {
+       // stop highlight legend
+       // no line
 
+    })
+})
 }
 
 let dragStart = function(d) {
