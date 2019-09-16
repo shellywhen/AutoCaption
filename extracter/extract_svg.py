@@ -241,6 +241,7 @@ def parse_a_rect(rect):
     opacity = float(get_attr(rect, "opacity", 1))
     color  = parse_fill(get_attr(rect, "fill", "#000"))
 
+
     # print(get_attr(rect, "fill", "#000"))
     # for debug
     value = float(get_attr(rect, "q0", 0))
@@ -422,6 +423,7 @@ def parse_color_legend(important_rects, legend):
         # print(diff_array)
         match_index = diff_array.index(min(diff_array))
         important_rects[i]["second"] = match_index
+        important_rects[i]["legend_index"] = match_index
     return important_rects
 
 def get_main_second(main_dimension_list, second_dimension_list):
@@ -450,6 +452,7 @@ def get_elements(important_rects):
         element['y'] = rect['y']
         element['w'] = rect['width']
         element['h'] = rect['height']
+        element['legend_id'] = rect['legend_index']
         elements_list.append(element)
 
     return elements_list
@@ -570,21 +573,26 @@ def get_text_bbox(text_element):
     # if text_anchor == "start":
 
 
-def get_text_group(original_text_group, texts_attr):
+def get_text_group(original_text_group, texts_attr, is_legend = False):
     array = []
     if isinstance(original_text_group["x"], list):
         array = original_text_group["x"]
     elif isinstance(original_text_group["y"], list):
         array = original_text_group["y"]
 
+
+
     text_array = [texts_attr[item["text_id"]] for item in array]
     text_bbox = [get_text_bbox(item) for item in text_array]
+    if is_legend:
+        for i, text in enumerate(text_bbox):
+            text["legend_id"] = i
     return text_bbox
 
 def get_text_information(X_axis, Y_axis, legend, texts_attr):
     xAxis_text = get_text_group(X_axis, texts_attr)
     yAxis_text = get_text_group(Y_axis, texts_attr)
-    legend_text = get_text_group(legend, texts_attr)
+    legend_text = get_text_group(legend, texts_attr, is_legend = True)
 
     print("formal_x_axis_array", xAxis_text)
     print("formal_y_axis_array", yAxis_text)
@@ -653,7 +661,8 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
     X_axis, Y_axis, legend = calculate_axis(texts_attr)
     is_vertical, width_array, height_array = judge_vertical(rects_attr)
     # print(f"X-axis: {X_axis} and Y-axis: {Y_axis}")
-    print("X_axis", X_axis)
+
+    print("legend_what", legend)
 
     text_information = get_text_information(X_axis, Y_axis, legend, texts_attr)
 
@@ -715,6 +724,7 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
 
         second_dimension_list = [item["content"] for item in legend]
 
+    print("legend_parsed", legend)
     main_dim, second_dim, data_type = get_main_second(main_dimension_list, second_dimension_list)
     if data_type == "ocq":
         if main_dim == "o0" and float(main_dimension_list[0]) > float(main_dimension_list[-1]):
