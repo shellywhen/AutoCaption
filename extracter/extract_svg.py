@@ -55,6 +55,16 @@ def get_attr(element, attr, default_value = ""):
         else:
             return parse_fill(element[attr])
 
+    if attr == "text-anchor":
+        if element.has_attr(attr):
+            return element[attr]
+            for node in element.parents:
+                if node.name == "g":
+                    if node.has_attr(attr):
+                        return node[attr]
+        return "start"
+
+
     elif element.has_attr(attr):
         if attr == "width" or attr == "height":
             if element[attr].endswith("%"):
@@ -77,19 +87,29 @@ def parse_transform(element):
 def get_font_size(element):
     if element.name == "text":
         font_size = float(get_attr(element, "font-size", 12))
+    
         return font_size
 
-def get_position(element):
+
+
+def get_position(element, is_bbox = False):
     # print(element.name)
-    if element.name == "rect":
-        x = float(get_attr(element, "x", 0))
-        y = float(get_attr(element, "y", 0))
-    elif element.name == "circle":
-        x = float(get_attr(element, "cx", 0))
-        y = float(get_attr(element, "cy", 0))
-    elif element.name == "text":
-        x = float(get_attr(element, "x", 0))
-        y = float(get_attr(element, "y", 0))
+    if not is_bbox:
+        if element.name == "rect":
+            x = float(get_attr(element, "x", 0))
+            y = float(get_attr(element, "y", 0))
+        elif element.name == "circle":
+            x = float(get_attr(element, "cx", 0))
+            y = float(get_attr(element, "cy", 0))
+        elif element.name == "text":
+            x = float(get_attr(element, "x", 0))
+            y = float(get_attr(element, "y", 0))
+    else:
+        x = float(get_attr(element, "bbox_x", 0))
+        y = float(get_attr(element, "bbox_y", 0))
+
+
+
     # print(f"Now, x: {x}, y: {y}")
     for parent in element.parents:
         if parent.name == "svg":
@@ -223,11 +243,21 @@ def parse_a_rect(rect):
 
 def parse_a_text(text):
     x, y = get_position(text)
+    bbox_x, bbox_y = get_position(text, is_bbox = True)
     font_size = get_font_size(text)
     content = text.string.replace("\n", "").replace(" ", "")
     text_anchor = get_attr(text, "text-anchor", "start")
+    # bbox_x = float(get_attr(text, "box_x"))
+    # bbox_y = float(get_attr(text, "box_y"))
+    # print("debug", text)
+    # print(get_attr(text, "bbox_w"))
+    bbox_w = float(get_attr(text, "bbox_w"))
+    bbox_h = float(get_attr(text, "bbox_h"))
+
+    print("bbox content", bbox_x, bbox_y, bbox_w, bbox_h)
+    
     # print(content)
-    return_content = {"x": x, "y": y, "content": content, "orgin":text, "font_size": font_size, "text_anchor": text_anchor}
+    return_content = {"x": x, "y": y, "content": content, "orgin":text, "font_size": font_size, "text_anchor": text_anchor, "bbox_x": bbox_x, "bbox_y": bbox_y, "bbox_w": bbox_w, "bbox_h": bbox_h}
     print("text content", return_content)
     return return_content
 
@@ -474,21 +504,17 @@ def get_text_bbox(text_element):
     content = text_element["content"]
     length = len(text_element["content"])
     font_size = text_element["font_size"]
-    width = length * font_size
-    height = font_size
-    x = text_element["x"]
-    y = text_element["y"]
-    y = y - height 
-    if text_anchor == "middle":
-        x = x - width / 2
-    elif text_anchor == "end":
-        x = x - width
+    width = text_element["bbox_w"]
+    height = text_element["bbox_h"]
+    x = text_element['bbox_x']
+    y = text_element['bbox_y']
 
     text_bbox = {}
     text_bbox["x"] = x 
     text_bbox["y"] = y 
     text_bbox["w"] = width 
     text_bbox["h"] = height 
+
     text_bbox["content"] = try_convert_number(content)
 
     return text_bbox
@@ -522,6 +548,8 @@ def get_text_information(X_axis, Y_axis, legend, texts_attr):
     text_collection['yAxis']['text'] = yAxis_text 
     text_collection['legend'] = {}
     text_collection['legend']['text'] = legend_text
+    text_collection['element'] = []
+
     return text_collection
 
 def parse_unknown_svg(svg_string, need_data_soup = False):
@@ -544,6 +572,7 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
         else:
             newtexts.append(text)
     texts = newtexts
+    print(texts)
     texts_attr = [parse_a_text(text) for text in texts]
     # add id, we need id
     for i in range(len(texts_attr)):

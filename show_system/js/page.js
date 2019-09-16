@@ -146,12 +146,15 @@ function frush(data_pack){
   cur.init(data)
   cur.drawTable()
   // we update the data
+  console.log("we change the svg string")
   d3.select('#visualization').node().innerHTML = svg_string
   // changeSVG(svg_string)
   highLightShadow()
   showSentences(sentences)
   addDragging()
-   highLightText()
+
+  // console.log(data_pack)
+  highLightText(data_pack)
 }
 
 // Do not update the svg chart
