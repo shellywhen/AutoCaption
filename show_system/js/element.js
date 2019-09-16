@@ -58,18 +58,36 @@ function addColorPicker(rect) {
 let popoverInit = []
 
 function changeSVG(SVG_string) {
-     window.num = 0
-     d3.select('#visualization').node().innerHTML = SVG_string
-     let svg = d3.select('#visualization').select('svg').attr('id', 'mySvg')
-     let windowWidth =  document.getElementById('visualization').clientWidth * 0.95
-     let windowHeight = document.body.clientHeight * 0.8
-     let width = svg.attr('width')
-     let height = svg.attr('height')
-     svg.attr('viewBox', '0 0 ' + String(width) + ' ' + String(height))
-        .attr('preserveAspectRatio', "xMidYMid meet")
-        .attr('height', windowHeight)
-        .attr('width', windowWidth)
-     highLightShadow()
+    window.num = 0
+    d3.select('#visualization').node().innerHTML = SVG_string
+    let svg = d3.select('#visualization').select('svg').attr('id', 'mySvg')
+
+    let windowWidth =  document.getElementById('visualization').clientWidth * 0.95
+    let windowHeight = document.body.clientHeight * 0.8
+    let width = svg.attr('width')
+    let height = svg.attr('height')
+    svg.attr('viewBox', '0 0 ' + String(width) + ' ' + String(height))
+      .attr('preserveAspectRatio', "xMidYMid meet")
+      .attr('height', windowHeight)
+      .attr('width', windowWidth)
+    
+    // Find the bouding box of text.
+    add_text_bbox()
+
+    highLightShadow()
+}
+
+function add_text_bbox(){
+    d3.select('#visualization').select("#mySvg").selectAll("text")
+      .each(function(){
+        console.log(d3.select(this).node().getBBox())
+        bbox = d3.select(this).node().getBBox()
+        d3.select(this)
+          .attr('bbox_x', bbox.x)
+          .attr('bbox_y', bbox.y)
+          .attr('bbox_w', bbox.width)
+          .attr('bbox_h', bbox.height)
+      })
 }
 
 function highLightShadow() {
@@ -565,6 +583,7 @@ Data.prototype.initChart = function() {
         default:
           alert("Invalid Data :-(")
     }
+    add_text_bbox()
 }
 Data.prototype.drawQQTableXY = function(){
   let table = d3.select('#data-table')
@@ -757,6 +776,8 @@ let loadJsonDataByData = function(data, fileName){
   //cur.drawTitle()
   SVG_string = d3.select('#visualization').node().innerHTML
   send_data = {'svg_string': SVG_string}
+  add_text_bbox()
+  // add the text bounding box
   get_modify_svg_from_server(send_data)
   // cur.drawTable()
   // dropdown(cur.dType)
@@ -791,6 +812,8 @@ let reloadJsonFromFile = function() {
            //cur.drawTitle()
            SVG_string = d3.select('#visualization').node().innerHTML
            send_data = {'svg_string': SVG_string}
+           add_text_bbox()
+           
             get_modify_svg_from_server(send_data)
          }
          else{

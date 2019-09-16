@@ -6,18 +6,20 @@ var TIME_NOW = 0
 let highLightTableColor = '#fec44f'
 let highLightRectColor = '#d95f0e'
 
-let highLightText = function (textData=[]) {
+let highLightText = function (data_pack) {
+  console.log("data_pack", data_pack)
+  let textCollection = data_pack.data.text_collection
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
-  let textCollection = {
-    'yAxis': {'text': [{'x': 30, 'y': 20, 'w': 20, 'h': 10 }, {'x': 30, 'y': 80, 'w': 20, 'h': 10 }, {'x': 30, 'y': 140, 'w': 20, 'h': 10 }]},
-    'xAxis': {'text': [{'x': 30, 'y': 500, 'w': 20, 'h': 10 }, {'x': 50, 'y': 500, 'w': 20, 'h': 10 }, {'x': 70, 'y': 500, 'w': 20, 'h': 10 }]},
-    'legend': {'text': [{'x': 300, 'y': 10, 'w': 20, 'h': 10 }, {'x': 300, 'y': 30, 'w': 20, 'h': 10 }, {'x': 300, 'y': 5, 'w': 20, 'h': 10 }]},
-    'unit': {'text': [{'x': 5, 'y': 10, 'w': 5, 'h': 30 }, {'x': 300, 'y': 500, 'w': 30, 'h': 5 }]},
-    'title': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20 }]},
-    'element': {[]} // 这里还要有元素的位置
-  }
+  // let textCollection = {
+  //   'yAxis': {'text': [{'x': 30, 'y': 20, 'w': 20, 'h': 10 }, {'x': 30, 'y': 80, 'w': 20, 'h': 10 }, {'x': 30, 'y': 140, 'w': 20, 'h': 10 }]},
+  //   'xAxis': {'text': [{'x': 30, 'y': 500, 'w': 20, 'h': 10 }, {'x': 50, 'y': 500, 'w': 20, 'h': 10 }, {'x': 70, 'y': 500, 'w': 20, 'h': 10 }]},
+  //   'legend': {'text': [{'x': 300, 'y': 10, 'w': 20, 'h': 10 }, {'x': 300, 'y': 30, 'w': 20, 'h': 10 }, {'x': 300, 'y': 5, 'w': 20, 'h': 10 }]},
+  //   'unit': {'text': [{'x': 5, 'y': 10, 'w': 5, 'h': 30 }, {'x': 300, 'y': 500, 'w': 30, 'h': 5 }]},
+  //   'title': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20 }]},
+  //   'element': [] // 这里还要有元素的位置
+  // }
   let colorList = ['blanchedalmond', 'palegreen', 'mediumpurple', 'lightskyblue', 'lightpink']
-  let attributeList = ['xAxis', 'yAxis', 'legend', 'unit', 'title']
+  let attributeList = ['xAxis', 'yAxis', 'legend']
   let i = 0
   for (let attrName of attributeList) {
     let canvas = g.append('g').attr('id', `g_${attrName}`)
