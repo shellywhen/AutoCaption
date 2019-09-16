@@ -41,14 +41,16 @@ let highLightText = function (data_pack) {
     }
     i++
   }
-textCollection.element.text.forEach(ele => {
+  element_list = data_pack.data.elements 
+  element_list.forEach(ele => {
   g.append('rect')
     .datum(ele)
     .attr('x', ele.x)
     .attr('y', ele.y)
     .attr('width', ele.w)
     .attr('height', ele.h)
-    .style('opacity', 0)
+    .style('opacity', 1)
+    .style('fill', "red")
     .attr('id', ele.id)
     .classed('fake_element', true)
     .on('mouseover', function (d) {

@@ -90,6 +90,18 @@ def get_font_size(element):
     
         return font_size
 
+def get_translate(element):
+    if not element.has_attr("transform"):
+        return 0,0
+    transform = element['transform']
+    if not transform.startswith("translate("):
+        return 0,0
+    xy = transform.replace("translate(", "").replace(")", "").split(",")
+
+    x = float(xy[0])
+    y = float(xy[1])
+    print(f"deal with transform: {x} {y}")
+    return x,y
 
 
 def get_position(element, is_bbox = False):
@@ -98,6 +110,9 @@ def get_position(element, is_bbox = False):
         if element.name == "rect":
             x = float(get_attr(element, "x", 0))
             y = float(get_attr(element, "y", 0))
+            dx, dy = get_translate(element)
+            x = x + dx
+            y = y + dy
         elif element.name == "circle":
             x = float(get_attr(element, "cx", 0))
             y = float(get_attr(element, "cy", 0))
@@ -417,6 +432,21 @@ def get_main_second(main_dimension_list, second_dimension_list):
 
     return main_dim, second_dim, data_type
 
+def get_elements(important_rects):
+    elements_list = []
+    print("important_rects: ", important_rects)
+    for rect in important_rects:
+        element = {}
+        element['type'] = "rect"
+        element["x"] = rect["x"]
+        element['y'] = rect['y']
+        element['w'] = rect['width']
+        element['h'] = rect['height']
+        elements_list.append(element)
+
+    return elements_list
+
+
 def pack_data(important_rects, main_dimension_list, second_dimension_list):
 
     # for rect in important_rects:
@@ -424,7 +454,12 @@ def pack_data(important_rects, main_dimension_list, second_dimension_list):
     for i in range(len(important_rects)):
         important_rects[i]["id"] = i
 
+
+
     main_dim, second_dim, data_type = get_main_second(main_dimension_list, second_dimension_list)
+
+
+    
 
     data = {}
     data["data_type"] = data_type
@@ -439,6 +474,11 @@ def pack_data(important_rects, main_dimension_list, second_dimension_list):
     data["type"] = data_type
     data["unit"] = ""
     data["title"] = ""
+
+    elements_list = get_elements(important_rects)
+    print("elements_list: ", elements_list)
+    # 获取元素列表
+    data['elements'] = elements_list
     return data
 
 def uniform_important_circle(data):
@@ -682,6 +722,7 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
     def get_order_value(item):
         return item["major"] * 100 + item["second"]
     important_rects = sorted(important_rects, key = get_order_value)
+    print("important_rects", important_rects)
     data = pack_data(important_rects, main_dimension_list, second_dimension_list)
     data_string = json.dumps(data, indent = 2)
     uniform_elements = uniform_important_elements(important_rects)
@@ -694,6 +735,8 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
         uniform_elements[i]["id"] = i
 
     data['text_collection'] = text_information
+
+    print("uniform elements:", uniform_elements)
 
     if need_data_soup:
         return uniform_elements, data, soup
