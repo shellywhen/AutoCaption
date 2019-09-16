@@ -21,7 +21,8 @@ let highLightText = function (data_pack) {
   let colorList = ['blanchedalmond', 'palegreen', 'mediumpurple', 'lightskyblue', 'lightpink']
   let attributeList = ['xAxis', 'yAxis', 'legend']
   let i = 0
-  xAxis =
+  xAxis = textCollection.xAxis.text
+  yAxis = textCollection.yAxis.text
   for (let attrName of attributeList) {
     let canvas = g.append('g').attr('id', `g_${attrName}`)
     for (let item of textCollection[attrName].text) {
