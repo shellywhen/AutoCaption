@@ -15,6 +15,14 @@ def is_number(s):
         pass
     return False
 
+def try_convert_number(s):
+    try:
+        number = float(s.replace(",", ""))
+        return number 
+    except ValueError:
+        pass
+    return s
+
 def parse_fill(fill):
     # print(fill)
     if type(fill)==list and len(fill)==3:
@@ -66,6 +74,10 @@ def parse_transform(element):
 
     return x, y
 
+def get_font_size(element):
+    if element.name == "text":
+        font_size = float(get_attr(element, "font-size", 12))
+        return font_size
 
 def get_position(element):
     # print(element.name)
@@ -211,9 +223,13 @@ def parse_a_rect(rect):
 
 def parse_a_text(text):
     x, y = get_position(text)
-    content = text.string
+    font_size = get_font_size(text)
+    content = text.string.replace("\n", "").replace(" ", "")
+    text_anchor = get_attr(text, "text-anchor", "start")
     # print(content)
-    return {"x": x, "y": y, "content": content, "orgin":text}
+    return_content = {"x": x, "y": y, "content": content, "orgin":text, "font_size": font_size, "text_anchor": text_anchor}
+    print("text content", return_content)
+    return return_content
 
 
 def extract_group(x_array, y_array, texts):
@@ -226,8 +242,8 @@ def extract_group(x_array, y_array, texts):
 
     print('DEBUG', x_array, y_array);
 
-    x_groups = [{"x": x_set[0], "y": [{"position": text["y"], "content": text["content"]} for text in texts if text["x"] == x_set[0]]} for x_set in x_important_array]
-    y_groups = [{"y": y_set[0], "x": [{"position": text["x"], "content": text["content"]} for text in texts if text["y"] == y_set[0]]} for y_set in y_important_array]
+    x_groups = [{"x": x_set[0], "y": [{"position": text["y"], "content": text["content"].replace("\n", "").replace(" ", ""), "text_id": text["text_id"]} for text in texts if text["x"] == x_set[0]]} for x_set in x_important_array]
+    y_groups = [{"y": y_set[0], "x": [{"position": text["x"], "content": text["content"].replace("\n", "").replace(" ", ""), "text_id": text["text_id"]} for text in texts if text["y"] == y_set[0]]} for y_set in y_important_array]
     for x_group in x_groups:
         x_group["distance"] = max([item["position"] for item in x_group["y"]]) - min([item["position"] for item in x_group["y"]])
     for y_group in y_groups:
@@ -253,6 +269,7 @@ def count_text(texts):
 
 
 def calculate_axis(texts, force=1):
+    # print("text_original_information", texts)
     x_array, y_array = count_text(texts)
     x_groups, y_groups = extract_group(x_array, y_array, texts)
     print("y_groups\n", y_groups)
@@ -274,6 +291,7 @@ def calculate_axis(texts, force=1):
                 legend = y_group
                 legend["type"] = "horizontal"
                 break
+
     max_distance = max([x_group["distance"] for x_group in x_groups])
     for x_group in x_groups:
         if x_group["distance"] > max_distance * 0.5:
@@ -450,6 +468,62 @@ def uniform_important_elements(important_rects):
         uniform_elements.append(rect)
     return uniform_elements
 
+def get_text_bbox(text_element):
+
+    text_anchor = text_element["text_anchor"]
+    content = text_element["content"]
+    length = len(text_element["content"])
+    font_size = text_element["font_size"]
+    width = length * font_size
+    height = font_size
+    x = text_element["x"]
+    y = text_element["y"]
+    y = y - height 
+    if text_anchor == "middle":
+        x = x - width / 2
+    elif text_anchor == "end":
+        x = x - width
+
+    text_bbox = {}
+    text_bbox["x"] = x 
+    text_bbox["y"] = y 
+    text_bbox["w"] = width 
+    text_bbox["h"] = height 
+    text_bbox["content"] = try_convert_number(content)
+
+    return text_bbox
+
+    # if text_anchor == "start":
+
+
+def get_text_group(original_text_group, texts_attr):
+    array = []
+    if isinstance(original_text_group["x"], list):
+        array = original_text_group["x"]
+    elif isinstance(original_text_group["y"], list):
+        array = original_text_group["y"]
+
+    text_array = [texts_attr[item["text_id"]] for item in array]
+    text_bbox = [get_text_bbox(item) for item in text_array]
+    return text_bbox
+
+def get_text_information(X_axis, Y_axis, legend, texts_attr):
+    xAxis_text = get_text_group(X_axis, texts_attr)
+    yAxis_text = get_text_group(Y_axis, texts_attr)
+    legend_text = get_text_group(legend, texts_attr)
+
+    print("formal_x_axis_array", xAxis_text)
+    print("formal_y_axis_array", yAxis_text)
+    print("formal_legend_axis_array", legend_text)
+    text_collection = {}
+    text_collection['xAxis'] = {}
+    text_collection['xAxis']["text"] = xAxis_text
+    text_collection['yAxis'] = {}
+    text_collection['yAxis']['text'] = yAxis_text 
+    text_collection['legend'] = {}
+    text_collection['legend']['text'] = legend_text
+    return text_collection
+
 def parse_unknown_svg(svg_string, need_data_soup = False):
     soup = bs4.BeautifulSoup(svg_string, "html5lib")
     svg = soup.select("svg")
@@ -471,6 +545,10 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
             newtexts.append(text)
     texts = newtexts
     texts_attr = [parse_a_text(text) for text in texts]
+    # add id, we need id
+    for i in range(len(texts_attr)):
+        texts_attr[i]["text_id"] = i
+
     # print(f"the length of texts_attr is {len(texts_attr)}")
     # for i in rects_attr:
     #     print(f"width is {i["width"]}, and height is {i["height"]}")
@@ -498,6 +576,16 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
     X_axis, Y_axis, legend = calculate_axis(texts_attr)
     is_vertical, width_array, height_array = judge_vertical(rects_attr)
     # print(f"X-axis: {X_axis} and Y-axis: {Y_axis}")
+    print("X_axis", X_axis)
+
+    text_information = get_text_information(X_axis, Y_axis, legend, texts_attr)
+
+    # print("formal_x_axis_array", get_text_group(X_axis, texts_attr))
+    # print("formal_y_axis_array", get_text_group(Y_axis, texts_attr))
+    # print("formal_legend_axis_array", get_text_group(legend, texts_attr))
+    # todo get the axis
+
+    print("text_information", text_information) 
 
     if is_vertical:
         calculate_value = parse_quantity_array(Y_axis, "vertical")
@@ -575,6 +663,9 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
         uniform_elements[i][second_dim] = uniform_elements[i]["second"]
         uniform_elements[i]["q0"] = uniform_elements[i]["value"]
         uniform_elements[i]["id"] = i
+
+    data['text_collection'] = text_information
+
     if need_data_soup:
         return uniform_elements, data, soup
     return uniform_elements, data, soup
