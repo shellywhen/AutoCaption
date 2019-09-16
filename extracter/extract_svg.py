@@ -548,6 +548,8 @@ def get_text_information(X_axis, Y_axis, legend, texts_attr):
     text_collection['yAxis']['text'] = yAxis_text 
     text_collection['legend'] = {}
     text_collection['legend']['text'] = legend_text
+    text_collection['element'] = []
+
     return text_collection
 
 def parse_unknown_svg(svg_string, need_data_soup = False):
