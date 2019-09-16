@@ -11,7 +11,7 @@ let highLightText = function (data_pack) {
   let textCollection = data_pack.data.text_collection
   d3.select('#annotationDiv').select('svg')
     .attr("viewBox", d3.select('#visualization').select('svg').attr("viewBox"))
-    
+
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
   // let textCollection = {
   //   'yAxis': {'text': [{'x': 30, 'y': 20, 'w': 20, 'h': 10 }, {'x': 30, 'y': 80, 'w': 20, 'h': 10 }, {'x': 30, 'y': 140, 'w': 20, 'h': 10 }]},
@@ -80,7 +80,7 @@ let highLightText = function (data_pack) {
 }
 
 let highLightLine = function (x, y) {
-  g.select('#interaction_annotation')
+  d3.select('#annotationDiv').select('#interaction_annotation')
     .append('line')
     .attr('x1', xAxis[0].x )
     .attr('y1', y)
@@ -89,7 +89,7 @@ let highLightLine = function (x, y) {
     .style('stroke-dasharray', "10,10")
     .style('stroke', 'black')
 
-  g.select('#interaction_annotation')
+  d3.select('#annotationDiv').select('#interaction_annotation')
     .append('line')
     .attr('x1', x)
     .attr('y1', yAxis[0].y)
@@ -97,7 +97,6 @@ let highLightLine = function (x, y) {
     .attr('y2',  yAxis[yAxis.length - 1].y -  yAxis[yAxis.length - 1].h)
     .style('stroke-dasharray', "10,10")
     .style('stroke', 'black')
-
 
 
     // highlight legend
