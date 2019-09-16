@@ -14,7 +14,8 @@ let highLightText = function (textData=[]) {
     'legend': {'text': [{'x': 300, 'y': 10, 'w': 20, 'h': 10 }, {'x': 300, 'y': 30, 'w': 20, 'h': 10 }, {'x': 300, 'y': 5, 'w': 20, 'h': 10 }]},
     'unit': {'text': [{'x': 5, 'y': 10, 'w': 5, 'h': 30 }, {'x': 300, 'y': 500, 'w': 30, 'h': 5 }]},
     'title': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20 }]},
-    'element': {[]} // 这里还要有元素的位置
+    'element': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20, 'content': 123}]},
+    'canvas': {'x': 10, 'y': 10, 'w': 500, 'h': 500, 'content': 123}
   }
   let colorList = ['blanchedalmond', 'palegreen', 'mediumpurple', 'lightskyblue', 'lightpink']
   let attributeList = ['xAxis', 'yAxis', 'legend', 'unit', 'title']
@@ -30,12 +31,15 @@ let highLightText = function (textData=[]) {
         .style('fill-opacity', 0.1)
         .style('fill', colorList[i])
         .style('stroke-opacity', 1)
+        .classed(`annotation_${attrName}`, true)
+        .classed('annotation_normal', true)
+        .classed('annotation_highlight', false)
     }
     i++
   }
-textCollection.element.forEach(ele => {
-  canvas.append('rect')
-    .datum(ele.data)
+textCollection.element.text.forEach(ele => {
+  g.append('rect')
+    .datum(ele)
     .attr('x', ele.x)
     .attr('y', ele.y)
     .attr('width', ele.w)
@@ -44,10 +48,20 @@ textCollection.element.forEach(ele => {
     .attr('id', ele.id)
     .classed('fake_element', true)
     .on('mouseover', function (d) {
+      g.select('#interaction_annotation')
+        .append('line')
+        .attr('x1', textCollection.canvas.x)
+        .attr('y1', d.y)
+        .attr('x2', textCollection.canvas.x + textCollection.canvas.w)
+        .attr('y2', d.y)
+        .style('stroke-dasharray', "10,10")
+        .style('stroke', 'black')
+
         // highlight legend
         // show a line
     })
     .on('mouseout', function (d) {
+      g.select('#interaction_annotation').selectAll('line').remove()
        // stop highlight legend
        // no line
 
