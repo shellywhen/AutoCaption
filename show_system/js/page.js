@@ -16,12 +16,29 @@ $(document).ready(function(){
       'pointer-events': 'none'
     });
     let origin = d3.select('#visualization').select('svg')
-    let overlay = d3.select('#annotationDiv').select('svg')
+    d3.select('#annotationDiv').select('svg').remove()
+    let overlay = d3.select('#annotationDiv').append("svg")
     console.log(origin.attr('width'), origin.attr('height'), origin.attr('viewBox'))
-    overlay.attr('width', origin.attr('width'))
-      .attr('height', origin.attr('height'))
-      .attr('viewBox', origin.attr('viewBox'))
-      .attr('preserveAspectRatio', origin.attr('preserveAspectRatio'))
+
+    if (origin.attr("viewBox") === null){
+      overlay.attr('width', origin.attr('width'))
+        .attr('height', origin.attr('height'))
+    }
+    else {
+      viewBox = origin.attr("viewBox")
+      width = viewBox.split(" ")[2]
+      height = viewBox.split(" ")[3]
+      overlay.attr("width", width)
+        .attr("height", height)
+
+      
+      overlay
+        .attr('viewBox', origin.attr('viewBox'))
+        .attr('preserveAspectRatio', origin.attr('preserveAspectRatio'))
+      overlay.attr("width", origin.attr("width"))
+        .attr("height", origin.attr('height'))
+    }
+    
     $('[data-toggle="popover"]').popover()
     document.getElementById('openFile')
             .addEventListener('change', function(){
@@ -30,7 +47,12 @@ $(document).ready(function(){
                   let f = this.files[0]
                   let p = new FileReader()
                   p.onload = function(e) {
+                      remove_old_vis()
                       let SVG_string = e.target.result
+                      // console.log(SVG_string)
+                      changeSVG(SVG_string)
+                      add_text_bbox()
+                      SVG_string = d3.select('#visualization').node().innerHTML
                       send_data = {'svg_string': SVG_string}
                       get_modify_svg_open(send_data)
                   }
@@ -104,17 +126,34 @@ function get_modify_svg_open(send_data){
 }
 
 function frush_open_file(data_pack){
+  // svg_string = data_pack['svg_string']
+  // sentences  = data_pack['sentences']
+  // data = data_pack['data']
+  // cur.init(data)
+  // cur.drawTable()
+  // // we update the data
+  // // d3.select('#visualization').node().innerHTML = svg_string
+  // changeSVG(svg_string)
+  // // highLightShadow()
+  // showSentences(sentences)
+  // addDragging()
+  // highLightText(data_pack)
+
   svg_string = data_pack['svg_string']
   sentences  = data_pack['sentences']
   data = data_pack['data']
   cur.init(data)
   cur.drawTable()
   // we update the data
-  // d3.select('#visualization').node().innerHTML = svg_string
-  changeSVG(svg_string)
-  // highLightShadow()
+  console.log("we change the svg string")
+  d3.select('#visualization').node().innerHTML = svg_string
+  // changeSVG(svg_string)
+  highLightShadow()
   showSentences(sentences)
   addDragging()
+
+  // console.log(data_pack)
+  highLightText(data_pack)
 }
 
 

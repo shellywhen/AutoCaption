@@ -176,7 +176,7 @@ class getModifySvgSentence(tornado.web.RequestHandler):
         #     data = json.load(f)
         begin_time = time.time()
         svg_string = self.get_body_argument('svg_string')
-        # print('svg_string, weird', svg_string)
+        print('svg_string, what', svg_string)
         svg_string, data_json = get_modified_svg_data(svg_string)
         # print("data_json", data_json)
         # print('modified svg_string', svg_string)
@@ -193,7 +193,7 @@ class getModifySvgSentence(tornado.web.RequestHandler):
             sentences = []
             sentence_type = ['compare_trend', 'compare_ave', 'sum_trend', 'all_trend', 'local_trend', 'local_sum_trend']
             for i, setting in enumerate(focal_array):
-                print(setting)
+                # print(setting)
                 this_sentences = generate_sentence_by(data_json, setting['focus_id'], setting["compare_id"], major_name, second_name)
                 for sentence in this_sentences:
                     if sentence['type'] == sentence_type[i]:

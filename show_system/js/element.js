@@ -66,10 +66,19 @@ function changeSVG(SVG_string) {
     let windowHeight = document.body.clientHeight * 0.8
     let width = svg.attr('width')
     let height = svg.attr('height')
-    svg.attr('viewBox', '0 0 ' + String(width) + ' ' + String(height))
-      .attr('preserveAspectRatio', "xMidYMid meet")
-      .attr('height', windowHeight)
-      .attr('width', windowWidth)
+
+    if (svg.attr("viewBox") !== null){
+      svg.attr('preserveAspectRatio', "xMidYMid meet")
+        .attr('height', windowHeight)
+        .attr('width', windowWidth)
+    }
+    else{
+      svg.attr('viewBox', '0 0 ' + String(width) + ' ' + String(height))
+        .attr('preserveAspectRatio', "xMidYMid meet")
+        .attr('height', windowHeight)
+        .attr('width', windowWidth)
+    }
+
     
     // Find the bouding box of text.
     add_text_bbox()
@@ -80,7 +89,7 @@ function changeSVG(SVG_string) {
 function add_text_bbox(){
     d3.select('#visualization').select("#mySvg").selectAll("text")
       .each(function(){
-        console.log(d3.select(this).node().getBBox())
+        // console.log(d3.select(this).node().getBBox())
         bbox = d3.select(this).node().getBBox()
         d3.select(this)
           .attr('bbox_x', bbox.x)
@@ -788,6 +797,7 @@ let loadJsonDataByData = function(data, fileName){
 let randomDraw = function(d) {
      cur.init(d)
      cur.initChartFromJson()
+     add_text_bbox()
      cur.drawTable()
      dropdown(cur.dType)
      addDragging()
@@ -810,15 +820,17 @@ let reloadJsonFromFile = function() {
            cur.initChartFromJson()
           // cur.drawTable()
            //cur.drawTitle()
+           add_text_bbox()
            SVG_string = d3.select('#visualization').node().innerHTML
            send_data = {'svg_string': SVG_string}
-           add_text_bbox()
-           
+           // add_text_bbox()
+
             get_modify_svg_from_server(send_data)
          }
          else{
            cur.init(d)
            cur.initChartFromJson()
+           add_text_bbox()
            cur.drawTable()
            dropdown(cur.dType)
            showSentences(d.sentences)

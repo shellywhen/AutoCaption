@@ -9,6 +9,9 @@ let highLightRectColor = '#d95f0e'
 let highLightText = function (data_pack) {
   console.log("data_pack", data_pack)
   let textCollection = data_pack.data.text_collection
+  d3.select('#annotationDiv').select('svg')
+    .attr("viewBox", d3.select('#visualization').select('svg').attr("viewBox"))
+    
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
   // let textCollection = {
   //   'yAxis': {'text': [{'x': 30, 'y': 20, 'w': 20, 'h': 10 }, {'x': 30, 'y': 80, 'w': 20, 'h': 10 }, {'x': 30, 'y': 140, 'w': 20, 'h': 10 }]},
@@ -43,36 +46,37 @@ let highLightText = function (data_pack) {
   }
   element_list = data_pack.data.elements 
   element_list.forEach(ele => {
-  g.append('rect')
-    .datum(ele)
-    .attr('x', ele.x)
-    .attr('y', ele.y)
-    .attr('width', ele.w)
-    .attr('height', ele.h)
-    .style('opacity', 1)
-    .style('fill', "red")
-    .attr('id', ele.id)
-    .classed('fake_element', true)
-    .on('mouseover', function (d) {
-      // g.select('#interaction_annotation')
-      //   .append('line')
-      //   .attr('x1', textCollection.canvas.x)
-      //   .attr('y1', d.y)
-      //   .attr('x2', textCollection.canvas.x + textCollection.canvas.w)
-      //   .attr('y2', d.y)
-      //   .style('stroke-dasharray', "10,10")
-      //   .style('stroke', 'black')
+    g.append('rect')
+      .datum(ele)
+      .attr('x', ele.x)
+      .attr('y', ele.y)
+      .attr('width', ele.w)
+      .attr('height', ele.h)
+      .style('opacity', 0.1)
+      .style('fill', "red")
+      .attr('id', ele.id)
+      .classed('fake_element', true)
+      .on('mouseover', function (d) {
+        console.log(d)
+        // g.select('#interaction_annotation')
+        //   .append('line')
+        //   .attr('x1', textCollection.canvas.x)
+        //   .attr('y1', d.y)
+        //   .attr('x2', textCollection.canvas.x + textCollection.canvas.w)
+        //   .attr('y2', d.y)
+        //   .style('stroke-dasharray', "10,10")
+        //   .style('stroke', 'black')
 
-        // highlight legend
-        // show a line
-    })
-    .on('mouseout', function (d) {
-      g.select('#interaction_annotation').selectAll('line').remove()
-       // stop highlight legend
-       // no line
+          // highlight legend
+          // show a line
+      })
+      .on('mouseout', function (d) {
+        g.select('#interaction_annotation').selectAll('line').remove()
+         // stop highlight legend
+         // no line
 
-    })
-})
+      })
+  })
 }
 
 let highLightLine = function (x, y) {

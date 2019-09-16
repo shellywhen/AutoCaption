@@ -71,6 +71,14 @@ def get_attr(element, attr, default_value = ""):
                 return default_value
         elif attr == "r":
             return re.sub("[a-z]", "", element[attr])
+        elif attr == "font-size":
+            font_size_value = element[attr]
+            font_size_value = font_size_value.replace("px", '')
+            if font_size_value.endswith("em"):
+                relative_value = float(font_size_value.replace("em", "")) * 12
+                return relative_value
+            print(font_size_value)
+            return font_size_value
         return element[attr]
     else:
         return default_value

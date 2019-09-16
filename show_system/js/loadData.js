@@ -112,8 +112,12 @@ function deal_with_ocq(data) {
 }
 
 function remove_old_vis(){
-    let svg = d3.selectAll("#visualization")
-               .selectAll("svg").selectAll("g").remove()
+    svg = d3.selectAll("#visualization")
+        .selectAll("svg").selectAll("g").remove()
+
+    d3.selectAll("#annotationDiv")
+        .selectAll("svg").selectAll("g").remove()
+    
 }
 
 let extent = function (array, key) {
