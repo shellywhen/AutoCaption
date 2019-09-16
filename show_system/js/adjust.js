@@ -13,14 +13,6 @@ let highLightText = function (data_pack) {
     .attr("viewBox", d3.select('#visualization').select('svg').attr("viewBox"))
 
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
-  // let textCollection = {
-  //   'yAxis': {'text': [{'x': 30, 'y': 20, 'w': 20, 'h': 10 }, {'x': 30, 'y': 80, 'w': 20, 'h': 10 }, {'x': 30, 'y': 140, 'w': 20, 'h': 10 }]},
-  //   'xAxis': {'text': [{'x': 30, 'y': 500, 'w': 20, 'h': 10 }, {'x': 50, 'y': 500, 'w': 20, 'h': 10 }, {'x': 70, 'y': 500, 'w': 20, 'h': 10 }]},
-  //   'legend': {'text': [{'x': 300, 'y': 10, 'w': 20, 'h': 10 }, {'x': 300, 'y': 30, 'w': 20, 'h': 10 }, {'x': 300, 'y': 5, 'w': 20, 'h': 10 }]},
-  //   'unit': {'text': [{'x': 5, 'y': 10, 'w': 5, 'h': 30 }, {'x': 300, 'y': 500, 'w': 30, 'h': 5 }]},
-  //   'title': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20 }]},
-  //   'element': [] // 这里还要有元素的位置
-  // }
   let colorList = ['blanchedalmond', 'palegreen', 'mediumpurple', 'lightskyblue', 'lightpink']
   let attributeList = ['xAxis', 'yAxis', 'legend']
   let i = 0
@@ -44,7 +36,7 @@ let highLightText = function (data_pack) {
     }
     i++
   }
-  element_list = data_pack.data.elements 
+  element_list = data_pack.data.elements
   element_list.forEach(ele => {
     g.append('rect')
       .datum(ele)
@@ -58,17 +50,6 @@ let highLightText = function (data_pack) {
       .classed('fake_element', true)
       .on('mouseover', function (d) {
         console.log(d)
-        // g.select('#interaction_annotation')
-        //   .append('line')
-        //   .attr('x1', textCollection.canvas.x)
-        //   .attr('y1', d.y)
-        //   .attr('x2', textCollection.canvas.x + textCollection.canvas.w)
-        //   .attr('y2', d.y)
-        //   .style('stroke-dasharray', "10,10")
-        //   .style('stroke', 'black')
-
-          // highlight legend
-          // show a line
       })
       .on('mouseout', function (d) {
         g.select('#interaction_annotation').selectAll('line').remove()
@@ -97,10 +78,6 @@ let highLightLine = function (x, y) {
     .attr('y2',  yAxis[yAxis.length - 1].y -  yAxis[yAxis.length - 1].h)
     .style('stroke-dasharray', "10,10")
     .style('stroke', 'black')
-
-
-    // highlight legend
-    // show a line
 
 }
 
