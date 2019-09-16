@@ -5,21 +5,22 @@ var TIME_LAST = 0
 var TIME_NOW = 0
 let highLightTableColor = '#fec44f'
 let highLightRectColor = '#d95f0e'
-
-let highLightText = function (textData=[]) {
+let xAxis = []
+let yAxis = []
+let highLightText = function (textCollection = {
+  'yAxis': {'text': [{'x': 30, 'y': 20, 'w': 20, 'h': 10 }, {'x': 30, 'y': 80, 'w': 20, 'h': 10 }, {'x': 30, 'y': 140, 'w': 20, 'h': 10 }]},
+  'xAxis': {'text': [{'x': 30, 'y': 500, 'w': 20, 'h': 10 }, {'x': 50, 'y': 500, 'w': 20, 'h': 10 }, {'x': 70, 'y': 500, 'w': 20, 'h': 10 }]},
+  'legend': {'text': [{'x': 300, 'y': 10, 'w': 20, 'h': 10 }, {'x': 300, 'y': 30, 'w': 20, 'h': 10 }, {'x': 300, 'y': 5, 'w': 20, 'h': 10 }]},
+  'unit': {'text': [{'x': 5, 'y': 10, 'w': 5, 'h': 30 }, {'x': 300, 'y': 500, 'w': 30, 'h': 5 }]},
+  'title': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20 }]},
+  'element': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20, 'content': 123}]},
+  'canvas': {'x': 10, 'y': 10, 'w': 500, 'h': 500, 'content': 123}
+} ) {
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
-  let textCollection = {
-    'yAxis': {'text': [{'x': 30, 'y': 20, 'w': 20, 'h': 10 }, {'x': 30, 'y': 80, 'w': 20, 'h': 10 }, {'x': 30, 'y': 140, 'w': 20, 'h': 10 }]},
-    'xAxis': {'text': [{'x': 30, 'y': 500, 'w': 20, 'h': 10 }, {'x': 50, 'y': 500, 'w': 20, 'h': 10 }, {'x': 70, 'y': 500, 'w': 20, 'h': 10 }]},
-    'legend': {'text': [{'x': 300, 'y': 10, 'w': 20, 'h': 10 }, {'x': 300, 'y': 30, 'w': 20, 'h': 10 }, {'x': 300, 'y': 5, 'w': 20, 'h': 10 }]},
-    'unit': {'text': [{'x': 5, 'y': 10, 'w': 5, 'h': 30 }, {'x': 300, 'y': 500, 'w': 30, 'h': 5 }]},
-    'title': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20 }]},
-    'element': {'text': [{'x': 100, 'y': 30, 'w': 100, 'h': 20, 'content': 123}]},
-    'canvas': {'x': 10, 'y': 10, 'w': 500, 'h': 500, 'content': 123}
-  }
   let colorList = ['blanchedalmond', 'palegreen', 'mediumpurple', 'lightskyblue', 'lightpink']
   let attributeList = ['xAxis', 'yAxis', 'legend', 'unit', 'title']
   let i = 0
+  xAxis =
   for (let attrName of attributeList) {
     let canvas = g.append('g').attr('id', `g_${attrName}`)
     for (let item of textCollection[attrName].text) {
@@ -48,14 +49,14 @@ textCollection.element.text.forEach(ele => {
     .attr('id', ele.id)
     .classed('fake_element', true)
     .on('mouseover', function (d) {
-      g.select('#interaction_annotation')
-        .append('line')
-        .attr('x1', textCollection.canvas.x)
-        .attr('y1', d.y)
-        .attr('x2', textCollection.canvas.x + textCollection.canvas.w)
-        .attr('y2', d.y)
-        .style('stroke-dasharray', "10,10")
-        .style('stroke', 'black')
+      // g.select('#interaction_annotation')
+      //   .append('line')
+      //   .attr('x1', textCollection.canvas.x)
+      //   .attr('y1', d.y)
+      //   .attr('x2', textCollection.canvas.x + textCollection.canvas.w)
+      //   .attr('y2', d.y)
+      //   .style('stroke-dasharray', "10,10")
+      //   .style('stroke', 'black')
 
         // highlight legend
         // show a line
@@ -67,6 +68,32 @@ textCollection.element.text.forEach(ele => {
 
     })
 })
+}
+
+let highLightLine = function (x, y) {
+  g.select('#interaction_annotation')
+    .append('line')
+    .attr('x1', xAxis[0].x )
+    .attr('y1', y)
+    .attr('x2', xAxis[xAxis.length - 1].x -  xAxis[xAxis.length - 1].w)
+    .attr('y2', y)
+    .style('stroke-dasharray', "10,10")
+    .style('stroke', 'black')
+
+  g.select('#interaction_annotation')
+    .append('line')
+    .attr('x1', x)
+    .attr('y1', yAxis[0].y)
+    .attr('x2', x)
+    .attr('y2',  yAxis[yAxis.length - 1].y -  yAxis[yAxis.length - 1].h)
+    .style('stroke-dasharray', "10,10")
+    .style('stroke', 'black')
+
+
+
+    // highlight legend
+    // show a line
+
 }
 
 let dragStart = function(d) {
