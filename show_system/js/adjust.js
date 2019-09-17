@@ -16,11 +16,13 @@ let tick_value_x = []
 let g_xAxis
 let g_yAxis
 let g_legend
+let element_list
 
 let highLightText = function (data_pack) {
   console.log("data_pack", data_pack)
   let textCollection = data_pack.data.text_collection
   let viewBox = d3.select('#visualization').select('svg').attr("viewBox").split(" ")
+  
 
   let rel_width = parseFloat(viewBox[2])
   let rel_height = parseFloat(viewBox[3])
@@ -28,6 +30,19 @@ let highLightText = function (data_pack) {
 
   d3.select('#annotationDiv').select('svg')
     .attr("viewBox", d3.select('#visualization').select('svg').attr("viewBox"))
+
+  let this_svg = d3.select('#annotationDiv').select('svg')
+
+  this_svg.append("svg:defs").append("svg:marker")
+    .attr("id", "triangle")
+    .attr("refX", 15)
+    .attr("refY", -1.5)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
+    .attr("orient", "auto")
+    .append("path")
+    .attr("d", "M 0 -5 10 10")
+    .style("stroke", "black");
 
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
 
@@ -115,6 +130,7 @@ let highLightText = function (data_pack) {
     .attr("y2", 0)
     // .attr("stroke-width", 2)
     .attr("stroke", colorList[0])
+    .attr("opacity", 0)
 
   g.append("line")
     .attr("id", "y_auxiliary_line")
@@ -125,6 +141,7 @@ let highLightText = function (data_pack) {
     .attr("y2", 0)
     // .attr("stroke-width", 5)
     .attr("stroke", colorList[1])
+    .attr("opacity", 0)
 
   g.append("circle")
     .attr("id", "auxiliary_circle")
@@ -133,6 +150,7 @@ let highLightText = function (data_pack) {
     .attr("cy", x_axis_y)
     .attr("fill", colorList[2])
     .attr("r", 5)
+    .attr("opacity", 0)
 
   // 添加一个透明大矩形：
   g.append("rect")
@@ -144,25 +162,17 @@ let highLightText = function (data_pack) {
       var coordinates = d3.mouse(this)
       let x = coordinates[0]
       let y = coordinates[1]
-      console.log(coordinates)
-      Draw_line(x, y)
-      highlight_y_tick(y)
-      highlight_x_tick(x)
+      // console.log(coordinates)
+      // Draw_line(x, y)
+      // highlight_y_tick(y)
+      // highlight_x_tick(x)
       
     })
     .on("mouseover", function(d){
-      d3.select("#x_auxiliary_line")
-        .attr("stroke-width", 1)
-
-      d3.select("#y_auxiliary_line")
-        .attr("stroke-width", 1)
+      
     })
     .on("mouseout", function(d){
-      d3.select("#x_auxiliary_line")
-        .attr("stroke-width", null)
-
-      d3.select("#y_auxiliary_line")
-        .attr("stroke-width", null)
+      
     })
 
   g_xAxis = d3.select("#g_xAxis")
@@ -170,18 +180,27 @@ let highLightText = function (data_pack) {
   g_legend = d3.select("#g_legend")
 
   element_list = data_pack.data.elements 
-  element_list.forEach(ele => {
-    g.append('rect')
-      .datum(ele)
-      .attr('x', ele.x)
-      .attr('y', ele.y)
-      .attr('width', ele.w)
-      .attr('height', ele.h)
+  g.selectAll(".element")
+      .data(element_list).enter()
+      .append('rect')
+      .attr('x', d => d.x)
+      .attr('y', d => d.y)
+      .attr('width', d => d.w)
+      .attr('height', d => d.h)
       .style('opacity', 0)
       .style('fill', "red")
-      .attr('id', ele.id)
+      .attr('id', (d, i) => "element_" + i)
       .classed('fake_element', true)
       .on('mouseover', function (d) {
+        // d3.select("#x_auxiliary_line")
+        //   .attr("opacity", 1)
+
+        // d3.select("#y_auxiliary_line")
+        //   .attr("opacity", 1)
+
+        // d3.select("#auxiliary_circle")
+        //   .attr("opacity", 1)
+
         console.log(d)
         if (is_vertical){
           x = d.x + d.w / 2 
@@ -209,16 +228,24 @@ let highLightText = function (data_pack) {
         else{
           // TODO
         }
+        
+        d3.select(this).classed("highlight", true)
 
       })
       .on('mouseout', function (d) {
         // g.select('#interaction_annotation').selectAll('line').remove()
          // stop highlight legend
          // no line
-
+         fade_out_line()
+         d3.select(this).classed("highlight", true)
       })
 
-  })
+  add_trend(0, 4)
+
+
+  // element_list.forEach(ele => {
+    
+  // })
 }
 
 
@@ -289,11 +316,62 @@ function find_closest_y_tick(value){
   return [0]
 
 
+
   // console.log(yAxis
   // return 0
 
 }
 // function draw_line()
+
+function add_trend(begin_id, end_id){
+  let begin_element = element_list[begin_id]
+  let end_element = element_list[end_id]
+
+  if (is_vertical)
+  {
+    let space = 20
+    d3.select("#annotationDiv").select("#annotation")
+      .append("g")
+      .attr("class", "trend_arrow")
+      .append("line")
+      .attr("x1", begin_element.x + begin_element.w / 2 )
+      .attr("y1", begin_element.y - space)
+      .attr("x2", end_element.x + end_element.w / 2 )
+      .attr("y2", end_element.y - space)
+      .attr("marker-end", "url(#triangle)");
+
+
+
+  }
+}
+
+
+function fade_out_line(){
+
+  let trans = d3.select("#annotationDiv")
+    .transition()
+    .duration(200)
+
+  trans.select("#x_auxiliary_line")
+    .attr("opacity", 0)
+
+  trans.select("#y_auxiliary_line")
+    .attr("opacity", 0)
+
+  trans.select("#auxiliary_circle")
+    .attr("opacity", 0)
+
+  g_xAxis.selectAll("rect")
+    .classed("highlight", false)
+
+  g_yAxis.selectAll("rect")
+    .classed("highlight", false)
+
+  g_legend.selectAll("rect")
+    .classed("highlight", false)
+
+
+}
 
 function Draw_line(x, y){
 
@@ -302,16 +380,19 @@ function Draw_line(x, y){
     .duration(200)
 
   trans.select("#x_auxiliary_line")
+    .attr("opacity", 1)
     .attr("x1", x)
     .attr("x2", x)
     .attr("y2", y)
 
   trans.select("#y_auxiliary_line")
+    .attr("opacity", 1)
     .attr("y1", y)
     .attr("x2", x)
     .attr("y2", y)
 
   trans.select("#auxiliary_circle")
+    .attr("opacity", 1)
     .attr("cx", x)
     .attr("cy", y)
 }

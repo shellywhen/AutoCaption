@@ -27,6 +27,11 @@ rect :active{
   stroke-width: 5px;
   stroke-dasharray: 5,5;
 }
+.trend_arrow {
+  stroke-width: 5px;
+  stroke-dasharray: 5,5;
+  stroke: #a6d854;
+}
 
 .line {
   fill: none;

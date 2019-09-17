@@ -25,7 +25,7 @@ const type_name = {
   "outlier": "Outlier"
 }
 const color = ['#05668D','#A8DADC', '#00A896', '#FFF1D0', '#FFE5D9', '#FFA69E', '#FFCAD4']
-const sweetcolor = ['#7cbff2', '#B2F7EF', '#d2f2cf', '#F7D6E0', '#F2B5D4', '#f2b6c4', '#7BDFF2','#EFF7F6']
+const sweetcolor = ['#f6eff7','#bdc9e1','#67a9cf','#1c9099','#016c59', '#f2b6c4', '#7BDFF2','#EFF7F6']
 let dropdownList = [{
       'text': 'Bar Chart (vertical)',
       'value': 'load_bar_chart_1d'
