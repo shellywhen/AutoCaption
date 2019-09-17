@@ -453,6 +453,10 @@ def get_elements(important_rects):
         element['w'] = rect['width']
         element['h'] = rect['height']
         element['legend_id'] = rect['legend_index']
+        if 'x_axis' in rect.keys():
+            element["x_axis_id"] = rect['x_axis']
+        if 'y_axis' in rect.keys():
+            element["y_axis_id"] = rect['y_axis']
         elements_list.append(element)
 
     return elements_list
@@ -695,6 +699,7 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
             diff_array = [abs(x["position"] - center_x) for x in x_pair]
             main_index = diff_array.index(min(diff_array))
             important_rects[i]["major"] = main_index
+            important_rects[i]["x_axis"] = main_index
         important_rects = parse_color_legend(important_rects, legend)
         second_dimension_list = [item["content"] for item in legend]
     else:
@@ -720,6 +725,7 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
             diff_array = [abs(y["position"] - center_y) for y in y_pair]
             main_index = diff_array.index(min(diff_array))
             important_rects[i]["major"] = main_index
+            important_rects[i]["y_axis"] = main_index
         important_rects = parse_color_legend(important_rects, legend)
 
         second_dimension_list = [item["content"] for item in legend]
@@ -753,6 +759,7 @@ def parse_unknown_svg(svg_string, need_data_soup = False):
         uniform_elements[i]["id"] = i
 
     data['text_collection'] = text_information
+    data['is_vertical'] = is_vertical
 
     print("uniform elements:", uniform_elements)
 
