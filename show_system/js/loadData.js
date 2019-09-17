@@ -1,16 +1,18 @@
 /*
     chart drawing
 */
+let flag = true
 const marginRate = .1
 const spaceRatio = .3
 const fontRatio = .03
 const fontRatio2 = .04
-const legendHeightRatio = .04
+const legendHeightRatio = .06
 const paddingValue = 0.2
 // let myheight = document.getElementById('visualization').clientWidth * 0.95
 // let mywidth = document.body.clientHeight * 0.8
-const myheight = 660
+const myheight = flag? 400: 660
 const mywidth = 800
+
 
 Array.prototype.unique = function() {
     var result=[], hash={};
@@ -28,10 +30,10 @@ function deal_with_data (d) {
   init_element_status(d)
   console.log('element initial',element_status)
   switch (d['type']) {
-    case "ccq":
+    case 'ccq':
       deal_with_ccq(d)
       break;
-    case "ocq":
+    case 'ocq':
       deal_with_ocq(d)
       break;
     case 'cq':
@@ -41,7 +43,7 @@ function deal_with_data (d) {
       deal_with_oq(d)
       break;
     default:
-      console.log("I can not handle this kind of data!")
+      console.log('I can not handle this kind of data!')
   }
   if (is_show) {
     let sent_data = { data_string: JSON.stringify(data_json),
@@ -54,24 +56,24 @@ function deal_with_data (d) {
 }
 function judge_type(data) {
       let d = data.data_array[0]
-      let o0 = d.hasOwnProperty("o0")
-      let o1 = d.hasOwnProperty("01")
-      let c0 = d.hasOwnProperty("c0")
-      let c1 = d.hasOwnProperty("c1")
-      let q0 = d.hasOwnProperty("q0")
-      let q1 = d.hasOwnProperty("q1")
+      let o0 = d.hasOwnProperty('o0')
+      let o1 = d.hasOwnProperty('01')
+      let c0 = d.hasOwnProperty('c0')
+      let c1 = d.hasOwnProperty('c1')
+      let q0 = d.hasOwnProperty('q0')
+      let q1 = d.hasOwnProperty('q1')
 
       if (o0 && c0 && q0 && !o1 && !c1 && !q1) {
-        return "ocq"
+        return 'ocq'
       }
       else if (c0 && c1 && q0 && !o0 && !o1 && !q1) {
-        return "ccq"
+        return 'ccq'
       }
       else if (c0 && !c1 && q0 && !o0 && !o1 && !q1) {
-        return "cq"
+        return 'cq'
       }
       else if (!c0 && !c1 && q0 && o0 && !o1 && !q1) {
-        return "oq"
+        return 'oq'
       }
 }
 function deal_with_oq(data){
@@ -96,7 +98,7 @@ function deal_with_cq(data){
 }
 function deal_with_ccq(data){
       if (Math.random() > 0.5) {
-        load_group_bar_chart(data, "c0", "c1", "q0")
+        load_group_bar_chart(data, 'c0', 'c1', 'q0')
       }
       else {
         load_stack_bar_chart_horizontal(data, 'c0', 'c1', 'q0')
@@ -104,7 +106,7 @@ function deal_with_ccq(data){
 }
 function deal_with_ocq(data) {
       if (Math.random() > 0.5) {
-        load_group_bar_chart(data, "c0", "o0", "q0")
+        load_group_bar_chart(data, 'c0', 'o0', 'q0')
       }
       else {
         load_stack_bar_chart(data, 'o0', 'c0', 'q0')
@@ -112,12 +114,12 @@ function deal_with_ocq(data) {
 }
 
 function remove_old_vis(){
-    svg = d3.selectAll("#visualization")
-        .selectAll("svg").selectAll("g").remove()
+    svg = d3.selectAll('#visualization')
+        .selectAll('svg').selectAll('g').remove()
 
-    d3.selectAll("#annotationDiv")
-        .selectAll("svg").selectAll("g").remove()
-    
+    d3.selectAll('#annotationDiv')
+        .selectAll('svg').selectAll('g').remove()
+
 }
 
 let extent = function (array, key) {
@@ -131,7 +133,7 @@ let extent = function (array, key) {
       return [yMin, yMax]
 }
 
-function CQQ(data, cat_color, cat_x, cat_y, position = 'vertical', tag="scatter") {
+function CQQ(data, cat_color, cat_x, cat_y, position = 'vertical', tag='scatter') {
       this.tag = tag
   // initial chart set up
       let windowWidth =  document.getElementById('visualization').clientWidth * 0.95
@@ -147,6 +149,9 @@ function CQQ(data, cat_color, cat_x, cat_y, position = 'vertical', tag="scatter"
                   .attr('width', windowWidth)
       this.g = this.svg.append('g')
                        .attr('transform', 'translate(' + this.width * marginRate + ',' + this.height * marginRate + ')')
+      if (flag) {
+        this.g.attr('transform', 'translate(' + this.width * marginRate + ',' + this.height * 0.1 + ')' )
+      }
       this.g.append('g')
                 .attr('class', 'brush')
  // database set up
@@ -163,7 +168,7 @@ function CQQ(data, cat_color, cat_x, cat_y, position = 'vertical', tag="scatter"
       if(this.position === 'horizontal') {
         this.xScale.rangeRound(this.scaleHeight)
         this.yScale.rangeRound(this.scaleWidth)
-        if (this.tag!="scatter") {
+        if (this.tag!='scatter') {
           console.log('HELP!!!')
             this.xScale = d3.scalePoint()
                             .domain(this.data['o0'])
@@ -173,7 +178,7 @@ function CQQ(data, cat_color, cat_x, cat_y, position = 'vertical', tag="scatter"
       else {
         this.xScale.rangeRound(this.scaleWidth)
         this.yScale.rangeRound(this.scaleHeight)
-        if (this.tag!="scatter") {
+        if (this.tag!='scatter') {
             this.xScale = d3.scalePoint()
                             .domain(this.data['o0'])
                             .range(this.scaleWidth)
@@ -213,7 +218,7 @@ CQQ.prototype.drawAxis = function () {
   yMin -= 1
   xMin -= 1
   this.yScale.domain([yMin, yMax])
-  if (this.tag == "scatter") {
+  if (this.tag == 'scatter') {
       this.xScale.domain([xMin, xMax])
   }
   if(this.position === 'horizontal') {
@@ -358,13 +363,25 @@ CQQ.prototype.drawTitle = function(title) {
     let canvasHeight = this.height * (1 - 2 * marginRate)
     let canvasWidth = this.width * (1 - 2* marginRate)
     let fontSize = canvasHeight * fontRatio
-    this.g.append('text')
+    if(flag) {
+      this.g.append('text')
+          .attr('class', 'title')
+          .attr('text-anchor', 'middle')
+          .attr('font-size', fontSize * 5)
+          .attr('x', canvasWidth / 2)
+          .attr('y', - 2 * fontSize)
+          .text(title)
+          .style('font-family', 'Roboto')
+    }
+    else {
+      this.g.append('text')
           .attr('class', 'title')
           .attr('text-anchor', 'middle')
           .attr('font-size', fontSize * 1.5)
           .attr('x', canvasWidth / 2)
           .attr('y', - 2 * fontSize)
           .text(title)
+        }
     return this
 }
 
@@ -536,7 +553,7 @@ CQ.prototype.drawTitle = function (title) {
 }
 
 CQ.prototype.drawPieChart = function(){
-    this.g.attr("transform", "translate(" + this.width / 2 + "," + this.height / 2 + ")");
+    this.g.attr('transform', 'translate(' + this.width / 2 + ',' + this.height / 2 + ')');
     let radius = Math.min(this.width, this.height)/3
     let pie = d3.pie()
                 .sort(null)
@@ -550,19 +567,19 @@ CQ.prototype.drawPieChart = function(){
                   .outerRadius(radius - 40)
                   .innerRadius(radius - 40)
 
-    let arc = this.g.selectAll(".arc")
+    let arc = this.g.selectAll('.arc')
                .data(pie(this.data.data_array))
                .enter()
-               .append("g")
-               .attr("class", "arc");
+               .append('g')
+               .attr('class', 'arc');
 
-     arc.append("path")
-         .attr("d", path)
-         .attr("fill", (d,i)=>this.data["color"][i]);
+     arc.append('path')
+         .attr('d', path)
+         .attr('fill', (d,i)=>this.data['color'][i]);
 
-     arc.append("text")
-         .attr("transform", function(d) { return "translate(" + label.centroid(d) + ")"; })
-         .attr("dy", "0.35em")
+     arc.append('text')
+         .attr('transform', function(d) { return 'translate(' + label.centroid(d) + ')'; })
+         .attr('dy', '0.35em')
          .text((d,i)=>this.data['c0'][i]);
 
 }
@@ -619,6 +636,9 @@ function CCQ(data, cat_position, cat_color, quantity, position = 'vertical') {
                      .attr('height', windowHeight)
         this.g = this.svg.append('g')
                          .attr('transform', 'translate(' + this.width * marginRate + ',' + this.height * marginRate + ')')
+       if (flag) {
+         this.g.attr('transform', 'translate(' + this.width * marginRate + ',' + this.height * 0.1 + ')' )
+       }
    // database set up
         this.position = position
         this.data = data
@@ -646,36 +666,59 @@ CCQ.prototype.drawAxis = function() {
     if (this.position === 'horizontal') {
         this.g.append('g')
               .attr('class', 'axis')
-              .call(d3.axisLeft(this.xScale))
+              .call(d3.axisLeft(this.xScale).ticks(5))
 
-        this.g.append('g')
+        let xAxis = this.g.append('g')
               .attr('class', 'axis')
               .attr('transform', 'translate(0,' + this.height * (1 - 2 * marginRate) + ')')
-              .call(d3.axisBottom(this.yScale))
-        this.g.append('text')
+              .call(d3.axisBottom(this.yScale).ticks(5))
+
+        let unit = this.g.append('text')
                   .attr('transform', 'translate(' + String(this.scaleWidth[1]) + ',' + this.scaleHeight[0] + ')')
                   .attr('dy', '-.2rem')
                   .attr('text-anchor', 'end')
                   .attr('class', 'text-truncate')
                   .attr('font-size', '15px')
                   .text(this.data.unit)
+        if(flag) {
+            let axis = d3.selectAll('.axis')
+            axis.selectAll('.tick').selectAll('line').remove()
+            axis.selectAll('.domain').remove()
+            axis.selectAll('text').style('font-size', '20').style('font-family', 'Oxygen').style('fill', '#253039')
+            xAxis.call(g => g.selectAll('.tick:not(:first-of-type) line')
+              .style('stroke-opacity', 0.5)
+              .style('stroke-dasharray', '2,2'))
+          }
         return this
       }
-      this.g.append('g')
+      let xAxis = this.g.append('g')
             .attr('class', 'axis')
             .attr('transform', 'translate(0,' + this.height * (1 - 2 * marginRate) + ')')
-            .call(d3.axisBottom(this.xScale))
-
-      this.g.append('g')
+            .call(d3.axisBottom(this.xScale).ticks(5))
+      let axisLeft = d3.axisLeft(this.yScale)
+      if(flag) {
+        let canvasWidth = this.width * (1 - 2 * marginRate)
+        axisLeft = d3.axisLeft(this.yScale).ticks(5).tickSize( - canvasWidth)
+      }
+      let yAxis = this.g.append('g')
             .attr('class', 'axis')
-            .call(d3.axisLeft(this.yScale))
-      this.g.append('text')
+            .call(axisLeft)
+      let unit = this.g.append('text')
                 .attr('transform', 'rotate(-90)')
                 .attr('y', 6)
                 .attr('dy', '0.71em')
                 .attr('text-anchor', 'end')
                 .attr('font-size', '15px')
                 .text(this.data.unit)
+      if(flag) {
+        let axis = d3.selectAll('.axis')
+        axis.selectAll('.domain').remove()
+        xAxis.selectAll('line').remove()
+        axis.selectAll('text').style('font-size', '20').style('font-family', 'Oxygen').style('fill', '#253039')
+        yAxis.selectAll('.tick:not(:first-of-type) line')
+          .style('stroke-opacity', 0.3)
+          // .style('stroke-dasharray', '1,1')
+      }
       return this
 }
 
@@ -782,51 +825,65 @@ CCQ.prototype.drawGroupBarChart = function() {
       let innerScale = d3.scaleBand().domain(this.data[this.secondName]).rangeRound([0,this.xScale.bandwidth()])
       this.yScale.domain(extent(this.data.data_array, this.quantity))
       if (this.position === 'horizontal') {
-            this.g.append('g').attr('class', 'bars').selectAll('rect')
+            let rects = this.g.append('g').attr('class', 'bars').selectAll('rect')
                   .data(this.data.data_array)
                   .enter()
                   .append('rect')
-                    .attr('transform', d => 'translate(0,' + String(innerScale(this.data[this.secondName][d[this.secondName]])) + ')')
                     .attr('fill', (d, i) => this.data.color[d[this.secondName]])
                     .attr('id', d => d.id)
                     .attr('class', d => 'element_' + String(d.id))
                     .classed('ordinary', true)
                         .attr('x', 0)
-                        .attr('y', d => this.xScale(this.data[this.majorName][d[this.majorName]]))
+                        .attr('y', d => this.xScale(this.data[this.majorName][d[this.majorName]]) + innerScale(this.data[this.secondName][d[this.secondName]]) + 2)
                         .attr('width', d => this.yScale(d[this.quantity]))
-                        .attr('height', innerScale.bandwidth())
+                        .attr('height', innerScale.bandwidth() - 4)
             return this
       }
 
-      this.g.append('g').attr('class', 'bars').selectAll('rect')
+    let rects = this.g.append('g').attr('class', 'bars').selectAll('rect')
             .data(this.data.data_array)
             .enter()
             .append('rect')
-              .attr('transform', d => 'translate(' + String(innerScale(this.data[this.secondName][d[this.secondName]])) + ',0)')
               .attr('fill', (d, i) => this.data.color[d[this.secondName]])
               .attr('id', d => d.id)
               .attr('class', d => 'element_' + String(d.id))
               .classed('elements', true)
               .classed('ordinary', true)
-                  .attr('x', d => this.xScale(this.data[this.majorName][d[this.majorName]]))
+                  .attr('x', d => innerScale(this.data[this.secondName][d[this.secondName]]) + this.xScale(this.data[this.majorName][d[this.majorName]]) + 2)
                   .attr('y', d => this.yScale(d[this.quantity]))
                   .attr('height', d => this.scaleHeight[0] - this.yScale(d[this.quantity]))
-                  .attr('width', innerScale.bandwidth() - 2)
-
-      return this
+                  .attr('width', innerScale.bandwidth() - 4)
+    rects.attr('rx', 5)
+      .attr('ry', 5)
+    return this
 }
 
 CCQ.prototype.drawTitle = function (title) {
     let canvasHeight = this.height * (1 - 2 * marginRate)
     let canvasWidth = this.width * (1 - 2* marginRate)
     let fontSize = canvasHeight * fontRatio
-    this.g.append('text')
+    if(flag) {
+      this.g.append('text')
           .attr('class', 'title')
           .attr('text-anchor', 'middle')
-          .attr('font-size', fontSize * 1.8)
+          .attr('font-size', fontSize * 4)
           .attr('x', canvasWidth / 2)
-          .attr('y', - 2 * fontSize )
+          .attr('y', - 2 * fontSize -  0.1 * canvasHeight)
+          .text(title.toUpperCase())
+          .style('font-family', 'Oxygen')
+          .style('font-weight', 'bold')
+          .style('fill', '#253039')
+
+    }
+    else {
+      this.g.append('text')
+          .attr('class', 'title')
+          .attr('text-anchor', 'middle')
+          .attr('font-size', fontSize * 1.5)
+          .attr('x', canvasWidth / 2)
+          .attr('y', - 2 * fontSize)
           .text(title)
+        }
     return this
 }
 
@@ -834,9 +891,10 @@ CCQ.prototype.drawLegend = function (cat_color) {
         let canvasHeight = this.height * (1 - 2 * marginRate)
         let canvasWidth = this.width * (1 - 2 * marginRate)
         let legendHeight = canvasHeight * legendHeightRatio
-        let fontSize = canvasHeight * fontRatio
+        let fontSize = canvasHeight * fontRatio * 1.5
         let rectHeight = legendHeight * .9
         let rectWidth = canvasWidth * .03
+        if (flag) rectWidth = rectHeight
         let cell = this.data[cat_color].map((d, i) => ({'name': d, 'color': this.data.color[i]}))
         let canvas =  this.g.append('g')
                         .attr('transform', 'translate(' + canvasWidth + ',0)')
@@ -861,7 +919,7 @@ CCQ.prototype.drawLegend = function (cat_color) {
               .attr('x', rectWidth + .2 * fontSize)
               .attr('y', fontSize)
               .attr('text-anchor', 'start')
-              .attr('font-size', fontSize)
+              .attr('font-size', fontSize )
               .text(d => d.name)
         return canvas
 }
@@ -890,17 +948,17 @@ let CCQ2CQQ = function(data) {
 
 function load_stack_bar_chart (data, cat_position, cat_color, quantity) {
     chart = new CCQ(data, cat_position, cat_color, quantity)
+   chart.drawAxis()
     chart.drawStackBarChart(cat_color)
     chart.drawLegend(cat_color)
-    chart.drawAxis()
     chart.drawTitle(data.title)
 }
 
 function load_stack_bar_chart_horizontal (data, cat_position, cat_color, quantity) {
     chart = new CCQ(data, cat_position, cat_color, quantity, 'horizontal')
+    chart.drawAxis()
     chart.drawStackBarChart(cat_color)
     chart.drawLegend(cat_color)
-    chart.drawAxis()
     chart.drawTitle(data.title)
 }
 
@@ -918,18 +976,18 @@ function load_bar_chart_1d_horizontal (data, cat_position, cat_color, quantity) 
 
 function load_group_bar_chart (data, cat_position, cat_color, quantity) {
     let chart = new CCQ(data, cat_position, cat_color, quantity)
+    chart.drawAxis()
     chart.drawGroupBarChart()
     chart.drawLegend(cat_color)
-    chart.drawAxis()
     cur.chart = chart
     chart.drawTitle(data.title)
 }
 
 function load_group_bar_chart_horizontal (data, cat_position, cat_color, quantity) {
     let chart = new CCQ(data, cat_position, cat_color, quantity, 'horizontal')
+    chart.drawAxis()
     chart.drawGroupBarChart()
     chart.drawLegend(cat_color)
-    chart.drawAxis()
     chart.drawTitle(data.title)
 }
 
@@ -974,7 +1032,7 @@ function load_line_plot_horizontal (data, cat_color, x, y) {
 }
 
 function load_scatter_line_plot (data, cat_color, x, y) {
-    let chart = new CQQ(data, cat_color, x, y, "vertical", "line")
+    let chart = new CQQ(data, cat_color, x, y, 'vertical', 'line')
     console.log('-------------load_scatter_line_plot-------------')
     chart.drawAxis()
     chart.drawLine()
@@ -985,7 +1043,7 @@ function load_scatter_line_plot (data, cat_color, x, y) {
 }
 
 function load_scatter_line_plot_horizontal (data, cat_color, x, y) {
-    let chart = new CQQ(data, cat_color, x, y, 'horizontal', "line")
+    let chart = new CQQ(data, cat_color, x, y, 'horizontal', 'line')
     chart.drawAxis()
     chart.drawLine()
     chart.drawScatterPlot()

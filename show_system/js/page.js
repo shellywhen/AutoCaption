@@ -31,14 +31,14 @@ $(document).ready(function(){
       overlay.attr("width", width)
         .attr("height", height)
 
-      
+
       overlay
         .attr('viewBox', origin.attr('viewBox'))
         .attr('preserveAspectRatio', origin.attr('preserveAspectRatio'))
       overlay.attr("width", origin.attr("width"))
         .attr("height", origin.attr('height'))
     }
-    
+
     $('[data-toggle="popover"]').popover()
     document.getElementById('openFile')
             .addEventListener('change', function(){

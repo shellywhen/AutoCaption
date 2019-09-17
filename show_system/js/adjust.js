@@ -30,6 +30,7 @@ let highLightText = function (data_pack) {
     .attr("viewBox", d3.select('#visualization').select('svg').attr("viewBox"))
 
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
+
   // let textCollection = {
   //   'yAxis': {'text': [{'x': 30, 'y': 20, 'w': 20, 'h': 10 }, {'x': 30, 'y': 80, 'w': 20, 'h': 10 }, {'x': 30, 'y': 140, 'w': 20, 'h': 10 }]},
   //   'xAxis': {'text': [{'x': 30, 'y': 500, 'w': 20, 'h': 10 }, {'x': 50, 'y': 500, 'w': 20, 'h': 10 }, {'x': 70, 'y': 500, 'w': 20, 'h': 10 }]},
@@ -209,11 +210,9 @@ let highLightText = function (data_pack) {
           // TODO
         }
 
-
-
       })
       .on('mouseout', function (d) {
-        g.select('#interaction_annotation').selectAll('line').remove()
+        // g.select('#interaction_annotation').selectAll('line').remove()
          // stop highlight legend
          // no line
 
@@ -316,6 +315,28 @@ function Draw_line(x, y){
     .attr("cx", x)
     .attr("cy", y)
 }
+// =======
+// let highLightLine = function (x, y) {
+//   d3.select('#annotationDiv').select('#interaction_annotation')
+//     .append('line')
+//     .attr('x1', xAxis[0].x )
+//     .attr('y1', y)
+//     .attr('x2', xAxis[xAxis.length - 1].x -  xAxis[xAxis.length - 1].w)
+//     .attr('y2', y)
+//     .style('stroke-dasharray', "10,10")
+//     .style('stroke', 'black')
+
+//   d3.select('#annotationDiv').select('#interaction_annotation')
+//     .append('line')
+//     .attr('x1', x)
+//     .attr('y1', yAxis[0].y)
+//     .attr('x2', x)
+//     .attr('y2',  yAxis[yAxis.length - 1].y -  yAxis[yAxis.length - 1].h)
+//     .style('stroke-dasharray', "10,10")
+//     .style('stroke', 'black')
+
+// >>>>>>> c6f61b7455fa151e46f2964cadd4fb79e139839f
+// }
   
 
 let dragStart = function(d) {
