@@ -13,7 +13,7 @@ $(document).ready(function(){
       'display': 'block',
       'top': 0,
       'left': 0,
-      'pointer-events': 'none'
+      // 'pointer-events': 'none'
     });
     let origin = d3.select('#visualization').select('svg')
     d3.select('#annotationDiv').select('svg').remove()
