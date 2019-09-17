@@ -16,6 +16,7 @@ let highLightText = function (data_pack) {
   let colorList = ['blanchedalmond', 'palegreen', 'mediumpurple', 'lightskyblue', 'lightpink']
   let attributeList = ['xAxis', 'yAxis', 'legend']
   let i = 0
+  return
   xAxis = textCollection.xAxis.text
   yAxis = textCollection.yAxis.text
   for (let attrName of attributeList) {
