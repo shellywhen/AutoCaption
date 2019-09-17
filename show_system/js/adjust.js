@@ -22,7 +22,7 @@ let highLightText = function (data_pack) {
   console.log("data_pack", data_pack)
   let textCollection = data_pack.data.text_collection
   let viewBox = d3.select('#visualization').select('svg').attr("viewBox").split(" ")
-  
+
 
   let rel_width = parseFloat(viewBox[2])
   let rel_height = parseFloat(viewBox[3])
@@ -57,7 +57,6 @@ let highLightText = function (data_pack) {
   let colorList = ['#66c2a5','#fc8d62','#8da0cb', 'lightskyblue', 'lightpink']
   let attributeList = ['xAxis', 'yAxis', 'legend']
   let i = 0
-  return
   xAxis = textCollection.xAxis.text
   x_axis_y = xAxis[0].y
   yAxis = textCollection.yAxis.text
@@ -167,20 +166,20 @@ let highLightText = function (data_pack) {
       // Draw_line(x, y)
       // highlight_y_tick(y)
       // highlight_x_tick(x)
-      
+
     })
     .on("mouseover", function(d){
-      
+
     })
     .on("mouseout", function(d){
-      
+
     })
 
   g_xAxis = d3.select("#g_xAxis")
   g_yAxis = d3.select("#g_yAxis")
   g_legend = d3.select("#g_legend")
 
-  element_list = data_pack.data.elements 
+  element_list = data_pack.data.elements
   g.selectAll(".element")
       .data(element_list).enter()
       .append('rect')
@@ -204,11 +203,11 @@ let highLightText = function (data_pack) {
 
         console.log(d)
         if (is_vertical){
-          x = d.x + d.w / 2 
-          y = d.y 
+          x = d.x + d.w / 2
+          y = d.y
         }
         else {
-          x = d.x + d.w 
+          x = d.x + d.w
           y = d.y + d.h / 2
         }
         Draw_line(x, y)
@@ -229,7 +228,7 @@ let highLightText = function (data_pack) {
         else{
           // TODO
         }
-        
+
         d3.select(this).classed("highlight", true)
 
       })
@@ -245,7 +244,7 @@ let highLightText = function (data_pack) {
 
 
   // element_list.forEach(ele => {
-    
+
   // })
 }
 
@@ -397,7 +396,7 @@ function Draw_line(x, y){
     .attr("cx", x)
     .attr("cy", y)
 }
-// =======
+
 // let highLightLine = function (x, y) {
 //   d3.select('#annotationDiv').select('#interaction_annotation')
 //     .append('line')
@@ -417,9 +416,8 @@ function Draw_line(x, y){
 //     .style('stroke-dasharray', "10,10")
 //     .style('stroke', 'black')
 
-// >>>>>>> c6f61b7455fa151e46f2964cadd4fb79e139839f
 // }
-  
+
 
 let dragStart = function(d) {
     DRAG_HANDLER = d3.event.y
