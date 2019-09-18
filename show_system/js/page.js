@@ -35,8 +35,8 @@ $(document).ready(function(){
       overlay
         .attr('viewBox', origin.attr('viewBox'))
         .attr('preserveAspectRatio', origin.attr('preserveAspectRatio'))
-      overlay.attr("width", origin.attr("width"))
-        .attr("height", origin.attr('height'))
+      // overlay.attr("width", origin.attr("width"))
+      //   .attr("height", origin.attr('height'))
     }
 
     $('[data-toggle="popover"]').popover()
@@ -150,10 +150,10 @@ function frush_open_file(data_pack){
   // changeSVG(svg_string)
   highLightShadow()
   showSentences(sentences)
-  addDragging()
 
   // console.log(data_pack)
   highLightText(data_pack)
+  addDragging()
 }
 
 
@@ -190,10 +190,11 @@ function frush(data_pack){
   // changeSVG(svg_string)
   highLightShadow()
   showSentences(sentences)
-  addDragging()
+
 
   // console.log(data_pack)
   highLightText(data_pack)
+    addDragging()
 }
 
 // Do not update the svg chart

@@ -149,6 +149,7 @@ function CQQ(data, cat_color, cat_x, cat_y, position = 'vertical', tag='scatter'
                   .attr('width', windowWidth)
       this.g = this.svg.append('g')
                        .attr('transform', 'translate(' + this.width * marginRate + ',' + this.height * marginRate + ')')
+                       .classed('main_canvas', true)
       if (flag) {
         this.g.attr('transform', 'translate(' + this.width * marginRate + ',' + this.height * 0.1 + ')' )
       }
@@ -215,9 +216,9 @@ CQQ.prototype.drawAxis = function () {
   }
   // WDT改了一下这里，避免Scatterplot某些点跑到轴上
   yMax += 1
-  xMax += 1
-  yMin -= 1
-  xMin -= 1
+  xMax += 0.1
+  yMin =0
+  xMin -= 0.1
   this.yScale.domain([yMin, yMax])
   if (this.tag == 'scatter') {
       this.xScale.domain([xMin, xMax])
@@ -269,7 +270,7 @@ if(flag) {
 let xAxis = this.g.append('g')
     .classed('axis', true)
     .attr('transform', 'translate(0,' + this.height * (1 - 2 * marginRate) + ')')
-    .call(d3.axisBottom(this.xScale))
+    .call(d3.axisBottom(this.xScale).ticks(3))
   let unit1 = this.g.append('text')
     .attr('transform', `translate(${this.scaleWidth[1]/2}, ${this.height - 10})`)
     .attr('text-anchor', 'middle')
@@ -394,7 +395,7 @@ CQQ.prototype.drawTitle = function(title) {
           .attr('x', canvasWidth / 2)
           .attr('y', - 2 * fontSize)
           .text(title)
-          .style('font-family', 'Roboto')
+          .style('font-family', 'Oxygen')
     }
     else {
       this.g.append('text')
@@ -450,6 +451,7 @@ function CQ(data, cat_position, cat_color, quantity, position = 'vertical') {
                 .attr('width', mywidth)
         this.g = this.svg.append('g')
                          .attr('transform', 'translate(' + this.width * marginRate + ',' + this.height * marginRate + ')')
+                         .classed('main_canvas', true)
         this.g.append('g')
                   .attr('class', 'brush')
    // database set up
@@ -659,6 +661,7 @@ function CCQ(data, cat_position, cat_color, quantity, position = 'vertical') {
                      .attr('height', windowHeight)
         this.g = this.svg.append('g')
                          .attr('transform', 'translate(' + this.width * marginRate + ',' + this.height * marginRate + ')')
+                         .classed('main_canvas', true)
        if (flag) {
          this.g.attr('transform', 'translate(' + this.width * marginRate + ',' + this.height * 0.1 + ')' )
        }
@@ -950,7 +953,7 @@ CCQ.prototype.drawLegend = function (cat_color) {
 }
 
 let CCQ2CQQ = function(data) {
-  // console.log('DEBUG CCQ2CQQ', data)
+  console.log('DEBUG CCQ2CQQ', data)
     if(data.data_array == undefined){
       data = data.data
     }
@@ -962,6 +965,7 @@ let CCQ2CQQ = function(data) {
     data.quan = 'q0'
     data.x = 'o0'
     data.y = 'q0'
+    console.log('why?', data.data_array, data.o0)
     for (i in data.data_array) {
          let idxo = data.data_array[i]['o0']
          let valueo = Number(data['o0'][idxo])

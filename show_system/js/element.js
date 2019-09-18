@@ -79,7 +79,7 @@ function changeSVG(SVG_string) {
         .attr('width', windowWidth)
     }
 
-    
+
     // Find the bouding box of text.
     add_text_bbox()
 
@@ -338,16 +338,16 @@ function showSentences(data) {
 }
 
 function back2normal(d, i) {
-    d3.selectAll('rect')
+    d3.select('#annotationDiv').selectAll('.fake_element')
       .classed('nobody', false)
       .classed('myfocus', false)
       .classed('mycompare', false)
-      .classed('ordinary', true)
+      .classed('normal', true)
     d3.selectAll('circle')
       .classed('nobody', false)
       .classed('myfocus', false)
       .classed('mycompare', false)
-      .classed('ordinary', true)
+      .classed('normal', true)
     d3.select("#data-table").selectAll(".table-cell").style("background", "white")
     // for (let k of d.compare_id){
     //   d3.select('.element_' + String(k)).style('fill', cur.color[cur.data_array[k]['c0']])
@@ -375,28 +375,27 @@ function captionHighlight(d, i) {
     let allid = Array.from(Array(total).keys())
     let fadeid = allid.map(v => true)
     for(let compid of d.compare_id) {
-       d3.select('.element_' + String(compid))
+       d3.select('#element_' + String(compid))
          .raise()
-         .classed('ordinary', false)
+         .classed('normal', false)
          .classed('mycompare', true)
          fadeid[compid] = false
       //d3.select('.element_' + String(compid)).style('fill', 'blue')
       d3.select("#data-table").select("#table-" + String(compid)).style("background", "#9ecae1")
     }
     for(let focusid of d.focus_id) {
-       d3.select('.element_' + String(focusid))
+       d3.select('#element_' + String(focusid))
          .raise()
-         .classed('ordinary', false)
+         .classed('normal', false)
          .classed('myfocus', true)
        fadeid[focusid] = false
-       // Tell me why!!!!!!!
-      // d3.select('.element_' + String(focusid)).style('fill', 'red')
+
        d3.select("#data-table").select("#table-" + String(focusid)).style("background", "#fc9272")
      }
     for(let i in fadeid){
         if(fadeid[i] === true){
-            let a = d3.select('.element_' + String(i))
-                      .classed('ordinary', false)
+            let a = d3.select('#element_' + String(i))
+                      .classed('normal', false)
                       .classed('nobody', true)
             d3.select("#data-table").select("#table-" + String(i)).style("background", "white")
         }
@@ -513,7 +512,7 @@ Data.prototype.init = function(data, filename) {
        data  = CCQ2CQQ(data)
        if(filename){
          this.filename = filename.slice(14)
-         console.log('Data Obj from file: ', filename)
+         console.log('Data Obj from file: ', filename, data)
        }
        this.dType = 'cqq'
     }
@@ -561,7 +560,7 @@ Data.prototype.initChart = function() {
               this.cPara = [this, 'c0', 'c1', 'q0']
               break
           case "ocq":
-              load_group_bar_chart(this, 'c0', 'o0', 'q0')
+              load_group_bar_chart(this, 'o0', 'c0', 'q0')
               this.major = 'c0'
               this.second = 'o0'
               this.quan = 'q0'

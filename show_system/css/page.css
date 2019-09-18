@@ -105,11 +105,13 @@ body,html {
     height:100%;
 }
 .mycompare {
+  opacity: 0;
   /* mask: url("#mask-blue"); */
   /* filter: url("#blue-shadow"); */
   /* fill: blue; */
 }
 .myfocus {
+  opacity: 0;
   /* mask: url("#mask-red"); */
   /* filter: url("#red-shadow"); */
   /* fill: red; */
@@ -118,7 +120,10 @@ body,html {
   fill:red;
 }
 .nobody {
-  opacity: 0.2;
+  opacity: 0.8;
+}
+.normal {
+  opacity: 0;
 }
 ::-webkit-scrollbar {
     width: 10px;

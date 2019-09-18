@@ -3,6 +3,7 @@ var INIT_HEIGHT = 0
 var INIT_Y = 0
 var TIME_LAST = 0
 var TIME_NOW = 0
+var INIT_Y_Origin = 0
 let highLightTableColor = '#fec44f'
 let highLightRectColor = '#d95f0e'
 
@@ -27,11 +28,37 @@ let highLightText = function (data_pack) {
   let rel_width = parseFloat(viewBox[2])
   let rel_height = parseFloat(viewBox[3])
   is_vertical = data_pack.data.is_vertical
+  let origin = d3.select('#visualization').select('svg')
+  let overlay = d3.select('#annotationDiv').select('svg')
+    .attr("viewBox", origin.attr("viewBox"))
+    .attr('preserveAspectRatio', origin.attr('preserveAspectRatio'))
 
-  d3.select('#annotationDiv').select('svg')
-    .attr("viewBox", d3.select('#visualization').select('svg').attr("viewBox"))
+  if (origin.attr("viewBox") === null){
+    overlay.attr('width', origin.attr('width'))
+      .attr('height', origin.attr('height'))
+  }
+  else {
+    viewBox = origin.attr("viewBox")
+    // let width = viewBox.split(" ")[2]
+    // let height = viewBox.split(" ")[3]
+    overlay.attr("width", origin.attr('width'))
+      .attr("height", origin.attr('height'))
+  }
 
   let this_svg = d3.select('#annotationDiv').select('svg')
+
+  this_svg.append('defs').html(`
+    <filter id="f1" height="130%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
+    <feOffset dx="8" dy="5" result="offsetblur"/> <!-- how much to offset -->
+    <feComponentTransfer>
+      <feFuncA type="linear" slope="0.5"/> <!-- slope is the opacity of the shadow -->
+    </feComponentTransfer>
+    <feMerge>
+      <feMergeNode/> <!-- this contains the offset blurred image -->
+      <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+    </feMerge>
+    </filter>`)
 
   this_svg.append("svg:defs").append("svg:marker")
     .attr("id", "triangle")
@@ -42,7 +69,7 @@ let highLightText = function (data_pack) {
     .attr("orient", "auto")
     .append("path")
     .attr("d", "M 0 -5 10 10")
-    .style("stroke", "black");
+    .style("stroke", "black")
 
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
 
@@ -157,7 +184,7 @@ let highLightText = function (data_pack) {
     .attr("width", rel_width)
     .attr("height", rel_height)
     .attr("fill", "black")
-    .attr("opacity", 0.0)
+    .attr("opacity", 0)
     .on("mousemove", function(d){
       var coordinates = d3.mouse(this)
       let x = coordinates[0]
@@ -187,10 +214,10 @@ let highLightText = function (data_pack) {
       .attr('y', d => d.y)
       .attr('width', d => d.w)
       .attr('height', d => d.h)
-      .style('opacity', 0)
-      .style('fill', "red")
+      .style('fill', "white")
       .attr('id', (d, i) => "element_" + i)
       .classed('fake_element', true)
+      .classed('normal', true)
       .on('mouseover', function (d) {
         // d3.select("#x_auxiliary_line")
         //   .attr("opacity", 1)
@@ -420,11 +447,12 @@ function Draw_line(x, y){
 
 
 let dragStart = function(d) {
+    let id = d3.select(this).attr('id')
     DRAG_HANDLER = d3.event.y
     INIT_HEIGHT = d3.select(this).attr('height')
     INIT_Y = parseFloat(d3.select(this).attr('y'))
-    d3.select(this)
-      .style("stroke", highLightRectColor)
+    INIT_Y_Origin = parseFloat(d3.select(`.${id}`).attr('y'))
+    d3.select(this).style("stroke", highLightRectColor)
       .style('stroke-width', '0.5vh')
     d3.select('#table-'+String(id))
       .style('background', highLightTableColor)
@@ -439,6 +467,10 @@ let dragging = function(d) {
     d3.select(this)
       .attr('height', newH)
       .attr('y', newY)
+    let id = d3.select(this).attr('id')
+    d3.select(`.${id}`)
+      .attr('height', newH)
+      .attr('y', INIT_Y_Origin + dy)
     let mydate = new Date()
     TIME_NOW = mydate.getTime()
     if (TIME_NOW - TIME_LAST > 200){
@@ -456,11 +488,14 @@ let dragEnd = function(d) {
     let dy = d3.event.y - DRAG_HANDLER
     let newH = INIT_HEIGHT - dy
     let newY = INIT_Y + dy
-
+    let id = d3.select(this).attr('id')
     d3.select(this)
       .attr('height', newH)
       .attr('y', newY)
       .style('stroke-width', 0)
+    d3.select(`.${id}`)
+      .attr('height', newH)
+      .attr('y', INIT_Y_Origin + dy)
     d3.select('#table-'+String(id))
       .style('background', null)
     update_sentence_data()
@@ -489,29 +524,41 @@ let highLightRect = function() {
     id = d3.select(this).attr('customid')
     d3.select(this)
       .style('background', highLightTableColor)
-    d3.select('.element_'+String(id))
-      .style("stroke", highLightRectColor)
-      .style('stroke-width', '0.5vh')
+    d3.select('#element_'+String(id))
+      .style('fill', function(d) {
+        let color =  d3.select(`#color-${d.legend_id}`).attr('color-data')
+        return color
+      })
+      .style('opacity', 1)
+      .attr('filter', "url(#f1)")
+      //.style("stroke", highLightRectColor)
+      //.style('stroke-width', '0.5vh')
 
 }
 
 let normalRect = function() {
     id = d3.select(this).attr('customid')
-    d3.select('.element_'+String(id))
-      .style('stroke-width', 0)
+    d3.select('#element_'+String(id))
+      .style('fill', 'white')
+      .style('opacity', 0)
+      .attr('filter', 'none')
+      //.style('stroke-width', 0)
     d3.select(this)
       .style('background', null)
 }
 
 let addDragging = function() {
-    d3.selectAll('rect')
-      .on('mouseover', mouseOver)
-      .on('mouseout', mouseOut)
-      .call(d3.drag()
-              .on('start', dragStart)
-              .on('drag', dragging)
-              .on('end', dragEnd))
+  console.log('addDragging', d3.selectAll('.fake_element'))
+    d3.selectAll('.fake_element')
+    .call(d3.drag()
+            .on('start', dragStart)
+            .on('drag', dragging)
+            .on('end', dragEnd))
+            // .on('mouseover', mouseOver)
+            // .on('mouseout', mouseOut)
 }
+
+
 
 let update_sentence_data = function() {
     SVG_string = d3.select('#visualization').node().innerHTML
