@@ -10,7 +10,7 @@ const legendHeightRatio = .06
 const paddingValue = 0.2
 // let myheight = document.getElementById('visualization').clientWidth * 0.95
 // let mywidth = document.body.clientHeight * 0.8
-const myheight = flag? 400: 660
+const myheight = flag? 350: 660
 const mywidth = 800
 
 
@@ -202,6 +202,7 @@ CQ.prototype.drawTitle = function (title) {
 }
 
 CQQ.prototype.drawAxis = function () {
+
   let yMin = Infinity
   let yMax = -Infinity
   let xMin = Infinity
@@ -222,55 +223,77 @@ CQQ.prototype.drawAxis = function () {
       this.xScale.domain([xMin, xMax])
   }
   if(this.position === 'horizontal') {
-    this.g.append('g')
-      .attr('class', 'axis axis--x')
-      .call(d3.axisLeft(this.xScale))
-      .append('text')
+    let axisLeft = d3.axisLeft(this.xScale)
+    if(flag) {
+      let canvasWidth = this.width * (1 - 2 * marginRate)
+      axisLeft = d3.axisLeft(this.xScale).ticks(5).tickSize( - canvasWidth)
+    }
+    let yAxis = this.g.append('g')
+      .attr('class', 'axis')
+      .call(axisLeft)
+    let unit1 = yAxis.append('text')
         .attr('y', 6)
         .attr('dy', '0.71em')
         .attr('text-anchor', 'end')
+        .attr('font-size', '20px')
         .text(this.data.unit1)
-        .style('stroke', 'black')
 
-    this.g.append('g')
-      .attr('class', 'axis axis--y')
+
+   let xAxis = this.g.append('g')
+      .attr('class', 'axis')
       .attr('transform', 'translate(0,' + this.height * (1 - 2 * marginRate) + ')')
       .call(d3.axisBottom(this.yScale))
-    .append('text')
+   let unit2 = xAxis.append('text')
     .attr('transform', 'translate(' + String(this.scaleWidth[1]) + ',' + this.scaleHeight[0] + ')')
-    .attr('dy', '-.2rem')
     .attr('text-anchor', 'end')
     .attr('class', 'text-truncate')
-    .attr('font-size', '15px')
+    .attr('font-size', '20px')
     .text(this.data.unit2)
-    .style('stroke', 'black')
-       return
-  }
 
-  this.g.append('g')
-    .attr('class', 'axis axis--x')
+    if (flag) {
+        let axis = d3.selectAll('.axis')
+        axis.selectAll('.tick').selectAll('line').remove()
+        axis.selectAll('.domain').remove()
+        axis.selectAll('text').style('font-size', '20').style('font-family', 'Oxygen').style('fill', '#253039')
+        xAxis.call(g => g.selectAll('.tick:not(:first-of-type) line')
+        .style('stroke-opacity', 0.5))
+        // .style('stroke-dasharray', '2,2'))
+    }
+       return this
+  }
+let axisLeft = d3.axisLeft(this.yScale)
+if(flag) {
+  let canvasWidth = this.width * (1 - 2 * marginRate)
+  axisLeft = d3.axisLeft(this.yScale).ticks(5).tickSize( - canvasWidth)
+}
+let xAxis = this.g.append('g')
+    .classed('axis', true)
     .attr('transform', 'translate(0,' + this.height * (1 - 2 * marginRate) + ')')
     .call(d3.axisBottom(this.xScale))
-    .append('text')
-      .attr('transform', 'translate(' + String(this.scaleWidth[1]) + ',0)')
-      .attr('dy', '-0.2rem')
-      .attr('text-anchor', 'end')
-      .attr('class', 'text-truncate')
-      .attr('font-size', '12px')
-      .style('stroke', 'black')
-      .text(this.data.unit1)
+  let unit1 = this.g.append('text')
+    .attr('transform', `translate(${this.scaleWidth[1]/2}, ${this.height - 10})`)
+    .attr('text-anchor', 'middle')
+    .attr('font-size', '20px')
+    .text(this.data.unit1)
 
-  this.g.append('g')
-    .attr('class', 'axis axis--y')
-    .call(d3.axisLeft(this.yScale))
-  .append('text')
-    .attr('transform', 'rotate(-90)')
-    .attr('y', 6)
-    .attr('dy', '0.71em')
-    .attr('text-anchor', 'end')
-    .attr('font-size', '12px')
+  let yAxis = this.g.append('g')
+    .classed('axis', true)
+    .call(axisLeft)
+  let unit2 = this.g.append('text')
+    .attr('transform', `translate(${-35}, ${this.height/2}) rotate(-90)`)
+    .attr('text-anchor', 'start')
+    .attr('font-size', '20px')
     .text(this.data.unit2)
-    .style('stroke', 'black')
+  if (flag) {
+      let axis = d3.selectAll('.axis')
+      axis.selectAll('.domain').remove()
+      xAxis.selectAll('line').remove()
+      axis.selectAll('text').style('font-size', '20').style('font-family', 'Oxygen').style('fill', '#253039')
+      yAxis.selectAll('.tick:not(:first-of-type) line')
+        .style('stroke-opacity', 0.3)
+        // .style('stroke-dasharray', '1,1')
+    }
+    return this
 }
 
 CQQ.prototype.drawScatterPlot = function(){
@@ -280,7 +303,6 @@ CQQ.prototype.drawScatterPlot = function(){
           .data(this.data.data_array)
           .enter().append('circle')
           .attr('class', function(d){
-            console.log('Why?????', d)
             return 'element_'+String(d['id'])
           })
           .classed('circle', true)
@@ -291,7 +313,7 @@ CQQ.prototype.drawScatterPlot = function(){
           .attr('cx', d => this.xScale(d[this.secondName]))
           .attr('cy', d => this.yScale(d[this.majorName]))
           .attr('r', '0.5vh')
-          .attr('alpha', 0.5)
+          .attr('alpha', 0.8)
           .attr('fill', d => this.data.color[d[this.category]])
           .classed('ordinary', true)
     }
@@ -308,7 +330,7 @@ CQQ.prototype.drawScatterPlot = function(){
         .attr('cx', d => this.xScale(d[this.majorName]))
         .attr('cy', d => this.yScale(d[this.secondName]))
         .attr('r', '0.5vh')
-        .attr('alpha', 0.5)
+        .attr('alpha', 0.8)
         .attr('fill', d => this.data.color[d[this.category]])
         .classed('ordinary', true)
 }
@@ -327,9 +349,10 @@ CQQ.prototype.drawLegend = function(cat_color) {
   let canvasHeight = this.height * (1 - 2 * marginRate)
   let canvasWidth = this.width * (1 - 2 * marginRate)
   let legendHeight = canvasHeight * legendHeightRatio
-  let fontSize = canvasHeight * fontRatio
+  let fontSize = canvasHeight * fontRatio * 1.5
   let rectHeight = legendHeight * .9
   let rectWidth = canvasWidth * .03
+  if (flag) rectWidth = rectHeight
   let cell = this.data[this.category].map((d, i) => ({'name': d, 'color': this.data.color[i]}))
   let canvas =  this.g.append('g')
                   .attr('transform', 'translate(' + String(canvasWidth) + ',0)')
@@ -664,30 +687,34 @@ function CCQ(data, cat_position, cat_color, quantity, position = 'vertical') {
 
 CCQ.prototype.drawAxis = function() {
     if (this.position === 'horizontal') {
-        this.g.append('g')
+      let axisBottom = d3.axisBottom(this.yScale)
+      if(flag) {
+        let canvasHeight = this.height * (1 - 2 * marginRate)
+        axisBottom = d3.axisBottom(this.yScale).ticks(6).tickSize(-canvasHeight)
+      }
+        let yAxis = this.g.append('g')
               .attr('class', 'axis')
-              .call(d3.axisLeft(this.xScale).ticks(5))
+              .call(d3.axisLeft(this.xScale))
 
         let xAxis = this.g.append('g')
               .attr('class', 'axis')
               .attr('transform', 'translate(0,' + this.height * (1 - 2 * marginRate) + ')')
-              .call(d3.axisBottom(this.yScale).ticks(5))
+              .call(axisBottom)
 
         let unit = this.g.append('text')
-                  .attr('transform', 'translate(' + String(this.scaleWidth[1]) + ',' + this.scaleHeight[0] + ')')
-                  .attr('dy', '-.2rem')
-                  .attr('text-anchor', 'end')
+                  .attr('transform', `translate(${this.scaleWidth[1]/2}, ${this.height - 10})`)
+                  .attr('text-anchor', 'middle')
                   .attr('class', 'text-truncate')
-                  .attr('font-size', '15px')
+                  .attr('font-size', '20px')
                   .text(this.data.unit)
         if(flag) {
             let axis = d3.selectAll('.axis')
-            axis.selectAll('.tick').selectAll('line').remove()
+            yAxis.selectAll('.tick').selectAll('line').remove()
             axis.selectAll('.domain').remove()
             axis.selectAll('text').style('font-size', '20').style('font-family', 'Oxygen').style('fill', '#253039')
             xAxis.call(g => g.selectAll('.tick:not(:first-of-type) line')
-              .style('stroke-opacity', 0.5)
-              .style('stroke-dasharray', '2,2'))
+              .style('stroke-opacity', 0.5))
+              // .style('stroke-dasharray', '2,2'))
           }
         return this
       }
@@ -704,11 +731,9 @@ CCQ.prototype.drawAxis = function() {
             .attr('class', 'axis')
             .call(axisLeft)
       let unit = this.g.append('text')
-                .attr('transform', 'rotate(-90)')
-                .attr('y', 6)
-                .attr('dy', '0.71em')
-                .attr('text-anchor', 'end')
-                .attr('font-size', '15px')
+                .attr('transform', `translate(${-35}, ${this.height/2}) rotate(-90)`)
+                .attr('text-anchor', 'start')
+                .attr('font-size', '20px')
                 .text(this.data.unit)
       if(flag) {
         let axis = d3.selectAll('.axis')
