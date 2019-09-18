@@ -33,17 +33,6 @@ let highLightText = function (data_pack) {
 
   let this_svg = d3.select('#annotationDiv').select('svg')
 
-  this_svg.append("svg:defs").append("svg:marker")
-    .attr("id", "triangle")
-    .attr("refX", 15)
-    .attr("refY", -1.5)
-    .attr("markerWidth", 6)
-    .attr("markerHeight", 6)
-    .attr("orient", "auto")
-    .append("path")
-    .attr("d", "M 0 -5 10 10")
-    .style("stroke", "black");
-
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
 
   // let textCollection = {
@@ -330,15 +319,18 @@ function add_trend(begin_id, end_id){
   if (is_vertical)
   {
     let space = 20
-    d3.select("#annotationDiv").select("#annotation")
+    let trend = d3.select("#annotationDiv").select("#annotation")
       .append("g")
-      .attr("class", "trend_arrow")
+
+    trend.attr("class", "trend_arrow")
       .append("line")
       .attr("x1", begin_element.x + begin_element.w / 2 )
       .attr("y1", begin_element.y - space)
       .attr("x2", end_element.x + end_element.w / 2 )
       .attr("y2", end_element.y - space)
-      .attr("marker-end", "url(#triangle)");
+
+    // trend.append("path")
+    //   .attr("d", )
 
 
 
