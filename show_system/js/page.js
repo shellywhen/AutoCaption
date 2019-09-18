@@ -156,6 +156,10 @@ function frush_open_file(data_pack){
   addDragging()
 }
 
+function update_sentence(){
+
+}
+
 
 // update data and svg
 function get_modify_svg_from_server(send_data){

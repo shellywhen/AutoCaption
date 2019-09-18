@@ -47,6 +47,7 @@ let highLightText = function (data_pack) {
 
   let this_svg = d3.select('#annotationDiv').select('svg')
 
+<<<<<<< HEAD
   this_svg.append('defs').html(`
     <filter id="f1" height="130%">
     <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
@@ -71,6 +72,8 @@ let highLightText = function (data_pack) {
     .attr("d", "M 0 -5 10 10")
     .style("stroke", "black")
 
+=======
+>>>>>>> bf353324bbc42cb30cfae0f3a980df1eaa2929d3
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
 
   // let textCollection = {
@@ -257,6 +260,7 @@ let highLightText = function (data_pack) {
         }
 
         d3.select(this).classed("highlight", true)
+        show_element_sentence(d)
 
       })
       .on('mouseout', function (d) {
@@ -268,11 +272,41 @@ let highLightText = function (data_pack) {
       })
 
   add_trend(0, 4)
-
-
+  add_trend(10, 14)
+  add_trend(5, 9)
   // element_list.forEach(ele => {
 
   // })
+}
+
+function add_abs_sentence(abs_sentence, id){
+  let new_sentence = {}
+  new_sentence.sentence = abs_sentence
+  new_sentence.focus_id = [id]
+  new_sentence.compare_id = []
+  new_sentence.strength = 1
+  new_sentence.sure = true
+  new_sentence.type = "abs"
+
+  // sentences = data.
+
+  console.log("sentences[0].type", sentences[0].type)
+
+  if (sentences[0].type === "abs"){
+      console.log("remove the first one")
+      // sentences.shift()
+      sentences[0] = new_sentence
+  }
+  else{
+    sentences.splice(0, 0, new_sentence)
+  }
+  showSentences(sentences)
+}
+
+function show_element_sentence(d){
+  abs_sentence = data.title + " of " + d.major + " in " + d.second + " is " + parseInt(d.value * 100)/100 + " " + data.unit + "." 
+  add_abs_sentence(abs_sentence, d.id)
+  console.log(abs_sentence)
 }
 
 
@@ -357,15 +391,18 @@ function add_trend(begin_id, end_id){
   if (is_vertical)
   {
     let space = 20
-    d3.select("#annotationDiv").select("#annotation")
+    let trend = d3.select("#annotationDiv").select("#annotation")
       .append("g")
-      .attr("class", "trend_arrow")
+
+    trend.attr("class", "trend_arrow")
       .append("line")
       .attr("x1", begin_element.x + begin_element.w / 2 )
       .attr("y1", begin_element.y - space)
       .attr("x2", end_element.x + end_element.w / 2 )
       .attr("y2", end_element.y - space)
-      .attr("marker-end", "url(#triangle)");
+
+    // trend.append("path")
+    //   .attr("d", )
 
 
 

@@ -275,8 +275,8 @@ def parse_a_text(text):
     # bbox_y = float(get_attr(text, "box_y"))
     # print("debug", text)
     # print(get_attr(text, "bbox_w"))
-    bbox_w = float(get_attr(text, "bbox_w"))
-    bbox_h = float(get_attr(text, "bbox_h"))
+    bbox_w = float(get_attr(text, "bbox_w", 0))
+    bbox_h = float(get_attr(text, "bbox_h", 0))
 
     print("bbox content", bbox_x, bbox_y, bbox_w, bbox_h)
     
@@ -442,7 +442,7 @@ def get_main_second(main_dimension_list, second_dimension_list):
 
     return main_dim, second_dim, data_type
 
-def get_elements(important_rects):
+def get_elements(important_rects, main_dimension_list, second_dimension_list):
     elements_list = []
     print("important_rects: ", important_rects)
     for rect in important_rects:
@@ -453,6 +453,10 @@ def get_elements(important_rects):
         element['w'] = rect['width']
         element['h'] = rect['height']
         element['legend_id'] = rect['legend_index']
+        element['value'] = rect["value"]
+        element['major'] = main_dimension_list[rect["major"]]
+        element['second'] = second_dimension_list[rect["second"]]
+        element['id'] = rect["id"]
         if 'x_axis' in rect.keys():
             element["x_axis_id"] = rect['x_axis']
         if 'y_axis' in rect.keys():
@@ -487,10 +491,10 @@ def pack_data(important_rects, main_dimension_list, second_dimension_list):
     data["major_name"] = main_dim
     data["second_name"] = second_dim
     data["type"] = data_type
-    data["unit"] = ""
-    data["title"] = ""
+    data["unit"] = "billion"
+    data["title"] = "Fruit consumption"
 
-    elements_list = get_elements(important_rects)
+    elements_list = get_elements(important_rects, main_dimension_list, second_dimension_list)
     print("elements_list: ", elements_list)
     # 获取元素列表
     data['elements'] = elements_list
