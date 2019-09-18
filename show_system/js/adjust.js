@@ -219,6 +219,7 @@ let highLightText = function (data_pack) {
         }
 
         d3.select(this).classed("highlight", true)
+        show_element_sentence(d)
 
       })
       .on('mouseout', function (d) {
@@ -230,11 +231,41 @@ let highLightText = function (data_pack) {
       })
 
   add_trend(0, 4)
-
-
+  add_trend(10, 14)
+  add_trend(5, 9)
   // element_list.forEach(ele => {
 
   // })
+}
+
+function add_abs_sentence(abs_sentence, id){
+  let new_sentence = {}
+  new_sentence.sentence = abs_sentence
+  new_sentence.focus_id = [id]
+  new_sentence.compare_id = []
+  new_sentence.strength = 1
+  new_sentence.sure = true
+  new_sentence.type = "abs"
+
+  // sentences = data.
+
+  console.log("sentences[0].type", sentences[0].type)
+
+  if (sentences[0].type === "abs"){
+      console.log("remove the first one")
+      // sentences.shift()
+      sentences[0] = new_sentence
+  }
+  else{
+    sentences.splice(0, 0, new_sentence)
+  }
+  showSentences(sentences)
+}
+
+function show_element_sentence(d){
+  abs_sentence = data.title + " of " + d.major + " in " + d.second + " is " + parseInt(d.value * 100)/100 + " " + data.unit + "." 
+  add_abs_sentence(abs_sentence, d.id)
+  console.log(abs_sentence)
 }
 
 

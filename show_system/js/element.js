@@ -12,7 +12,8 @@ const type_dict = {
   "local_sum_trend": "trend_local",
   "compare_trend": "compare_trend",
   "outlier": "outlier",
-  "cluster":"cluster"
+  "cluster":"cluster", 
+  "abs": "abs"
 }
 const type_name = {
   "all_trend": "Trend",
@@ -287,6 +288,7 @@ function showElement(element) {
     //设置父节点的双击事件为空
     // newobj.parentNode.setAttribute("ondblclick", "");
 }
+
 
 function showSentences(data) {
    // data is the sentence array with index to focus & compare
