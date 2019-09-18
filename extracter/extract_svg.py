@@ -275,8 +275,8 @@ def parse_a_text(text):
     # bbox_y = float(get_attr(text, "box_y"))
     # print("debug", text)
     # print(get_attr(text, "bbox_w"))
-    bbox_w = float(get_attr(text, "bbox_w"))
-    bbox_h = float(get_attr(text, "bbox_h"))
+    bbox_w = float(get_attr(text, "bbox_w", 0))
+    bbox_h = float(get_attr(text, "bbox_h", 0))
 
     print("bbox content", bbox_x, bbox_y, bbox_w, bbox_h)
     
