@@ -181,6 +181,7 @@ class getModifySvgSentence(tornado.web.RequestHandler):
         # print("data_json", data_json)
         # print('modified svg_string', svg_string)
         input, id_array = get_data_svg(svg_string)
+        print(input)
         machine_model.set_input(input)
         output = machine_model.test()
         focal_array = parse_to_id_array(output, id_array)

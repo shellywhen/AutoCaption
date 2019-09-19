@@ -221,16 +221,6 @@ let highLightText = function (data_pack) {
       .classed('fake_element', true)
       .classed('normal', true)
       .on('mouseover', function (d) {
-        // d3.select("#x_auxiliary_line")
-        //   .attr("opacity", 1)
-
-        // d3.select("#y_auxiliary_line")
-        //   .attr("opacity", 1)
-
-        // d3.select("#auxiliary_circle")
-        //   .attr("opacity", 1)
-
-        console.log(d)
         if (is_vertical){
           x = d.x + d.w / 2
           y = d.y
@@ -250,17 +240,13 @@ let highLightText = function (data_pack) {
             .classed("highlight", false)
           g_legend.select("#legend_" + d.legend_id)
             .classed("highlight", true)
-
           highlight_y_tick(y)
-
         }
         else{
           // TODO
         }
-
         d3.select(this).classed("highlight", true)
         show_element_sentence(d)
-
       })
       .on('mouseout', function (d) {
         // g.select('#interaction_annotation').selectAll('line').remove()
@@ -270,9 +256,9 @@ let highLightText = function (data_pack) {
          d3.select(this).classed("highlight", true)
       })
 
-  add_trend(0, 4)
-  add_trend(10, 14)
-  add_trend(5, 9)
+  // add_trend(0, 4)
+  // add_trend(10, 14)
+  // add_trend(5, 9)
   // element_list.forEach(ele => {
 
   // })
