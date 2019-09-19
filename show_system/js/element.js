@@ -558,11 +558,7 @@ Data.prototype.initChart = function() {
       remove_old_vis()
       switch (this.dType) {
           case "ccq":
-<<<<<<< HEAD
-              load_group_bar_chart(this, 'c0', 'c1', 'q0')
-=======
               load_group_bar_chart(this, this.data.major_name, this.data.second_name, 'q0')
->>>>>>> 260b1023601198383be27506a2564c7acb971911
               this.major = this.data.major_name
               this.second = this.data.second_name
               this.quan = 'q0'
@@ -570,20 +566,12 @@ Data.prototype.initChart = function() {
               this.cPara = [this, this.data.major_name, this.data.second_name, 'q0']
               break
           case "ocq":
-<<<<<<< HEAD
-              load_group_bar_chart(this, 'o0', 'c0', 'q0')
-=======
               load_group_bar_chart(this,this.data.major_name, this.data.second_name, 'q0')
->>>>>>> 260b1023601198383be27506a2564c7acb971911
               this.major = this.data.major_name
               this.second = this.data.second_name
               this.quan = 'q0'
               this.cType = 'load_group_bar_chart'
-<<<<<<< HEAD
-              this.cPara = [this, 'c0', 'o0', 'q0']
-=======
               this.cPara = [this, this.data.major_name, this.data.second_name, 'q0']
->>>>>>> 260b1023601198383be27506a2564c7acb971911
               break
           case "cq":
               load_pie_chart(this, 'c0', undefined, 'q0')

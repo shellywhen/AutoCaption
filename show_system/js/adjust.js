@@ -474,8 +474,8 @@ let dragStart = function(d) {
     INIT_HEIGHT = d3.select(this).attr('height')
     INIT_Y = parseFloat(d3.select(this).attr('y'))
     INIT_Y_Origin = parseFloat(d3.select(`.${id}`).attr('y'))
-    d3.select(this).style("stroke", highLightRectColor)
-      .style('stroke-width', '0.5vh')
+    // d3.select(this).style("stroke", highLightRectColor)
+    //   .style('stroke-width', '0.5vh')
     d3.select('#table-'+String(id))
       .style('background', highLightTableColor)
 }
@@ -543,7 +543,9 @@ let mouseOut = function() {
 }
 
 let customHighlightRect = function (id) {
-  let color = d3.select(`.element_${id}`).attr('fill')
+  let data = d3.select(`#element_${id}`)._groups[0][0].__data__
+  let legendId = data.legend_id
+  let color = d3.select(`#color-${legendId}`).attr('color-data')
 
   d3.select('#element_'+String(id))
     .style('fill', color)

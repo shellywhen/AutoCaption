@@ -128,6 +128,8 @@ body,html {
 }
 .myfocus {
   opacity: 1;
+  stroke: gray;
+  stroke-width: 2px;
   /* mask: url("#mask-red"); */
   /* filter: url("#red-shadow"); */
   /* fill: red; */
