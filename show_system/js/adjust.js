@@ -51,9 +51,9 @@ let highLightText = function (data_pack) {
   let this_svg = d3.select('#annotationDiv').select('svg')
 
   this_svg.append('defs').html(`
-    <filter id="f1" height="130%" width="130%">
+    <filter id="f1" height="130%" width="200%">
     <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
-    <feOffset dx="8" dy="5" result="offsetblur"/> <!-- how much to offset -->
+    <feOffset dx="3" dy="5" result="offsetblur"/> <!-- how much to offset -->
     <feComponentTransfer>
       <feFuncA type="linear" slope="0.5"/> <!-- slope is the opacity of the shadow -->
     </feComponentTransfer>
