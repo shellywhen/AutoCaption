@@ -379,7 +379,7 @@ function captionHighlight(d, i) {
     let fadeid = allid.map(v => true)
     fadeAll()
     for(let compid of d.compare_id) {
-      customHighlightRect(compid)
+      customHighlightRect(compid, 'mycompare')
        // d3.select('#element_' + String(compid))
        //   .raise()
        //   .classed('normal', false)
@@ -389,7 +389,7 @@ function captionHighlight(d, i) {
       d3.select("#data-table").select("#table-" + String(compid)).style("background", "#9ecae1")
     }
     for(let focusid of d.focus_id) {
-      customHighlightRect(focusid)
+      customHighlightRect(focusid, 'myfocus')
        // d3.select('#element_' + String(focusid))
        //   .raise()
        //   .classed('normal', false)

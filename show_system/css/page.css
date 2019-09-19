@@ -122,17 +122,24 @@ body,html {
 }
 .mycompare {
   opacity: 1;
+  stroke: #7CB9E8;
+  stroke-width: 2px;
   /* mask: url("#mask-blue"); */
   /* filter: url("#blue-shadow"); */
   /* fill: blue; */
 }
 .myfocus {
   opacity: 1;
-  stroke: gray;
+  stroke: #FF5533;
   stroke-width: 2px;
   /* mask: url("#mask-red"); */
   /* filter: url("#red-shadow"); */
   /* fill: red; */
+}
+.myhighlight {
+  opacity: 1;
+  stroke: sandybrown;
+  stroke-width: 2px;
 }
 .myfocus circle{
   fill:red;

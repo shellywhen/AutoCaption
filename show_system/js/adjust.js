@@ -528,9 +528,9 @@ let mouseOver = function() {
            .attr('id')
     d3.select('#table-'+String(id))
       .style('background', highLightTableColor)
-    d3.select(this)
-      .style("stroke", highLightRectColor)
-      .style('stroke-width', '0.5vh')
+    // d3.select(this)
+    //   .style("stroke", highLightRectColor)
+    //   .style('stroke-width', '0.5vh')
 }
 
 let mouseOut = function() {
@@ -538,11 +538,11 @@ let mouseOut = function() {
          .attr('id')
    d3.select('#table-'+String(id))
      .style('background', null)
-   d3.select(this)
-     .style('stroke-width', 0)
+   // d3.select(this)
+   //   .style('stroke-width', 0)
 }
 
-let customHighlightRect = function (id) {
+let customHighlightRect = function (id, cls = 'myhighlight') {
   let data = d3.select(`#element_${id}`)._groups[0][0].__data__
   let legendId = data.legend_id
   let color = d3.select(`#color-${legendId}`).attr('color-data')
@@ -551,7 +551,7 @@ let customHighlightRect = function (id) {
     .style('fill', color)
     .attr('filter', 'url(#f1)')
     .classed('normal', false)
-    .classed('myfocus', true)
+    .classed(cls, true)
     .classed('nobody', false)
     //.style("stroke", highLightRectColor)
     //.style('stroke-width', '0.5vh')
@@ -565,6 +565,8 @@ let customNormalRect = function (id) {
     .classed('nobody', false)
     .classed('normal', true)
     .classed('myfocus', false)
+    .classed('mycompare', false)
+    .classed('myhighlight', false)
     //.style('stroke-width', 0)
 }
 
@@ -574,6 +576,7 @@ let fadeAll = function () {
     .classed('normal', false)
     .classed('myfocus', false)
     .classed('mycompare', false)
+    .classed('myhighlight', false)
 }
 
 let normalAll = function () {
@@ -583,6 +586,7 @@ let normalAll = function () {
     .classed('nobody', false)
     .classed('myfocus', false)
     .classed('mycompare', false)
+    .classed('myhighlight', false)
     .classed('normal', true)
 }
 
