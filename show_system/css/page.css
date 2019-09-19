@@ -9,17 +9,17 @@ rect :active{
 }
 
 
-div.tooltip { 
-    position: absolute;     
-    text-align: center;     
-    width: 200px;          
-    height: 100px;         
-    padding: 2px;       
-    font: 12px sans-serif;    
-    background: lightsteelblue; 
-    border: 0px;    
-    border-radius: 8px;     
-    pointer-events: none;     
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
 }
 
 
@@ -121,16 +121,25 @@ body,html {
     height:100%;
 }
 .mycompare {
-  opacity: 0;
+  opacity: 1;
+  stroke: #7CB9E8;
+  stroke-width: 2px;
   /* mask: url("#mask-blue"); */
   /* filter: url("#blue-shadow"); */
   /* fill: blue; */
 }
 .myfocus {
-  opacity: 0;
+  opacity: 1;
+  stroke: #FF5533;
+  stroke-width: 2px;
   /* mask: url("#mask-red"); */
   /* filter: url("#red-shadow"); */
   /* fill: red; */
+}
+.myhighlight {
+  opacity: 1;
+  stroke: sandybrown;
+  stroke-width: 2px;
 }
 .myfocus circle{
   fill:red;
