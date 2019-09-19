@@ -18,9 +18,12 @@ let g_xAxis
 let g_yAxis
 let g_legend
 let element_list
+let global_data_pack
+
 
 let highLightText = function (data_pack) {
   console.log("data_pack", data_pack)
+  global_data_pack = data_pack
   let textCollection = data_pack.data.text_collection
   let viewBox = d3.select('#visualization').select('svg').attr("viewBox").split(" ")
 
@@ -221,6 +224,7 @@ let highLightText = function (data_pack) {
       .classed('fake_element', true)
       .classed('normal', true)
       .on('mouseover', function (d) {
+        console.log(d.id)
         if (is_vertical){
           x = d.x + d.w / 2
           y = d.y
@@ -275,10 +279,10 @@ function add_abs_sentence(abs_sentence, id){
 
   // sentences = data.
 
-  console.log("sentences[0].type", sentences[0].type)
+  // console.log("sentences[0].type", sentences[0].type)
 
   if (sentences[0].type === "abs"){
-      console.log("remove the first one")
+      // console.log("remove the first one")
       // sentences.shift()
       sentences[0] = new_sentence
   }
@@ -291,14 +295,14 @@ function add_abs_sentence(abs_sentence, id){
 function show_element_sentence(d){
   abs_sentence = data.title + " of " + d.major + " in " + d.second + " is " + parseInt(d.value * 100)/100 + " " + data.unit + "."
   add_abs_sentence(abs_sentence, d.id)
-  console.log(abs_sentence)
+  // console.log(abs_sentence)
 }
 
 
 function highlight_y_tick(value){
   tick_id = find_closest_y_tick(value)
 
-  console.log(tick_id)
+  // console.log(tick_id)
 
   g_yAxis.selectAll("rect")
     .classed("highlight", false)
@@ -347,7 +351,7 @@ function find_closest_x_tick(value){
 
 
 function find_closest_y_tick(value){
-  console.log("value", value)
+  // console.log("value", value)
   tick_num = tick_value.length
 
   if (value > tick_value[0] )
