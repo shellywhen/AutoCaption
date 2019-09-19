@@ -104,7 +104,17 @@ def modify_sum_trend(data, focus_id, compare_id, category_name = 'c0', ordinal_n
     category_chosen = [i for i in range(len(category_chosen)) if category_chosen[i]]
     ordinal_chosen = [i for i in range(len(ordinal_chosen)) if ordinal_chosen[i]]
 
-    return new_focus_id, [], category_chosen, ordinal_chosen
+    ordinal_related_chosen = [i for i in range(ordinal_chosen[0], ordinal_chosen[-1] + 1)]
+
+    new_focus_related_id = []
+    for datum in data['data_array']:
+        if datum[category_name] in category_chosen and datum[ordinal_name] in ordinal_related_chosen: 
+            new_focus_related_id.append(datum['id'])
+
+    # compare_ordinal_related_chosen = [i for i in range(compare_ordinal_chosen[0], compare_ordinal_chosen[-1] + 1)]
+
+
+    return new_focus_id, [], category_chosen, ordinal_chosen, new_focus_related_id
 
 # 描述总值的变化
 # 如：总值从2008 到 2018年的变化
@@ -218,7 +228,7 @@ def sentence_local_trend(data, focus_id, compare_id, major_name = 'c0', second_n
     return sentences
 
 def sentence_sum_trend(data, focus_id, compare_id, major_name = 'c0', second_name = 'q0', version = 'English', fuzzy = True, ordinal_name = 'o0', category_name = 'c0'):
-    focus_id, compare_id, category_chosen, ordinal_chosen = modify_sum_trend(data, focus_id, compare_id)
+    focus_id, compare_id, category_chosen, ordinal_chosen, new_focus_related_id = modify_sum_trend(data, focus_id, compare_id)
     if len(ordinal_chosen) < 2:
         return []
     ordinal_sum_quantity = get_sum_quantity_array(data, category_chosen)
@@ -236,7 +246,7 @@ def sentence_sum_trend(data, focus_id, compare_id, major_name = 'c0', second_nam
     if len(category_chosen) > 1:
         object_name = f'The value of {get_aggre_name([data[category_name][i] for i in category_chosen], len(data[category_name]))}'
     sentence = get_sentence(data, segment_array, segment_parameter_array, ordinal_sum_quantity, object_name = object_name, allow_absolute_value = False)
-    sentences.append(get_sentence_setting('all_trend', sentence, focus_id, compare_id, sure = False))
+    sentences.append(get_sentence_setting('all_trend', sentence, new_focus_related_id, compare_id, sure = False))
     return sentences
 
 # 比较趋势：

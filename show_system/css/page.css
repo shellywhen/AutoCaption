@@ -122,8 +122,8 @@ body,html {
 }
 .mycompare {
   opacity: 1;
-  stroke: #6a6faf;
- stroke-opacity: 1;
+  stroke: blue;
+  stroke-opacity: 2;
   stroke-width: 2px;
   /* mask: url("#mask-blue"); */
   /* filter: url("#blue-shadow"); */
@@ -131,8 +131,8 @@ body,html {
 }
 .myfocus {
   opacity: 1;
-  stroke: #6A0156;
-  stroke-opacity: 0.8;
+  stroke: red;
+  stroke-opacity: 2;
   stroke-width: 2px;
   /* mask: url("#mask-red"); */
   /* filter: url("#red-shadow"); */
