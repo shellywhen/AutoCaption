@@ -67,11 +67,27 @@ def modify_compare_trend(data, focus_id, compare_id, category_name = 'c0', ordin
 
     focus_category_chosen = [i for i in range(len(focus_category_chosen)) if focus_category_chosen[i]]
     focus_ordinal_chosen = [i for i in range(len(focus_ordinal_chosen)) if focus_ordinal_chosen[i]]
+# 这是一个补丁，用来调的情况
+    focus_ordinal_related_chosen = [i for i in range(focus_ordinal_chosen[0], focus_ordinal_chosen[-1] + 1)]
+
+    # print('这是 focus_ordinal_chosen', focus_ordinal_chosen)
+    # print('这是 focus_ordinal_related_chosen', focus_ordinal_related_chosen)
 
     compare_category_chosen = [i for i in range(len(compare_category_chosen)) if compare_category_chosen[i]]
     compare_ordinal_chosen = [i for i in range(len(compare_ordinal_chosen)) if compare_ordinal_chosen[i]]
+    compare_ordinal_related_chosen = [i for i in range(compare_ordinal_chosen[0], compare_ordinal_chosen[-1] + 1)]
 
-    return new_focus_id, new_compare_id, focus_category_chosen, focus_ordinal_chosen, compare_category_chosen, compare_ordinal_chosen
+
+    new_focus_related_id = []
+    new_compare_related_id = []
+
+    for datum in data['data_array']:
+        if datum[category_name] in focus_category_chosen and datum[ordinal_name] in focus_ordinal_related_chosen: 
+            new_focus_related_id.append(datum['id'])
+        elif datum[category_name] in compare_category_chosen and datum[ordinal_name] in compare_ordinal_related_chosen:
+            new_compare_related_id.append(datum['id'])
+
+    return new_focus_id, new_compare_id, focus_category_chosen, focus_ordinal_chosen, compare_category_chosen, compare_ordinal_chosen, new_focus_related_id, new_compare_related_id
 
 
 def modify_sum_trend(data, focus_id, compare_id, category_name = 'c0', ordinal_name = 'o0', barrier = 0.3):
@@ -113,7 +129,7 @@ def get_segment_parameter(ordinal_chosen, quantity_array, max_value):
 def get_cat_quantity_array(data, cat_index):
     return get_sum_quantity_array(data, [cat_index])
 
-def get_sentence(data, segment_array, segment_parameter_array, quantity_array, ordinal_name = 'o0', object_name = '', allow_absolute_value = True):
+def get_sentence(data, segment_array, segment_parameter_array, quantity_array, ordinal_name = 'o0', object_name = '', allow_absolute_value = True, is_compare = False):
     sentence = ''
     for i in range(len(segment_array)):
         segment = segment_array[i]
@@ -128,7 +144,7 @@ def get_sentence(data, segment_array, segment_parameter_array, quantity_array, o
         if end_value == max(quantity_array) or end_value == min(quantity_array):
             need_absolute_value = True
         need_absolute_value = need_absolute_value and allow_absolute_value
-        sentence = sentence + get_ordinal_trend_component(begin_name, begin_value, end_name, end_value, std_mean, end_o_index - begin_o_index, i == 0, object_name, need_absolute_value = need_absolute_value)
+        sentence = sentence + get_ordinal_trend_component(begin_name, begin_value, end_name, end_value, std_mean, end_o_index - begin_o_index, i == 0, object_name, need_absolute_value = need_absolute_value, is_compare = is_compare)
     return sentence
 
 def modify_local_trend(data, focus_id, compare_id, category_name = 'c0', ordinal_name = 'o0', barrier = 0.3):
@@ -172,14 +188,20 @@ def sentence_local_trend(data, focus_id, compare_id, major_name = 'c0', second_n
     sentences = []
     if len(ordinal_chosen) < 3:
         return []
+    print("see see category chosen: ", category_chosen)
     ordinal_sum_quantity = get_sum_quantity_array(data, category_chosen)
     max_value = max(ordinal_sum_quantity)
 
     category_num = len(data['c0'])
 
     sentence = ''
+
     if ordinal_sum_quantity[ordinal_chosen[1]] > ordinal_sum_quantity[ordinal_chosen[0]] and ordinal_sum_quantity[ordinal_chosen[1]] > ordinal_sum_quantity[ordinal_chosen[2]]:
-        sentence = f' there is an unusual rise in {get_aggre_name([data[second_name][ordinal_chosen[1]]], 10)} of {get_aggre_name([data[major_name][i] for i in category_chosen], category_num)}'
+        # 这是一个补丁
+        if len(category_chosen) == 1:
+            sentence = f' {data["title"]} of {get_aggre_name([data[major_name][i] for i in category_chosen], category_num)} suddenly increase to {ordinal_sum_quantity[ordinal_chosen[1]]} {data["unit"]} in {get_aggre_name([data[second_name][ordinal_chosen[1]]], 10)} '
+        else:
+            sentence = f' there is an unusual rise in {get_aggre_name([data[second_name][ordinal_chosen[1]]], 10)} of {get_aggre_name([data[major_name][i] for i in category_chosen], category_num)}'
         sentences.append(get_sentence_setting('local_trend', sentence, focus_id, compare_id))
 
         sentence = f' the sum value of {get_aggre_name([data[major_name][i] for i in category_chosen], category_num)} has an unusual rise in {get_aggre_name([data[second_name][ordinal_chosen[1]]], 10)} '
@@ -204,9 +226,9 @@ def sentence_sum_trend(data, focus_id, compare_id, major_name = 'c0', second_nam
     segment_array, segment_parameter_array = get_segment_parameter(ordinal_chosen, ordinal_sum_quantity, max_value)
     # 只有一个没办法称为sum
     if len(category_chosen) == 1:
-        object_name = f'The value of {get_aggre_name([data[category_name][i] for i in category_chosen], len(data[category_name]))}'
+        object_name = f'{data["title"]} of {get_aggre_name([data[category_name][i] for i in category_chosen], len(data[category_name]))}'
     else:
-        object_name = f'The sum value of {get_aggre_name([data[category_name][i] for i in category_chosen], len(data[category_name]))}'
+        object_name = f'The sum of {data["title"]} {get_aggre_name([data[category_name][i] for i in category_chosen], len(data[category_name]))}'
     sentence = get_sentence(data, segment_array, segment_parameter_array, ordinal_sum_quantity, object_name = object_name)
     sentences = []
     # sentence = str(segment_parameter_array)
@@ -239,7 +261,8 @@ def get_ave_parameter(data, focus_category_chosen, focus_ordinal_chosen, max_val
     return focus_segment_array, focus_parameter_array_sum, focus_quantity
 
 def sentence_compare_trend(data, focus_id, compare_id, major_name = 'c0', second_name = 'o0', version = 'English', fuzzy = True, quantity_name = 'q0', category_name = 'c0'):
-    focus_id, compare_id, focus_category_chosen, focus_ordinal_chosen, compare_category_chosen, compare_ordinal_chosen = modify_compare_trend(data, focus_id, compare_id)
+    print("compare_trend: ", data)
+    focus_id, compare_id, focus_category_chosen, focus_ordinal_chosen, compare_category_chosen, compare_ordinal_chosen, new_focus_related_id, new_compare_related_id = modify_compare_trend(data, focus_id, compare_id)
     if len(focus_category_chosen) == 0 or len(compare_category_chosen) == 0 or len(focus_ordinal_chosen) <2 or len(compare_ordinal_chosen) < 2:
         return []
     max_value = max([datum[quantity_name] for datum in data['data_array']])
@@ -259,11 +282,11 @@ def sentence_compare_trend(data, focus_id, compare_id, major_name = 'c0', second
         allow_absolute_value = False
     else:
         allow_absolute_value = True
-    compare_sentence = get_sentence(data, compare_segment_array, compare_parameter_array_ave, compare_quantity, object_name = '', allow_absolute_value = allow_absolute_value)
-    sentence = f'The value of {focus_name} {focus_sentence}; while {compare_name} {compare_sentence}'
+    compare_sentence = get_sentence(data, compare_segment_array, compare_parameter_array_ave, compare_quantity, object_name = '', allow_absolute_value = allow_absolute_value, is_compare = True)
+    sentence = f'{data["title"]} of {focus_name} {focus_sentence}; while {compare_name} {compare_sentence}'
 
     sentences = []
-    sentences.append(get_sentence_setting('compare_trend', sentence, focus_id, compare_id))
+    sentences.append(get_sentence_setting('compare_trend', sentence, new_focus_related_id, new_compare_related_id))
 
     return sentences
 

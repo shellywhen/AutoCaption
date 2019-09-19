@@ -198,8 +198,10 @@ def compare_1d(data, focus_data, compare_data, focus_name, compare_name, share_n
         relation = "the same as"
 
     if len(focus_array) == 1:
-        sentence = f'In the category of {share_name}, value of {focus_name} is {focus_array[0]} {unit}, which is {degree} {relation} {compare_name}'
+        sentence = f'In the category of {share_name}, {data["title"]} of {focus_name} is {focus_array[0]} {unit}, which is {degree} {relation} {compare_name}'
         sentences.append(get_sentence_setting('compare', sentence))
+        sentences.append(get_sentence_setting('compare_ave', sentence))
+        
 
 
 
@@ -264,7 +266,7 @@ def compare_sum(data, focus_data, compare_data, focus_name, compare_name, share_
             else:
                 sentence = f"The sum value of {share_name} in {focus_name} is {degree} {relation} {compare_name}"
                 sentences.append(get_sentence_setting('compare_sum', sentence))
-                sentence = f"The value of {share_name} in {focus_name} is {degree} {relation} {compare_name}"
+                sentence = f"{data['title']} of {share_name} in {focus_name} is {degree} {relation} {compare_name}"
                 sentences.append(get_sentence_setting('compare_ave', sentence))
                 sentence = f"The sum value of {share_name} in {focus_name} is {degree} {relation} {compare_name}"
                 sentences.append(get_sentence_setting('compare_val', sentence))
@@ -326,7 +328,7 @@ def compare_sum(data, focus_data, compare_data, focus_name, compare_name, share_
     # sentence = f'the sum value in a is {shenme}'
     sentences.append(get_sentence_setting('compare_sum', sentence))
 
-    sentence = f"The value of {focus_name} is {degree} {relation} {compare_name} in the category of {share_name}"
+    sentence = f"{data['title']} of {focus_name} is {degree} {relation} {compare_name} in the category of {share_name}"
 
     sentences.append(get_sentence_setting('compare_ave', sentence, sure = False))
 

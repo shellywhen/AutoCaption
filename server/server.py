@@ -196,6 +196,7 @@ class getModifySvgSentence(tornado.web.RequestHandler):
             for i, setting in enumerate(focal_array):
                 # print(setting)
                 this_sentences = generate_sentence_by(data_json, setting['focus_id'], setting["compare_id"], major_name, second_name)
+                print("This sentences: ", this_sentences)
                 for sentence in this_sentences:
                     if sentence['type'] == sentence_type[i]:
                         sentence['strength'] = setting['strength']

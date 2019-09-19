@@ -82,7 +82,7 @@ def get_sentence(segment, setting, data, is_first, object_name = 'the value'):
     diff_number = end_id - begin_id
     return get_ordinal_trend_component(begin_name, begin_value, end_name, end_value, setting, diff_number, is_first)
 
-def get_ordinal_trend_component(begin_name, begin_value, end_name, end_value, std_mean, diff_number, is_first, object_name = 'the value', need_absolute_value = True):
+def get_ordinal_trend_component(begin_name, begin_value, end_name, end_value, std_mean, diff_number, is_first, object_name = 'the value', need_absolute_value = True, is_compare = False):
     diff_std = std_mean[0]
     diff_mean = std_mean[1]
     trend = ""
@@ -107,7 +107,11 @@ def get_ordinal_trend_component(begin_name, begin_value, end_name, end_value, st
     end_value = int(end_value * 100)/100.0
 
     if is_first:
-        return f'{object_name} {trend} {degree} from {begin_name} to {end_name}, '
+        if is_compare:
+            sentence = f'{object_name} {trend} {degree} during the same period, '
+        else:
+            sentence = f'{object_name} {trend} {degree} from {begin_name} to {end_name}, '
+        return sentence
     else:
         if need_absolute_value:
             return f' then it {trend} {degree} to {end_value} by {end_name}, '

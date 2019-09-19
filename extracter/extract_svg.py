@@ -489,8 +489,8 @@ def pack_data(important_rects, main_dimension_list, second_dimension_list):
     data["major_name"] = main_dim
     data["second_name"] = second_dim
     data["type"] = data_type
-    data["unit"] = "billion"
-    data["title"] = "Fruit consumption"
+    data["unit"] = ""
+    data["title"] = "Active user percentage"
 
     elements_list = get_elements(important_rects, main_dimension_list, second_dimension_list)
     print("elements_list: ", elements_list)

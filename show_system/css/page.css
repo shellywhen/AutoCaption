@@ -9,7 +9,7 @@ rect :active{
 }
 
 
-div.tooltip {
+/*div.tooltip {
     position: absolute;
     text-align: center;
     width: 200px;
@@ -20,7 +20,7 @@ div.tooltip {
     border: 0px;
     border-radius: 8px;
     pointer-events: none;
-}
+}*/
 
 
 .circle {
