@@ -448,7 +448,7 @@ def generate_data(file_dir, out_dir, opt = 'train'):
             print(i)
 
 if __name__ == '__main__':
-    generate_data('../../user_data/20180918_full_ocq_rule/', '../datasets/20190918_full_ocq_rule/')
+    generate_data('../../user_data/20190919_cases/', '../datasets/20190919_cases/')
     # file_json = '../../server/user_collected_data/cq_try_2018_08_27_21_48_37_337642.json'
     # A_numpy, B_numpy = deal_with_json(file_json)
     # print(A_numpy)

@@ -198,7 +198,7 @@ function frush(data_pack){
 
   // console.log(data_pack)
   highLightText(data_pack)
-    addDragging()
+  addDragging()
 }
 
 // Do not update the svg chart
@@ -233,6 +233,10 @@ function frush_no_update_svg(data_pack){
   // we do not update the data
   // d3.select('#visualization').node().innerHTML = svg_string
   // highLightShadow()
-   showSentences(sentences)
+  showSentences(sentences)
+
+  //需要更新数据
+  
+  // highLightText(data_pack)
   // addDragging()
 }
