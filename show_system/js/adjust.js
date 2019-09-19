@@ -254,9 +254,9 @@ let highLightText = function (data_pack) {
          d3.select(this).classed("highlight", true)
       })
 
-  add_trend(0, 4)
-  add_trend(10, 14)
-  add_trend(5, 9)
+  // add_trend(0, 4)
+  // add_trend(10, 14)
+  // add_trend(5, 9)
   // element_list.forEach(ele => {
 
   // })

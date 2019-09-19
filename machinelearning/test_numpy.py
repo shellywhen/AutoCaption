@@ -26,6 +26,8 @@ class use_model:
 
 def get_data_svg(svg_string):
     A_numpy, id_array = parse_svg_string(svg_string)
+    print("让我们看看A_numpy 是什么鬼东西：", A_numpy)
+    numpy.save("看看.npy", A_numpy)
     print(id_array)
     data = get_data_numpy(A_numpy)
     return data, id_array
