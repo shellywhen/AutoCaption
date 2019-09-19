@@ -47,7 +47,6 @@ let highLightText = function (data_pack) {
 
   let this_svg = d3.select('#annotationDiv').select('svg')
 
-<<<<<<< HEAD
   this_svg.append('defs').html(`
     <filter id="f1" height="130%">
     <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
@@ -72,8 +71,6 @@ let highLightText = function (data_pack) {
     .attr("d", "M 0 -5 10 10")
     .style("stroke", "black")
 
-=======
->>>>>>> bf353324bbc42cb30cfae0f3a980df1eaa2929d3
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
 
   // let textCollection = {
@@ -217,6 +214,8 @@ let highLightText = function (data_pack) {
       .attr('y', d => d.y)
       .attr('width', d => d.w)
       .attr('height', d => d.h)
+      .attr('rx', d => d3.select(`.element_${i}`).attr('rx'))
+      .attr('ry', d => d3.select(`.element_${i}`).attr('ry'))
       .style('fill', "white")
       .attr('id', (d, i) => "element_" + i)
       .classed('fake_element', true)
@@ -304,7 +303,7 @@ function add_abs_sentence(abs_sentence, id){
 }
 
 function show_element_sentence(d){
-  abs_sentence = data.title + " of " + d.major + " in " + d.second + " is " + parseInt(d.value * 100)/100 + " " + data.unit + "." 
+  abs_sentence = data.title + " of " + d.major + " in " + d.second + " is " + parseInt(d.value * 100)/100 + " " + data.unit + "."
   add_abs_sentence(abs_sentence, d.id)
   console.log(abs_sentence)
 }
@@ -557,35 +556,66 @@ let mouseOut = function() {
      .style('stroke-width', 0)
 }
 
+let customHighlightRect = function (id) {
+  let color = d3.select(`.element_${id}`).attr('fill')
+
+  d3.select('#element_'+String(id))
+    .style('fill', color)
+    .attr('filter', 'url(#f1)')
+    .classed('normal', false)
+    .classed('myfocus', true)
+    .classed('nobody', false)
+    //.style("stroke", highLightRectColor)
+    //.style('stroke-width', '0.5vh')
+
+}
+
+let customNormalRect = function (id) {
+  d3.select('#element_'+String(id))
+    .style('fill', 'white')
+    .attr('filter', 'none')
+    .classed('nobody', false)
+    .classed('normal', true)
+    .classed('myfocus', false)
+    //.style('stroke-width', 0)
+}
+
+let fadeAll = function () {
+  d3.select('#annotationDiv').selectAll('.fake_element')
+    .classed('nobody', true)
+    .classed('normal', false)
+    .classed('myfocus', false)
+    .classed('mycompare', false)
+}
+
+let normalAll = function () {
+  d3.select('#annotationDiv').selectAll('.fake_element')
+    .attr('filter', 'none')
+    .style('fill', 'white')
+    .classed('nobody', false)
+    .classed('myfocus', false)
+    .classed('mycompare', false)
+    .classed('normal', true)
+}
+
 let highLightRect = function() {
     id = d3.select(this).attr('customid')
     d3.select(this)
       .style('background', highLightTableColor)
-    d3.select('#element_'+String(id))
-      .style('fill', function(d) {
-        let color =  d3.select(`#color-${d.legend_id}`).attr('color-data')
-        return color
-      })
-      .style('opacity', 1)
-      .attr('filter', "url(#f1)")
-      //.style("stroke", highLightRectColor)
-      //.style('stroke-width', '0.5vh')
-
+    fadeAll()
+    customHighlightRect(id)
 }
+
 
 let normalRect = function() {
     id = d3.select(this).attr('customid')
-    d3.select('#element_'+String(id))
-      .style('fill', 'white')
-      .style('opacity', 0)
-      .attr('filter', 'none')
-      //.style('stroke-width', 0)
+    customNormalRect(id)
+    normalAll()
     d3.select(this)
       .style('background', null)
 }
 
 let addDragging = function() {
-  console.log('addDragging', d3.selectAll('.fake_element'))
     d3.selectAll('.fake_element')
     .call(d3.drag()
             .on('start', dragStart)

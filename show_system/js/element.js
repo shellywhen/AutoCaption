@@ -12,7 +12,7 @@ const type_dict = {
   "local_sum_trend": "trend_local",
   "compare_trend": "compare_trend",
   "outlier": "outlier",
-  "cluster":"cluster", 
+  "cluster":"cluster",
   "abs": "abs"
 }
 const type_name = {
@@ -340,11 +340,12 @@ function showSentences(data) {
 }
 
 function back2normal(d, i) {
-    d3.select('#annotationDiv').selectAll('.fake_element')
-      .classed('nobody', false)
-      .classed('myfocus', false)
-      .classed('mycompare', false)
-      .classed('normal', true)
+    normalAll()
+    // d3.select('#annotationDiv').selectAll('.fake_element')
+    //   .classed('nobody', false)
+    //   .classed('myfocus', false)
+    //   .classed('mycompare', false)
+    //   .classed('normal', true)
     d3.selectAll('circle')
       .classed('nobody', false)
       .classed('myfocus', false)
@@ -376,29 +377,32 @@ function captionHighlight(d, i) {
     let total = cur.data_array.length
     let allid = Array.from(Array(total).keys())
     let fadeid = allid.map(v => true)
+    fadeAll()
     for(let compid of d.compare_id) {
-       d3.select('#element_' + String(compid))
-         .raise()
-         .classed('normal', false)
-         .classed('mycompare', true)
-         fadeid[compid] = false
+      customHighlightRect(compid)
+       // d3.select('#element_' + String(compid))
+       //   .raise()
+       //   .classed('normal', false)
+       //   .classed('mycompare', true)
+      fadeid[compid] = false
       //d3.select('.element_' + String(compid)).style('fill', 'blue')
       d3.select("#data-table").select("#table-" + String(compid)).style("background", "#9ecae1")
     }
     for(let focusid of d.focus_id) {
-       d3.select('#element_' + String(focusid))
-         .raise()
-         .classed('normal', false)
-         .classed('myfocus', true)
+      customHighlightRect(focusid)
+       // d3.select('#element_' + String(focusid))
+       //   .raise()
+       //   .classed('normal', false)
+       //   .classed('myfocus', true)
        fadeid[focusid] = false
 
        d3.select("#data-table").select("#table-" + String(focusid)).style("background", "#fc9272")
      }
     for(let i in fadeid){
         if(fadeid[i] === true){
-            let a = d3.select('#element_' + String(i))
-                      .classed('normal', false)
-                      .classed('nobody', true)
+            // let a = d3.select('#element_' + String(i))
+            //           .classed('normal', false)
+            //           .classed('nobody', true)
             d3.select("#data-table").select("#table-" + String(i)).style("background", "white")
         }
 
@@ -555,19 +559,19 @@ Data.prototype.initChart = function() {
       switch (this.dType) {
           case "ccq":
               load_group_bar_chart(this, 'c0', 'c1', 'q0')
-              this.major = 'c0'
-              this.second = 'c1'
+              this.major = this.data.major_name
+              this.second = this.data.second_name
               this.quan = 'q0'
               this.cType = 'load_group_bar_chart'
               this.cPara = [this, 'c0', 'c1', 'q0']
               break
           case "ocq":
               load_group_bar_chart(this, 'o0', 'c0', 'q0')
-              this.major = 'c0'
-              this.second = 'o0'
+              this.major = this.data.major_name
+              this.second = this.data.second_name
               this.quan = 'q0'
               this.cType = 'load_group_bar_chart'
-              this.cPara = [this, 'o0', 'c0', 'q0']
+              this.cPara = [this, 'c0', 'o0', 'q0']
               break
           case "cq":
               load_pie_chart(this, 'c0', undefined, 'q0')
