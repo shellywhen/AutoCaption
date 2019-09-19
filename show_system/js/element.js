@@ -655,7 +655,12 @@ Data.prototype.drawQQTable = function() {
             .attr('customtype', 'major')
             .attr('customid', (d, i) => i - 2)
             .attr('ondblclick', 'showElement(this)')
-            .text(d => d)
+            .text(d => {
+              return d
+              // let substring = d.substring(0, 7)
+              // if(d.length > 8) substring += '...'
+              // return substring
+            })
   let tableBody = table.select('tbody')
                        .selectAll('tr')
                        .data(matrix)
@@ -666,7 +671,12 @@ Data.prototype.drawQQTable = function() {
            .attr('ondblclick', 'showElement(this)')
            .attr('customtype', 'second')
            .attr('customid', (d, i) => i)
-           .text((d, i) => secondRow[i])
+           .text((d, i) => {
+             let content = secondRow[i]
+             let substring = content.substring(0, 7)
+             if(content.length > 8) substring += '...'
+             return substring
+           })
 
  tableBody.append('th')
           .attr('scope', 'row color-picker-th')
@@ -730,7 +740,12 @@ Data.prototype.drawTable = function() {
              .attr('ondblclick', 'showElement(this)')
              .attr('customtype', 'second')
              .attr('customid', (d, i) => i)
-             .text((d, i) => secondRow[i])
+             .text((d, i) => {
+                 let content = secondRow[i]
+                 let substring = content.substring(0, 7)
+                 if(content.length > 8) substring += '...'
+                 return substring
+             })
 
    tableBody.append('th')
             .attr('scope', 'row color-picker-th')

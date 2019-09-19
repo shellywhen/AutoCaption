@@ -122,7 +122,8 @@ body,html {
 }
 .mycompare {
   opacity: 1;
-  stroke: #7CB9E8;
+  stroke: #6a6faf;
+ stroke-opacity: 1;
   stroke-width: 2px;
   /* mask: url("#mask-blue"); */
   /* filter: url("#blue-shadow"); */
@@ -130,7 +131,8 @@ body,html {
 }
 .myfocus {
   opacity: 1;
-  stroke: #FF5533;
+  stroke: #6A0156;
+  stroke-opacity: 0.8;
   stroke-width: 2px;
   /* mask: url("#mask-red"); */
   /* filter: url("#red-shadow"); */
@@ -138,7 +140,7 @@ body,html {
 }
 .myhighlight {
   opacity: 1;
-  stroke: sandybrown;
+  stroke: black;
   stroke-width: 2px;
 }
 .myfocus circle{

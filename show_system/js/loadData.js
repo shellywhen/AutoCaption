@@ -689,6 +689,13 @@ function CCQ(data, cat_position, cat_color, quantity, position = 'vertical') {
 }
 
 CCQ.prototype.drawAxis = function() {
+  let yMin = Infinity
+  let yMax = -Infinity
+  for (v of this.data.data_array) {
+      yMin = 0
+      yMax = Math.max(yMax, v[this.quantity])
+  }
+  this.yScale.domain([yMin, yMax])
     if (this.position === 'horizontal') {
       let axisBottom = d3.axisBottom(this.yScale)
       if(flag) {

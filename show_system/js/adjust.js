@@ -4,7 +4,7 @@ var INIT_Y = 0
 var TIME_LAST = 0
 var TIME_NOW = 0
 var INIT_Y_Origin = 0
-let highLightTableColor = '#fec44f'
+let highLightTableColor = 'rgba(182, 182, 182, 0.53)' // '#fec44f'
 let highLightRectColor = '#d95f0e'
 
 // global
@@ -51,7 +51,7 @@ let highLightText = function (data_pack) {
   let this_svg = d3.select('#annotationDiv').select('svg')
 
   this_svg.append('defs').html(`
-    <filter id="f1" height="130%">
+    <filter id="f1" height="130%" width="130%">
     <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
     <feOffset dx="8" dy="5" result="offsetblur"/> <!-- how much to offset -->
     <feComponentTransfer>
@@ -531,7 +531,7 @@ let mouseOver = function() {
     id = d3.select(this)
            .attr('id')
     d3.select('#table-'+String(id))
-      .style('background', highLightTableColor)
+      .style('border', highLightTableColor)
     // d3.select(this)
     //   .style("stroke", highLightRectColor)
     //   .style('stroke-width', '0.5vh')

@@ -3,7 +3,7 @@
 */
 window.userStudyTotal = 2500;
 let cur = new Data()
-loadJsonData('../data/dataset/tmp/1.json')
+loadJsonData('../data/dataset/tmp/11.json')
 // generate_pie_data()
 get_line_chart_svg_data()
 window.num = 0
@@ -236,7 +236,7 @@ function frush_no_update_svg(data_pack){
   showSentences(sentences)
 
   //需要更新数据
-  
+
   // highLightText(data_pack)
   // addDragging()
 }
