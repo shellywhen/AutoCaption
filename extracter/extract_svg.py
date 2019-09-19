@@ -478,8 +478,6 @@ def pack_data(important_rects, main_dimension_list, second_dimension_list):
     main_dim, second_dim, data_type = get_main_second(main_dimension_list, second_dimension_list)
 
 
-    
-
     data = {}
     data["data_type"] = data_type
     data_array = [{"id": rect["id"], main_dim: rect["major"], second_dim: rect["second"], "q0": int(rect["value"] * 100)/100.0} for rect in important_rects]
