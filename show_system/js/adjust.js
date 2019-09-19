@@ -47,7 +47,6 @@ let highLightText = function (data_pack) {
 
   let this_svg = d3.select('#annotationDiv').select('svg')
 
-<<<<<<< HEAD
   this_svg.append('defs').html(`
     <filter id="f1" height="130%">
     <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
@@ -72,8 +71,6 @@ let highLightText = function (data_pack) {
     .attr("d", "M 0 -5 10 10")
     .style("stroke", "black")
 
-=======
->>>>>>> bf353324bbc42cb30cfae0f3a980df1eaa2929d3
   let g = d3.select('#annotationDiv').select('svg').append('g').attr('id', 'annotation')
 
   // let textCollection = {
@@ -222,16 +219,6 @@ let highLightText = function (data_pack) {
       .classed('fake_element', true)
       .classed('normal', true)
       .on('mouseover', function (d) {
-        // d3.select("#x_auxiliary_line")
-        //   .attr("opacity", 1)
-
-        // d3.select("#y_auxiliary_line")
-        //   .attr("opacity", 1)
-
-        // d3.select("#auxiliary_circle")
-        //   .attr("opacity", 1)
-
-        console.log(d)
         if (is_vertical){
           x = d.x + d.w / 2
           y = d.y
@@ -251,17 +238,13 @@ let highLightText = function (data_pack) {
             .classed("highlight", false)
           g_legend.select("#legend_" + d.legend_id)
             .classed("highlight", true)
-
           highlight_y_tick(y)
-
         }
         else{
           // TODO
         }
-
         d3.select(this).classed("highlight", true)
         show_element_sentence(d)
-
       })
       .on('mouseout', function (d) {
         // g.select('#interaction_annotation').selectAll('line').remove()
